@@ -13,6 +13,8 @@ async function init() {
         site = new GeminiEnterpriseSite();
     } else if (hostname.includes('gemini')) {
         site = new GeminiSite();
+    } else if (hostname.includes('chatgpt.com')) {
+        site = new ChatGPTSite();
     } else {
         site = new BaseSite();
     }
@@ -22,7 +24,7 @@ async function init() {
     site.modal = modal;
 
     // Only initialize button and observers on specific platforms
-    if (hostname.includes('aistudio') || hostname.includes('gemini') || dynamicSiteConfig) {
+    if (hostname.includes('aistudio') || hostname.includes('gemini') || hostname.includes('chatgpt.com') || dynamicSiteConfig) {
         site.ensureButtonByWatch();
     }
 

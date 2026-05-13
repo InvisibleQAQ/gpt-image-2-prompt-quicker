@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - Load unpacked extension in Chrome: open `chrome://extensions/` → enable Developer mode → **Load unpacked** → select `extension/`
 - After code changes to extension files, use **Reload** on the extension card in `chrome://extensions/`
-- Primary manual test targets from the README: `https://gemini.google.com/` and `https://aistudio.google.com/`
+- Primary manual test targets from the README: `https://gemini.google.com/`, `https://aistudio.google.com/`, and `https://chatgpt.com/`
 - Context-menu path matters too: focus any editable field on any site, right click, and trigger `Insert 🍌 Prompts`
 
 ### Repository inspection
@@ -47,7 +47,7 @@ On Linux, expect these scripts to fail unless rewritten to avoid `sips`.
   - forwards context-menu clicks to the active tab via `chrome.tabs.sendMessage`
 - `extension/content.js` is the runtime bootstrap inside pages:
   - fetches remote config via `ConfigManager`
-  - chooses a site adapter (`AIStudioSite`, `GeminiSite`, `GeminiEnterpriseSite`, `DynamicSite`, fallback `BaseSite`)
+  - chooses a site adapter (`AIStudioSite`, `GeminiSite`, `GeminiEnterpriseSite`, `ChatGPTSite`, `DynamicSite`, fallback `BaseSite`)
   - creates a `BananaModal`
   - wires background messages to `modal.show()`
 
@@ -116,7 +116,7 @@ Failure behavior matters: `fetcher.js` falls back to cached data even when expir
 - generic prompt insertion into textareas or contenteditable fields
 - theme color helpers
 
-Derived adapters (`gemini.js`, `ai_studio.js`, `gemini_enterprise.js`, `dynamic.js`) mainly override:
+Derived adapters (`gemini.js`, `ai_studio.js`, `gemini_enterprise.js`, `chatgpt.js`, `dynamic.js`) mainly override:
 
 - prompt-input lookup
 - target-button lookup

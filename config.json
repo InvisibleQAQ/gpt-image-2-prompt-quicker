@@ -12,6 +12,10 @@
             "promptInput": ".ProseMirror",
             "insertButton": ".tools-button-container"
         },
+        "chatgpt": {
+            "promptInput": "#prompt-textarea.ProseMirror[contenteditable=\"true\"], div.ProseMirror#prompt-textarea[contenteditable=\"true\"], textarea[name=\"prompt-textarea\"]",
+            "insertButton": "button[data-testid=\"composer-plus-btn\"], button#composer-plus-btn"
+        },
         "dynamic": [
             {
                 "host": "kokorolab.net",

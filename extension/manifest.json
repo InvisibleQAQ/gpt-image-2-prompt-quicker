@@ -35,6 +35,7 @@
                 "sites/ai_studio.js",
                 "sites/gemini.js",
                 "sites/gemini_enterprise.js",
+                "sites/chatgpt.js",
                 "sites/dynamic.js",
                 "ui/search.js",
                 "ui/card.js",
