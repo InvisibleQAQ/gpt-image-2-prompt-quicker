@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Prompt Quicker - 提示词从未如此优雅</title>
+    <meta name="description" content="一个 Chrome 扩展，让你在 Google AI Studio 和 Gemini 官网快速插入热门提示词">
+    <meta name="keywords"
+        content="Nano Banana, Banana Pro, Banana2, Banana Prompt Quicker, Gemini, AI Studio, Prompt Engineering, Chrome Extension, Prompt Library, 提示词, 效率工具">
+    <meta name="author" content="Glidea">
+    <link rel="canonical" href="https://glidea.github.io/banana-prompt-quicker/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HB9ZZYQVBY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HB9ZZYQVBY');
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glidea.github.io/banana-prompt-quicker/">
+    <meta property="og:title" content="Banana Prompt Quicker - 提示词从未如此优雅">
+    <meta property="og:description" content="一个 Chrome 扩展，让你在 Google AI Studio 和 Gemini 官网快速插入热门提示词">
+    <meta property="og:image"
+        content="https://github.com/glidea/banana-prompt-quicker/blob/main/images/modal.png?raw=true">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://glidea.github.io/banana-prompt-quicker/">
+    <meta property="twitter:title" content="Banana Prompt Quicker - 提示词从未如此优雅">
+    <meta property="twitter:description" content="一个 Chrome 扩展，让你在 Google AI Studio 和 Gemini 官网快速插入热门提示词">
+    <meta property="twitter:image"
+        content="https://github.com/glidea/banana-prompt-quicker/blob/main/images/modal.png?raw=true">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Banana Prompt Quicker",
+      "operatingSystem": "Chrome",
+      "applicationCategory": "ProductivityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Glidea"
+      },
+      "description": "一个 Chrome 扩展，让你在 Google AI Studio 和 Gemini 官网快速插入热门提示词"
+    }
+    </script>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍌</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #ffffff;
+            --surface: #f5f5f7;
+            --surface-hover: #e8e8ed;
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent: #0071e3;
+            --accent-hover: #0077ed;
+            --border: #d2d2d7;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #000000;
+                --surface: #1c1c1e;
+                --surface-hover: #2c2c2e;
+                --text-primary: #f5f5f7;
+                --text-secondary: #86868b;
+                --accent: #2997ff;
+                --accent-hover: #47a3ff;
+                --border: #424245;
+                --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+                --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+                --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(var(--background), 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: background 0.3s;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            header {
+                background: rgba(28, 28, 30, 0.7);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            font-size: 24px;
+        }
+
+        .github-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .github-link:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 24px 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 24px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--surface);
+            color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--surface-hover);
+        }
+
+        /* Gallery Section */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px 120px;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .search-bar {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 16px 24px 16px 48px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-primary);
+            font-size: 16px;
+            outline: none;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--accent);
+            background: var(--background);
+            box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            pointer-events: none;
+        }
+
+        .filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Category Dropdown */
+        .category-dropdown {
+            position: relative;
+        }
+
+        .category-trigger {
+            padding: 8px 20px;
+            border-radius: 999px;
+            background: var(--surface);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+            min-width: 110px;
+            justify-content: center;
+        }
+
+        .category-trigger #categoryText {
+            flex: 1;
+            text-align: center;
+        }
+
+        .category-trigger:hover {
+            background: var(--surface-hover);
+            color: var(--text-primary);
+        }
+
+        .category-trigger svg {
+            transition: transform 0.2s;
+            opacity: 0.6;
+        }
+
+        .category-trigger.active svg {
+            transform: rotate(180deg);
+        }
+
+        .category-options {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            width: 100%;
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 100;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .category-options.show {
+            display: flex;
+        }
+
+        .category-option {
+            padding: 10px 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 14px;
+            color: var(--text-primary);
+            border: none;
+            background: transparent;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .category-option:hover {
+            background: var(--surface-hover);
+        }
+
+        .category-option.selected {
+            background: var(--text-primary);
+            color: var(--background);
+            font-weight: 600;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 999px;
+            background: var(--surface);
+            color: var(--text-secondary);
+            border: 1px solid transparent;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            background: var(--surface-hover);
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active {
+            background: var(--text-primary);
+            color: var(--background);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--background);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            background: var(--surface);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            font-size: 12px;
+        }
+
+        .author {
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex: 1;
+            min-width: 0;
+            margin-right: 8px;
+        }
+
+        .author span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .badge {
+            flex-shrink: 0;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .badge-generate {
+            background: rgba(52, 199, 89, 0.1);
+            color: #34c759;
+        }
+
+        .badge-edit {
+            background: rgba(0, 122, 255, 0.1);
+            color: #007aff;
+        }
+
+        .badge-subcategory {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-subcategory {
+                background: rgba(255, 255, 255, 0.1);
+                color: var(--text-secondary);
+            }
+        }
+
+        .copy-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            backdrop-filter: blur(4px);
+        }
+
+        .card:hover .copy-overlay {
+            opacity: 1;
+        }
+
+        .action-btn {
+            background: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transform: translateY(20px);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card:hover .action-btn {
+            transform: translateY(0);
+        }
+
+        .action-btn:hover {
+            transform: scale(1.05) translateY(0);
+            background: #f5f5f7;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        footer a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 16px;
+            }
+
+            .card-image {
+                aspect-ratio: 1;
+            }
+
+            .card:hover {
+                transform: none;
+            }
+
+            /* Allow overlay to be shown via class on mobile */
+            .card.active .copy-overlay {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        /* Loading Skeleton */
+        .skeleton {
+            background: linear-gradient(90deg, var(--surface) 25%, var(--surface-hover) 50%, var(--surface) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: var(--radius-sm);
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        .author-link {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        .author-link:hover .author {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Showcase */
+        .showcase {
+            padding: 0 24px 80px;
+            text-align: center;
+        }
+
+        .showcase img {
+            max-width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+
+        /* Features */
+        .features {
+            padding: 120px 24px;
+            background: var(--surface);
+        }
+
+        .features-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .feature-item p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Install */
+        .install {
+            padding: 120px 24px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .install h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+
+        .steps {
+            display: grid;
+            gap: 24px;
+            text-align: left;
+            background: var(--surface);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--text-primary);
+            color: var(--background);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        .step p {
+            font-size: 16px;
+            padding-top: 4px;
+            color: var(--text-primary);
+        }
+
+        .step code {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        /* Showcase */
+        .showcase {
+            padding: 0 24px 80px;
+            text-align: center;
+        }
+
+        .showcase img {
+            max-width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+
+        /* Features */
+        .features {
+            padding: 120px 24px;
+            background: var(--surface);
+        }
+
+        .features-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .feature-item p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Install */
+        .install {
+            padding: 120px 24px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .install h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+
+        .steps {
+            display: grid;
+            gap: 24px;
+            text-align: left;
+            background: var(--surface);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--text-primary);
+            color: var(--background);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        .step p {
+            font-size: 16px;
+            padding-top: 4px;
+            color: var(--text-primary);
+        }
+
+        .step code {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+
+        /* Community */
+        .community {
+            padding: 80px 24px;
+            text-align: center;
+            background: var(--background);
+            border-top: 1px solid var(--border);
+        }
+
+        .community h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--text-primary);
+        }
+
+        .community-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .community-item {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .qr-code {
+            width: 200px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 16px;
+        }
+
+        .avatar {
+            width: 120px;
+            margin-bottom: 16px;
+            border-radius: 50%;
+        }
+
+        .community-text {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Announcement Carousel */
+        .announcement-carousel {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 24px;
+            padding: 0 16px;
+        }
+
+        .announcement-wrapper {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px 20px;
+            overflow: hidden;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .announcement-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 40px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .announcement-item.active {
+            opacity: 1;
+            pointer-events: auto;
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+        }
+
+        .announcement-icon {
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+
+        .announcement-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .announcement-link {
+            color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .announcement-link:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .announcement-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .announcement-indicator {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .announcement-indicator.active {
+            background: var(--accent);
+            width: 18px;
+            border-radius: 3px;
+        }
+
+        .announcement-indicator:hover {
+            background: var(--text-secondary);
+        }
+
+        .announcement-indicator.active:hover {
+            background: var(--accent-hover);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <span>🍌</span> Banana Prompt Quicker
+        </a>
+        <a href="https://github.com/glidea/banana-prompt-quicker" target="_blank" class="github-link">
+            <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+            GitHub
+        </a>
+    </header>
+
+    <section class="hero">
+        <h1>Prompts quicker<br>is ALL you need</h1>
+        <p>一个 Chrome 扩展，让你在 Google AI Studio 和 Gemini 官网快速插入热门提示词</p>
+        <div class="hero-actions">
+            <a href="https://chromewebstore.google.com/detail/banana-prompt-quicker/hgfgfocicepifbolifedlokjkknigoid?authuser=0&hl=zh-CN"
+                target="_blank" class="btn btn-primary">安装扩展</a>
+            <a href="#gallery" class="btn btn-secondary">浏览提示词</a>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/modal.png?raw=true"
+            alt="Banana Prompt Quicker Extension Interface Preview" width="900">
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <h3>快速插入</h3>
+                <p>一键插入全网热门提示词，让创作更高效</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎯</div>
+                <h3>多平台支持</h3>
+                <p>完美支持 Google AI Studio 和 Gemini 官网</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">✏️</div>
+                <h3>自定义</h3>
+                <p>灵活添加和管理你专属的提示词库</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-container">
+        <div class="controls">
+            <div class="search-bar">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="搜索提示词、作者...">
+            </div>
+            <div class="filters">
+                <!-- Category Dropdown -->
+                <div class="category-dropdown">
+                    <button class="category-trigger" id="categoryTrigger">
+                        <span id="categoryText">全部</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 1L5 5L9 1" />
+                        </svg>
+                    </button>
+                    <div class="category-options" id="categoryOptions">
+                        <!-- Options will be populated dynamically -->
+                    </div>
+                </div>
+
+                <button class="filter-btn" data-filter="recent-week">最近一周</button>
+                <button class="filter-btn" data-filter="generate">文生图</button>
+                <button class="filter-btn" data-filter="edit">编辑</button>
+            </div>
+        </div>
+
+        <!-- Announcement Carousel -->
+        <div class="announcement-carousel" id="announcementCarousel">
+            <div class="announcement-wrapper" id="announcementWrapper">
+                <!-- Announcements will be injected here -->
+            </div>
+            <div class="announcement-indicators" id="announcementIndicators">
+                <!-- Indicators will be injected here -->
+            </div>
+        </div>
+
+        <div id="promptsGrid" class="grid">
+            <!-- Prompts will be injected here -->
+            <div class="card" style="height: 300px; pointer-events: none;">
+                <div class="skeleton" style="width: 100%; height: 200px;"></div>
+                <div class="card-content">
+                    <div class="skeleton" style="width: 80%; height: 20px; margin-bottom: 10px;"></div>
+                    <div class="skeleton" style="width: 40%; height: 16px;"></div>
+                </div>
+            </div>
+            <div class="card" style="height: 300px; pointer-events: none;">
+                <div class="skeleton" style="width: 100%; height: 200px;"></div>
+                <div class="card-content">
+                    <div class="skeleton" style="width: 80%; height: 20px; margin-bottom: 10px;"></div>
+                    <div class="skeleton" style="width: 40%; height: 16px;"></div>
+                </div>
+            </div>
+            <div class="card" style="height: 300px; pointer-events: none;">
+                <div class="skeleton" style="width: 100%; height: 200px;"></div>
+                <div class="card-content">
+                    <div class="skeleton" style="width: 80%; height: 20px; margin-bottom: 10px;"></div>
+                    <div class="skeleton" style="width: 40%; height: 16px;"></div>
+                </div>
+            </div>
+            <div class="card" style="height: 300px; pointer-events: none;">
+                <div class="skeleton" style="width: 100%; height: 200px;"></div>
+                <div class="card-content">
+                    <div class="skeleton" style="width: 80%; height: 20px; margin-bottom: 10px;"></div>
+                    <div class="skeleton" style="width: 40%; height: 16px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="community">
+        <h2>加入社区</h2>
+        <div class="community-grid">
+            <div class="community-item">
+                <img src="https://github.com/glidea/zenfeed/blob/main/docs/images/wechat.png?raw=true"
+                    alt="WeChat QR Code" class="qr-code">
+                <p class="community-text">AI 学习交流社群</p>
+            </div>
+            <div class="community-item">
+                <a href="https://www.xiaohongshu.com/user/profile/5f7dc54d0000000001004afb" target="_blank"
+                    class="author-link"
+                    style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                    <div style="width: 200px; height: 200px; background: #FF2442; border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; box-shadow: var(--shadow-md); transition: transform 0.2s;"
+                        onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        <svg viewBox="0 0 1024 1024" width="100" height="100" fill="white">
+                            <path
+                                d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32z m-40 728H184V184h656v656zM312 376h400v80H312z m0 176h400v80H312z" />
+                        </svg>
+                    </div>
+                    <p class="community-text">关注小红书</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Banana Prompt Quicker. Open Source on <a
+                href="https://github.com/glidea/banana-prompt-quicker">GitHub</a>. <a href="privacy.html"
+                style="margin-left: 10px;">Privacy Policy</a></p>
+    </footer>
+
+    <div id="toast" class="toast">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        已复制到剪贴板
+    </div>
+
+    <script>
+        const GITHUB_PROMPTS_URL = 'https://raw.githubusercontent.com/glidea/banana-prompt-quicker/main/prompts.json';
+        const GITHUB_CONFIG_URL = 'https://raw.githubusercontent.com/glidea/banana-prompt-quicker/main/config.json';
+        let allPrompts = [];
+        let currentFilter = 'all';
+        let currentCategory = 'all';
+        let recentWeekEnabled = false;
+        let announcements = [];
+        let currentAnnouncementIndex = 0;
+        let announcementInterval = null;
+
+        // Announcement Carousel
+        async function fetchAnnouncements() {
+            try {
+                const response = await fetch(GITHUB_CONFIG_URL);
+                if (!response.ok) throw new Error('Failed to fetch config');
+                const config = await response.json();
+                announcements = (config.announcements || []).sort((a, b) => (b.priority || 0) - (a.priority || 0));
+                if (announcements.length > 0) {
+                    renderAnnouncements();
+                    startAnnouncementCarousel();
+                } else {
+                    document.getElementById('announcementCarousel').style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error loading announcements:', error);
+                document.getElementById('announcementCarousel').style.display = 'none';
+            }
+        }
+
+        function renderAnnouncements() {
+            const wrapper = document.getElementById('announcementWrapper');
+            const indicators = document.getElementById('announcementIndicators');
+
+            wrapper.innerHTML = '';
+            indicators.innerHTML = '';
+
+            announcements.forEach((announcement, index) => {
+                // Create announcement item
+                const item = document.createElement('div');
+                item.className = `announcement-item${index === 0 ? ' active' : ''}`;
+                item.dataset.index = index;
+
+                const icon = document.createElement('span');
+                icon.className = 'announcement-icon';
+                icon.textContent = '📢';
+
+                const textSpan = document.createElement('span');
+                textSpan.className = 'announcement-text';
+
+                if (announcement.link) {
+                    const link = document.createElement('a');
+                    link.className = 'announcement-link';
+                    link.href = announcement.link;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.textContent = announcement.content;
+                    textSpan.appendChild(link);
+                } else {
+                    textSpan.textContent = announcement.content;
+                }
+
+                item.appendChild(icon);
+                item.appendChild(textSpan);
+                wrapper.appendChild(item);
+
+                // Create indicator
+                if (announcements.length > 1) {
+                    const indicator = document.createElement('div');
+                    indicator.className = `announcement-indicator${index === 0 ? ' active' : ''}`;
+                    indicator.dataset.index = index;
+                    indicator.addEventListener('click', () => goToAnnouncement(index));
+                    indicators.appendChild(indicator);
+                }
+            });
+
+            // Hide indicators if only one announcement
+            if (announcements.length <= 1) {
+                indicators.style.display = 'none';
+            }
+
+            // Pause on hover
+            wrapper.addEventListener('mouseenter', pauseAnnouncementCarousel);
+            wrapper.addEventListener('mouseleave', resumeAnnouncementCarousel);
+        }
+
+        function goToAnnouncement(index) {
+            if (index === currentAnnouncementIndex) return;
+
+            const items = document.querySelectorAll('.announcement-item');
+            const indicators = document.querySelectorAll('.announcement-indicator');
+
+            items[currentAnnouncementIndex].classList.remove('active');
+            indicators[currentAnnouncementIndex]?.classList.remove('active');
+
+            currentAnnouncementIndex = index;
+
+            items[currentAnnouncementIndex].classList.add('active');
+            indicators[currentAnnouncementIndex]?.classList.add('active');
+
+            // Reset interval
+            if (announcementInterval) {
+                clearInterval(announcementInterval);
+                startAnnouncementCarousel();
+            }
+        }
+
+        function nextAnnouncement() {
+            const nextIndex = (currentAnnouncementIndex + 1) % announcements.length;
+            goToAnnouncement(nextIndex);
+        }
+
+        function startAnnouncementCarousel() {
+            if (announcements.length <= 1) return;
+            announcementInterval = setInterval(nextAnnouncement, 4000);
+        }
+
+        function pauseAnnouncementCarousel() {
+            if (announcementInterval) {
+                clearInterval(announcementInterval);
+                announcementInterval = null;
+            }
+        }
+
+        function resumeAnnouncementCarousel() {
+            if (!announcementInterval && announcements.length > 1) {
+                startAnnouncementCarousel();
+            }
+        }
+
+        // DOM Elements
+        const grid = document.getElementById('promptsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const toast = document.getElementById('toast');
+        const categoryTrigger = document.getElementById('categoryTrigger');
+        const categoryOptions = document.getElementById('categoryOptions');
+        const categoryText = document.getElementById('categoryText');
+
+        // Fetch Prompts
+        async function fetchPrompts() {
+            try {
+                const response = await fetch(GITHUB_PROMPTS_URL);
+                if (!response.ok) throw new Error('Failed to fetch');
+                allPrompts = await response.json();
+
+                // Initialize categories
+                initializeCategories();
+
+                filterPrompts();
+            } catch (error) {
+                console.error('Error loading prompts:', error);
+                grid.innerHTML = '<p style="text-align:center; grid-column: 1/-1; padding: 40px; color: var(--text-secondary);">加载失败，请检查网络连接</p>';
+            }
+        }
+
+        // Initialize Categories
+        function initializeCategories() {
+            const categories = new Set(['全部']);
+            allPrompts.forEach(prompt => {
+                if (prompt.category) {
+                    categories.add(prompt.category);
+                }
+            });
+
+            // Sort categories
+            const sortedCategories = Array.from(categories).sort((a, b) => {
+                if (a === '全部') return -1;
+                if (b === '全部') return 1;
+                return a.localeCompare(b, 'zh-CN');
+            });
+
+            // Populate dropdown
+            categoryOptions.innerHTML = '';
+            sortedCategories.forEach(cat => {
+                const option = document.createElement('button');
+                option.className = 'category-option';
+                option.textContent = cat;
+                if (cat === '全部') {
+                    option.classList.add('selected');
+                }
+
+                option.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectCategory(cat);
+                });
+
+                categoryOptions.appendChild(option);
+            });
+        }
+
+        // Select Category
+        function selectCategory(category) {
+            currentCategory = category === '全部' ? 'all' : category;
+            categoryText.textContent = category;
+
+            // Update selected state
+            categoryOptions.querySelectorAll('.category-option').forEach(opt => {
+                opt.classList.toggle('selected', opt.textContent === category);
+            });
+
+            // Close dropdown
+            categoryOptions.classList.remove('show');
+            categoryTrigger.classList.remove('active');
+
+            // Filter prompts
+            filterPrompts();
+        }
+
+        // Toggle Category Dropdown
+        categoryTrigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            categoryOptions.classList.toggle('show');
+            categoryTrigger.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!categoryTrigger.contains(e.target) && !categoryOptions.contains(e.target)) {
+                categoryOptions.classList.remove('show');
+                categoryTrigger.classList.remove('active');
+            }
+        });
+
+        // Render Prompts
+        function renderPrompts(prompts) {
+            grid.innerHTML = '';
+
+            if (prompts.length === 0) {
+                grid.innerHTML = '<p style="text-align:center; grid-column: 1/-1; padding: 40px; color: var(--text-secondary);">没有找到相关提示词</p>';
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+
+            prompts.forEach(prompt => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                // card.onclick removed to prevent conflict with buttons
+
+                const modeBadgeClass = prompt.mode === 'edit' ? 'badge-edit' : 'badge-generate';
+                const modeLabel = prompt.mode === 'edit' ? '编辑' : '文生图';
+
+                // Use encodeURIComponent to safely handle all special characters including newlines
+                const safePrompt = encodeURIComponent(prompt.prompt);
+
+                card.innerHTML = `
+                    <img src="${prompt.preview}" alt="${prompt.title}" class="card-image" loading="lazy">
+                    <div class="card-content">
+                        <div class="card-title" title="${prompt.title}">${prompt.title}</div>
+                        <div class="card-meta">
+                            <div class="author">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                <span>${prompt.author}</span>
+                            </div>
+                            <div style="display: flex; gap: 6px; align-items: center;">
+                                ${prompt.sub_category ? `<span class="badge badge-subcategory">${prompt.sub_category}</span>` : ''}
+                                <span class="badge ${modeBadgeClass}">${modeLabel}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copy-overlay">
+                        ${prompt.link ? `
+                            <a href="${prompt.link}" target="_blank" class="action-btn" title="查看来源">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                来源
+                            </a>
+                        ` : ''}
+                        <button class="action-btn" onclick="copyToClipboard(decodeURIComponent('${safePrompt}'))">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            复制
+                        </button>
+                    </div>
+                `;
+                fragment.appendChild(card);
+            });
+
+            grid.appendChild(fragment);
+        }
+
+        // Filter Logic
+        function filterPrompts() {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            // Calculate one week ago timestamp
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+            let filtered = allPrompts.filter(prompt => {
+                // Filter out prompts with reference images for the web gallery
+                if (prompt.reference_image_urls && prompt.reference_image_urls.length > 0) {
+                    return false;
+                }
+
+                const matchesSearch = prompt.title.toLowerCase().includes(searchTerm) ||
+                    prompt.author.toLowerCase().includes(searchTerm) ||
+                    prompt.prompt.toLowerCase().includes(searchTerm) ||
+                    (prompt.sub_category && prompt.sub_category.toLowerCase().includes(searchTerm));
+
+                const matchesMode = currentFilter === 'all' || prompt.mode === currentFilter;
+
+                const matchesCategory = currentCategory === 'all' || prompt.category === currentCategory;
+
+                // Filter by recent week if enabled
+                let matchesRecentWeek = true;
+                if (recentWeekEnabled) {
+                    if (!prompt.created) {
+                        matchesRecentWeek = false;
+                    } else {
+                        const createdDate = new Date(prompt.created);
+                        matchesRecentWeek = createdDate >= oneWeekAgo;
+                    }
+                }
+
+                return matchesSearch && matchesMode && matchesCategory && matchesRecentWeek;
+            });
+
+            // Sort by created time (newest first) if recent week is enabled
+            if (recentWeekEnabled) {
+                filtered.sort((a, b) => {
+                    const dateA = a.created ? new Date(a.created) : new Date(0);
+                    const dateB = b.created ? new Date(b.created) : new Date(0);
+                    return dateB - dateA;
+                });
+            }
+
+            renderPrompts(filtered);
+        }
+
+        // Copy Functionality
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                showToast();
+            } catch (err) {
+                console.error('Failed to copy:', err);
+            }
+        }
+
+        function showToast() {
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // Event Listeners
+        searchInput.addEventListener('input', filterPrompts);
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const clickedFilter = btn.dataset.filter;
+
+                // Handle "recent-week" button separately
+                if (clickedFilter === 'recent-week') {
+                    if (btn.classList.contains('active')) {
+                        btn.classList.remove('active');
+                        recentWeekEnabled = false;
+                    } else {
+                        btn.classList.add('active');
+                        recentWeekEnabled = true;
+                    }
+                    filterPrompts();
+                    return;
+                }
+
+                // 如果点击的是已选中的按钮，取消选中（显示全部）
+                if (btn.classList.contains('active')) {
+                    btn.classList.remove('active');
+                    currentFilter = 'all';
+                } else {
+                    // 取消 generate/edit 按钮的选中状态（不影响 recent-week）
+                    filterBtns.forEach(b => {
+                        if (b.dataset.filter !== 'recent-week') {
+                            b.classList.remove('active');
+                        }
+                    });
+                    // 选中当前按钮
+                    btn.classList.add('active');
+                    currentFilter = clickedFilter;
+                }
+
+                filterPrompts();
+            });
+        });
+
+        // Initialize
+        fetchPrompts();
+        fetchAnnouncements();
+
+    </script>
+</body>
+
+</html>

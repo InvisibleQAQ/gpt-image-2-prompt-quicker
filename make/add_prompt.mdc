@@ -1,0 +1,189 @@
+# 任务目标
+
+从所给信息中提取提示词,并更新到 `prompts.json` 文件中。
+
+---
+
+## 工作流程
+
+### 第零步:获取信息内容
+
+**如果所给信息是 URL(一个或多个):**
+- 使用 `https://r.jina.ai/{url}` 格式获取网页内容
+- 例如:如果用户提供 `https://example.com/prompts`,则访问 `https://r.jina.ai/https://example.com/prompts`
+- Jina AI Reader 会将网页转换为易于阅读的 Markdown格式
+
+**如果所给信息是文本:**
+- 直接使用提供的文本内容
+
+---
+
+### 第一步:提取提示词
+
+⚠️ **重要提醒:一个来源可能包含多个提示词,请仔细检查,不要遗漏任何一个!**
+
+从所给信息中识别并提取**所有**提示词,按照以下 JSON 格式整理:
+
+```json
+[
+    {
+        "title": "论文转教授白板板书(中英转换)",
+        "preview": "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/paper_to_whiteboard.jpg",
+        "prompt": "将这个论文转换为中文教授白板图片,帮助我理解信息",
+        "author": "@op7418",
+        "link": "https://x.com/op7418/status/1991806419948253508",
+        "mode": "generate",
+        "category": "学习",
+        "sub_category": "总结",
+        "created": "2025-12-08T21:30:00+08:00"
+    }
+]
+```
+
+---
+
+## 字段定义与约束
+
+### 必填字段
+
+| 字段 | 类型 | 说明 | 约束 |
+|------|------|------|------|
+| `title` | string | 提示词标题 | 简洁有吸引力,10-30字,能准确概括功能 |
+| `preview` | string | 预览图 URL | 必须使用 CDN 地址格式:`https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/{文件名}` |
+| `prompt` | string | 实际提示词内容 | 清晰可执行，避免模糊表述，如果是其他语言，请翻译成同等格式的中文 |
+| `author` | string | 作者信息 | 格式:`@用户名` 或 `平台@用户名` 或 `Official` |
+| `mode` | string | 生成模式 | 只能是 `generate`(文生图) 或 `edit`(编辑图片) |
+| `category` | string | 主分类 | 只能是:`学习`、`工作`、`生活`、`有趣`、`NSFW` |
+| `created` | string | 创建时间 | rfc3339 格式的时间字符串，如果不确定，使用 `date` 命令获取准确时间 |
+
+### 可选字段
+
+| 字段 | 类型 | 说明 | 约束 |
+|------|------|------|------|
+| `link` | string | 来源链接 | 完整的 URL,如果没有来源可省略 |
+| `sub_category` | string | 子分类 | 更细化的分类标签,如:`总结`、`穿搭`、`电商`、`装修`、`滤镜` 等 |
+
+---
+
+## 分类说明
+
+### `category` 分类标准
+
+- **学习**: 可用于学习教育目的,理解消化知识。例如:拍照解题、概念可视化、生物标本展示图
+- **工作**: 各行业的提效工具。例如:商务照、电商模特试穿、手绘草图转流程图
+- **生活**: 日常生活中会用到的,具有实用性。例如:换发型、换穿搭、智能消除路人、家具软装预览
+- **有趣**: 好玩但不实用,纯创意。例如:时空复现、重生之我是1美元钞票的头头
+- **NSFW**: 成人、擦边、色情内容
+
+### `mode` 判断标准
+
+- **`generate`**: 纯文生图,不需要用户上传任何图片
+- **`edit`**: 需要用户上传图片进行编辑、转换、合成等操作
+
+---
+
+## 预览图命名规范
+
+图片文件名应该:
+- 使用英文小写字母和下划线
+- 能够反映提示词的功能
+- 格式:`{功能描述}.jpg` 或 `{功能描述}.png`
+
+示例:
+- `paper_to_whiteboard.jpg` (论文转白板)
+- `business_portrait.jpg` (商务照)
+- `hairstyle_change.png` (换发型)
+
+---
+
+## 第二步:更新到 prompts.json
+
+将提取的提示词放到 `prompts.json` 文件的数组开头
+
+**注意事项:**
+- prompt 字段可能为多行，需要通过 \n 换行
+- 注意转义问题
+
+---
+
+## 第三步:处理预览图
+
+### 使用自动化脚本 (macOS Only)
+
+使用 `download_image.js` 脚本一键完成下载、压缩、保存 (无需安装任何依赖):
+
+```bash
+node make/download_image.js <预览图URL> [文件名]
+```
+
+**示例:**
+```bash
+# 指定文件名
+node make/download_image.js https://example.com/preview.jpg disney_3d_style
+```
+
+脚本会自动:
+- ✅ 下载图片
+- ✅ 使用 macOS 原生 `sips` 工具压缩
+- ✅ 统一转换为 JPG 格式
+- ✅ 保存并复制 CDN 路径
+
+### 手动处理步骤
+
+如果需要手动处理:
+
+1. **下载预览图**: 从来源获取预览图片
+2. **压缩图片**: 将图片压缩到 100KB 以内,保持清晰度
+3. **重命名**: 按照命名规范重命名文件
+4. **保存**: 将图片保存到 `images/` 文件夹
+
+---
+
+## 边界情况处理
+
+### 信息不完整时
+
+- 如果缺少 `author`,使用 `"Unknown"`
+- 如果缺少 `link`,省略该字段
+- 如果无法判断 `mode`,根据提示词内容推断:
+  - 提示词中提到"上传图片"、"图一"、"图二"、"参考图像" → `edit`
+  - 否则 → `generate`
+
+### 多个提示词时
+
+- 每个提示词单独成一个对象
+- 按照原始信息的顺序排列
+- 确保每个对象的字段完整
+
+### 分类不明确时
+
+优先级判断:
+1. 如果涉及学习知识 → `学习`
+2. 如果涉及工作场景 → `工作`
+3. 如果有明确生活应用 → `生活`
+4. 如果纯粹娱乐创意 → `有趣`
+5. 如果涉及成人内容 → `NSFW`
+
+---
+
+## 完整示例
+
+**输入信息:**
+```
+来自 @example_user 的提示词:
+"将自拍照转换成迪士尼3D风格角色"
+预览图: https://example.com/preview.jpg
+```
+
+**输出结果:**
+```json
+{
+    "title": "自拍转迪士尼3D风格",
+    "preview": "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/disney_3d_style.jpg",
+    "prompt": "将自拍照转换成迪士尼3D风格角色",
+    "author": "@example_user",
+    "mode": "edit",
+    "category": "生活",
+    "sub_category": "滤镜"
+}
+```

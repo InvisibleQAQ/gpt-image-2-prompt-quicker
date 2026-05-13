@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Banana Prompt Quicker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="slides-container">
+            <div class="slides">
+                <!-- Slide 1: Features (原 Slide 2) -->
+                <section class="slide" id="slide-1">
+                    <div class="content-wrapper">
+                        <h2>🍌提示词从未如此优雅</h2>
+                        <div class="guide-container">
+                            <img src="https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/guide.gif"
+                                alt="Banana Prompt Quicker Guide" class="guide-gif">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 2: Platforms (原 Slide 3) -->
+                <section class="slide" id="slide-2">
+                    <div class="content-wrapper">
+                        <h2>选择平台，即刻开始</h2>
+
+                        <div class="platforms-grid">
+                            <a href="https://gemini.google.com/" target="_blank" class="platform-card">
+                                <div class="platform-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                    </svg>
+                                </div>
+                                <h3>Gemini</h3>
+                                <span class="arrow">→</span>
+                            </a>
+                            <a href="https://aistudio.google.com/" target="_blank" class="platform-card">
+                                <div class="platform-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <h3>AI Studio</h3>
+                                <span class="arrow">→</span>
+                            </a>
+                            <a href="https://business.gemini.google/" target="_blank" class="platform-card">
+                                <div class="platform-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                </div>
+                                <h3>Gemini Enterprise</h3>
+                                <span class="arrow">→</span>
+                            </a>
+                            <div target="_blank" class="platform-card">
+                                <div class="platform-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                        </path>
+                                        <path d="M3 3l7 7-2 4 4-2 7 7" stroke-width="2.5"></path>
+                                    </svg>
+                                </div>
+                                <h3>任意网站，右键插入</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="pagination">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+            </div>
+            <div class="buttons">
+                <button id="btn-next" class="btn btn-primary">下一步</button>
+            </div>
+        </div>
+    </main>
+    <script src="onboarding.js"></script>
+</body>
+
+</html>

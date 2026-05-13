@@ -1,0 +1,21 @@
+*.pem
+extension.zip
+docs/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Dependencies
+node_modules/
+vendor/
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+.ace-tool/
+
+projects/
+.claude/

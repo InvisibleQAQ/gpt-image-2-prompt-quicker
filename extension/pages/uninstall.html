@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>很遗憾看到您离开 - Banana Prompt Quicker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onboarding.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .uninstall-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .feedback-form {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        textarea {
+            width: 100%;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 16px;
+            min-height: 120px;
+            resize: vertical;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
+            background: var(--background);
+        }
+
+        .btn-submit {
+            width: 100%;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        /* Dark mode adjustments for textarea */
+        @media (prefers-color-scheme: dark) {
+            textarea:focus {
+                box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.15);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="uninstall-container">
+        <div class="logo-container">
+            <span style="font-size: 72px;">🍌</span>
+        </div>
+        <h1>很遗憾看到您离开</h1>
+        <p class="subtitle">您的反馈对我们至关重要，能告诉我们原因吗？</p>
+
+        <form class="feedback-form" action="https://formsubmit.co/ysking7402@gmail.com" method="POST">
+            <!-- Configuration -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Banana Prompt Quicker 卸载反馈">
+            <input type="hidden" name="_template" value="table">
+
+            <div class="form-group">
+                <textarea name="reason" placeholder="请输入您的建议或卸载原因..." required autofocus></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">帮助改进</button>
+        </form>
+
+        <div style="margin-top: 24px;">
+            <a href="https://github.com/glidea/banana-prompt-quicker/issues" target="_blank" class="btn btn-text"
+                style="font-size: 13px;">
+                在 GitHub 上反馈问题
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>
