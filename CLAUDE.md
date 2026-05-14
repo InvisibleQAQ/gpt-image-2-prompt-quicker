@@ -22,6 +22,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Check root files: `ls -la`
 - Check extension contents: `ls -la extension`
 - Merge docs markdown: `python3 make/merge_docs.py`
+- Package the extension directory into a ZIP from WSL2/Linux: `bash make/zip_extension.sh`
 
 ### Image helper scripts
 
@@ -122,8 +123,14 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 - target-button lookup
 - theme detection
 - button rendering/placement when platform-specific UI differs
+- host-specific prompt insertion quirks (for example, ChatGPT uses a ProseMirror editor and should insert text without auto-uploading reference images)
 
 `DynamicSite` is the escape hatch for unsupported hosts. It reads selectors from remote `config.json`, so selector changes usually belong in `config.json` before code changes.
+
+### Tests
+
+- Minimal regression tests live in `extension/tests/` and use Node's built-in `node:test` runner.
+- Run a focused regression with `node --test extension/tests/<file>.test.js`.
 
 ### Pages outside the extension runtime
 

@@ -1,10 +1,26 @@
 class ChatGPTSite extends BaseSite {
     async findPromptInput() {
-        return this.findElement(
-            'chatgpt',
-            'promptInput',
-            '#prompt-textarea.ProseMirror[contenteditable="true"], div.ProseMirror#prompt-textarea[contenteditable="true"], textarea[name="prompt-textarea"]'
-        );
+        const localSelectors = [
+            '#prompt-textarea.ProseMirror[contenteditable="true"]',
+            'div.ProseMirror#prompt-textarea[contenteditable="true"]',
+            'textarea[name="prompt-textarea"]'
+        ];
+
+        for (const selector of localSelectors) {
+            const el = window.DOM.querySelectorShadowDom(selector);
+            if (el) return el;
+        }
+
+        const remoteSelector = await this.getRemoteSelector('chatgpt', 'promptInput');
+        if (!remoteSelector) return null;
+
+        const remoteSelectors = remoteSelector.split(',').map(s => s.trim()).filter(Boolean);
+        for (const selector of remoteSelectors) {
+            const el = window.DOM.querySelectorShadowDom(selector);
+            if (el) return el;
+        }
+
+        return null;
     }
 
     async findTargetButton() {
@@ -13,6 +29,86 @@ class ChatGPTSite extends BaseSite {
             'insertButton',
             'button[data-testid="composer-plus-btn"], button#composer-plus-btn'
         );
+    }
+
+    async insertPrompt(promptData) {
+        const promptText = typeof promptData === 'string' ? promptData : promptData.prompt;
+        const el = await this.findPromptInput();
+        if (!el || !this.isEditableElement(el)) {
+            console.log('Banana: ChatGPT insertPrompt debug', {
+                foundElement: false,
+                tagName: el?.tagName || null,
+                isContentEditable: !!el?.isContentEditable
+            });
+            return;
+        }
+
+        console.log('Banana: ChatGPT insertPrompt debug', {
+            foundElement: true,
+            tagName: el.tagName,
+            id: el.id || null,
+            className: el.className || null,
+            isContentEditable: !!el.isContentEditable,
+            textLength: promptText?.length || 0
+        });
+
+        if (!el.isContentEditable) {
+            console.log('Banana: ChatGPT insertPrompt path', 'textarea-fallback');
+            await super.insertPrompt(promptText);
+            return;
+        }
+
+        el.focus();
+
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        let inserted = false;
+        if (typeof document.execCommand === 'function') {
+            inserted = document.execCommand('insertText', false, promptText);
+        }
+        console.log('Banana: ChatGPT insertPrompt execCommand', inserted);
+
+        if (!inserted) {
+            console.log('Banana: ChatGPT insertPrompt path', 'innerHTML-fallback');
+            el.innerHTML = promptText.split('\n').map(line => {
+                const escaped = line
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+                return `<p>${escaped || '<br>'}</p>`;
+            }).join('');
+
+            range.selectNodeContents(el);
+            range.collapse(false);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else {
+            console.log('Banana: ChatGPT insertPrompt path', 'execCommand');
+        }
+
+        const inputEvent = typeof InputEvent === 'function'
+            ? new InputEvent('input', {
+                bubbles: true,
+                cancelable: true,
+                composed: true,
+                inputType: 'insertText',
+                data: promptText
+            })
+            : new Event('input', { bubbles: true });
+        el.dispatchEvent(inputEvent);
+        console.log('Banana: ChatGPT insertPrompt dispatched', {
+            inputType: inputEvent.inputType || 'plain-input',
+            dataLength: inputEvent.data?.length || 0,
+            finalInnerHTML: el.innerHTML
+        });
+
+        if (this.modal) {
+            this.modal.hide();
+        }
     }
 
     getCurrentTheme() {
