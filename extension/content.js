@@ -7,12 +7,6 @@ async function init() {
 
     if (dynamicSiteConfig) {
         site = new DynamicSite(dynamicSiteConfig);
-    } else if (hostname.includes('aistudio')) {
-        site = new AIStudioSite();
-    } else if (hostname.includes('business.gemini.google')) {
-        site = new GeminiEnterpriseSite();
-    } else if (hostname.includes('gemini')) {
-        site = new GeminiSite();
     } else if (hostname.includes('chatgpt.com')) {
         site = new ChatGPTSite();
     } else {
@@ -23,8 +17,8 @@ async function init() {
     const modal = new BananaModal(site);
     site.modal = modal;
 
-    // Only initialize button and observers on specific platforms
-    if (hostname.includes('aistudio') || hostname.includes('gemini') || hostname.includes('chatgpt.com') || dynamicSiteConfig) {
+    // Only initialize button and observers on supported platforms
+    if (hostname.includes('chatgpt.com') || dynamicSiteConfig) {
         site.ensureButtonByWatch();
     }
 

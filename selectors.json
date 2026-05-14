@@ -1,11 +1,3 @@
 {
-    "comment": "Deprecated, use config.json",
-    "aistudio": {
-        "promptInput": "ms-prompt-input-wrapper textarea",
-        "insertButton": "ms-run-button button"
-    },
-    "gemini": {
-        "promptInput": "div.ql-editor[contenteditable=\"true\"]",
-        "insertButton": "button.toolbox-drawer-item-deselect-button:has(mat-icon[fonticon=\"photo_prints\"])"
-    }
+    "comment": "Deprecated, use config.json"
 }

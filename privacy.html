@@ -35,7 +35,7 @@
     <h2>Data Collection and Usage</h2>
     <p>Banana Prompt Quicker is committed to protecting your privacy. Here's how we handle your data:</p>
     <ul>
-        <li>We only access webpage content on Google AI Studio and Gemini to insert the prompt selector interface</li>
+        <li>We inject content scripts on &lt;all_urls&gt; to add the ChatGPT button and open the prompt modal from the right-click menu on pages with editable fields</li>
         <li>All processing is done locally in your browser</li>
         <li>Your favorited prompts and preferences are stored locally in your browser</li>
         <li>We do not collect any personal identification information</li>
@@ -47,10 +47,9 @@
     <p>Our extension requires certain permissions to function:</p>
     <ul>
         <li><strong>Storage:</strong> To save your favorited prompts and custom prompts locally in your browser</li>
-        <li><strong>Host Permissions (raw.githubusercontent.com):</strong> To fetch the latest prompt library updates
-            from our GitHub repository</li>
-        <li><strong>Content Scripts (aistudio.google.com, gemini.google.com):</strong> To inject the banana button and
-            prompt selection interface on these pages</li>
+        <li><strong>Host Permissions (raw.githubusercontent.com, cdn.jsdelivr.net):</strong> To fetch the latest prompt library updates
+            and related hosted assets from our public repositories</li>
+        <li><strong>Content Scripts:</strong> To inject the ChatGPT button and support right-click modal opening on editable fields across webpages</li>
     </ul>
 
     <h2>Data Sharing</h2>

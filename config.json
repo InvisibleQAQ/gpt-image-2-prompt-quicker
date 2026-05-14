@@ -1,17 +1,5 @@
 {
     "selectors": {
-        "aistudio": {
-            "promptInput": "ms-prompt-box textarea",
-            "insertButton": "ms-prompt-box ms-run-button button"
-        },
-        "gemini": {
-            "promptInput": "div.ql-editor[contenteditable=\"true\"]",
-            "insertButton": "button.toolbox-drawer-item-deselect-button:has(mat-icon[fonticon=\"photo_prints\"])"
-        },
-        "gemini_enterprise": {
-            "promptInput": ".ProseMirror",
-            "insertButton": ".tools-button-container"
-        },
         "chatgpt": {
             "promptInput": "#prompt-textarea.ProseMirror[contenteditable=\"true\"], div.ProseMirror#prompt-textarea[contenteditable=\"true\"], textarea[name=\"prompt-textarea\"]",
             "insertButton": "button[data-testid=\"composer-plus-btn\"], button#composer-plus-btn"
@@ -30,12 +18,5 @@
         ]
     },
     "announcements": [
-        {
-            "content": "29元500次sonnet，wx扫码联系",
-            "priority": 4
-        },
-        {
-            "content": "Gemini 官网审查过于严格，部分提示词生成失败，请尝试其他渠道，如 Gemini Enterprise"
-        }
     ]
 }

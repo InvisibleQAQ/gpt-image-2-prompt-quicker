@@ -9,10 +9,7 @@
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/intro.png?raw=true" width="800">
 
 已支持网站：
-* [Gemini 官网](https://gemini.google.com/)
-* [Google AI Studio](https://aistudio.google.com/)
-* [Gemini Enterprise](https://business.gemini.google/)
-* [kokorolab](https://kokorolab.net/zh/home?referral=JBM9AGUV) 👈🏻 金主爸爸。欢迎更多垂类生图场景的应用合作！
+* [ChatGPT](https://chatgpt.com/)
 * 任意网站输入框，右键插入！
 * 扩展中...
 
@@ -42,7 +39,7 @@ https://chromewebstore.google.com/detail/banana-prompt-quicker/hgfgfocicepifboli
 
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/install.png?raw=true" width="300">
 
-3. 访问 [Google AI Studio](https://aistudio.google.com/) 或 [Gemini](https://gemini.google.com/) 开始使用
+3. 访问 [ChatGPT](https://chatgpt.com/) 开始使用
 > 或在任意网站任意输入框，右键选择【🍌 Insert Banana Prompts】
 
 ### 移动端
@@ -94,8 +91,8 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
 ### V1.4.0
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/v1.4.0-promo.png?raw=true" width="300">
 
-  * 支持 Gemini Enterprise
-  * 支持 Dynamic Site，你可以在 config.json 中添加 JS selector 适配其它不同渠道！
+  * 支持企业版站点适配
+  * 支持 Dynamic Site，可在 config.json 中添加 selector 适配其它渠道
   * 支持子分类
   * 支持编辑自定义提示词
   * UI/UX 优化
@@ -106,13 +103,13 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
 
   * 支持在任意网站通过右键菜单进入 Prompt 画廊，插入任意输入框。🍌 Anywhere!
   * 支持灵光模式，引导完成生图需求（"选择比填空容易"）
-  * Gemini 再次进入保留页面状态
+  * 返回项目主页时保留页面状态
   * 自定义 Prompt 支持上传图片
   * 插入提示词后，光标默认在末尾，便于补充需求
   * 增加随机排序，多一点新鲜感，多一点随手一试
 
 ### V1.2.1
-  * 修复 Gemini 官网按钮失效，并支持远程热修复
+  * 修复项目主页按钮失效，并支持远程热修复
 
 </details>
 

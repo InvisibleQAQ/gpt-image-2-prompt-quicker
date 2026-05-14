@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSlide(currentSlide + 1);
         } else {
             // Last slide action: Close tab or redirect
-            // Ideally we just let them click the platform links, 
-            // but if they click "Get Started", we can default to Gemini
-            window.open('https://gemini.google.com/', '_blank');
+            // Ideally we just let them click the platform links,
+            // but if they click "Get Started", we default to ChatGPT
+            window.open('https://chatgpt.com/', '_blank');
             // Optional: Close onboarding tab after delay?
             // window.close(); 
         }
