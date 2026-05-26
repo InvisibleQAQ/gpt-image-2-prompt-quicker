@@ -197,7 +197,7 @@
         "title": "阿凡达合照",
         "preview": "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/afadan.png",
         "reference_image_urls": [
-            "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/afadan_ref1.jpg"
+            "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/afanda_ref1.jpg"
         ],
         "prompt": "画一张与图1角色在电影院的合照。并排坐在红色影院座椅上，画面构图紧凑，二位主体靠得很近，头部靠在一起，面带自然微笑，眼神直视镜头。注意保留参考人物的特征，不要换脸，人物脸部不能有任何改变！！！",
         "author": "Official",

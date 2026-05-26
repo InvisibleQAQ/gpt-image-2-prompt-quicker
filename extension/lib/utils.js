@@ -96,7 +96,13 @@ window.Utils = {
 
     async urlToFile(url, filename) {
         const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Image fetch failed (${response.status})`);
+        }
         const blob = await response.blob();
+        if (!blob.type.startsWith('image/')) {
+            throw new Error(`Unexpected content type: ${blob.type || 'unknown'}`);
+        }
         return new File([blob], filename, { type: blob.type });
     }
 };

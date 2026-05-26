@@ -17,7 +17,7 @@ window.PromptManager = {
                                     const file = await window.Utils.urlToFile(url, 'image.jpg');
                                     return await window.Utils.compressReferenceImage(file);
                                 } catch (err) {
-                                    console.error(`Failed to process image ${url}:`, err);
+                                    console.warn(`Skipped invalid reference image ${url}:`, err);
                                     return null;
                                 }
                             })

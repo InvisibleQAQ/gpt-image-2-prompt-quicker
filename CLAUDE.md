@@ -85,6 +85,7 @@ There are two separate data sources with different purposes:
 - `prompts.json` at repo root:
   - prompt catalog fetched remotely at runtime
   - merged in the client with user-authored prompts from `chrome.storage.local`
+  - `reference_image_urls` entries are fetched and precompressed client-side; invalid or non-image URLs are skipped per entry rather than aborting the whole prompt list
 
 The fetch path is:
 
