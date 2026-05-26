@@ -22,12 +22,25 @@ class ChatGPTSite extends BaseSite {
     }
 
     createButton() {
+        const logo = window.DOM.create('img', {
+            src: chrome.runtime.getURL('icon128.png'),
+            alt: '',
+            'aria-hidden': 'true'
+        });
+
+        logo.style.cssText = `
+            width: 18px;
+            height: 18px;
+            display: block;
+            object-fit: contain;
+            pointer-events: none;
+        `;
+
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
             className: 'composer-btn banana-prompt-button',
-            'aria-label': '🍌 Prompts',
+            'aria-label': 'Prompts',
             title: '快捷提示',
-            textContent: '🍌',
             onmouseenter: (e) => {
                 const isDark = this.getCurrentTheme() === 'dark';
                 e.currentTarget.style.backgroundColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.08)';
@@ -40,7 +53,7 @@ class ChatGPTSite extends BaseSite {
                 e.stopPropagation();
                 if (this.modal) this.modal.show();
             }
-        });
+        }, [logo]);
 
         btn.style.cssText = `
             display: inline-flex;
@@ -56,7 +69,6 @@ class ChatGPTSite extends BaseSite {
             border-radius: 9999px;
             background: transparent;
             cursor: pointer;
-            font-size: 18px;
             line-height: 1;
             transition: background-color 0.2s ease;
         `;

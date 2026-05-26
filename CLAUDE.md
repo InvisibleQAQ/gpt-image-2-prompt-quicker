@@ -123,6 +123,7 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 - target-button lookup
 - theme detection
 - button rendering/placement when platform-specific UI differs
+- `ChatGPTSite` renders the launcher button with the extension icon via `chrome.runtime.getURL('icon128.png')`, so icon asset changes must stay in sync with `manifest.json` web-accessible resources
 
 `DynamicSite` is the escape hatch for unsupported hosts. It reads selectors from remote `config.json`, so selector changes usually belong in `config.json` before code changes.
 

@@ -45,6 +45,16 @@
             "run_at": "document_idle"
         }
     ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icon128.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
     "browser_specific_settings": {
         "gecko": {
             "id": "banana-prompt-quicker@glidea.io",
