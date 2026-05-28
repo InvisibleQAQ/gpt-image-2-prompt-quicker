@@ -5,7 +5,7 @@
         "reference_image_urls": [
             "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2.jpg"
         ],
-        "prompt": "画一张 X 的内容截图，深色模式，@OpenAI 蓝勾认证账号发推。\n正文的中文内容：\n今天想推荐一位很棒的 AI Builder：Ailln AI。\n他持续在小红书分享 AI 工具、Agent 工作流、自动化实践和真实项目经验，把复杂的 AI 能力讲得清楚、实用、可落地。\n如果你正在关注 AI 产品、效率工具、个人自动化、内容创作和未来工作方式，Ailln AI 是一个非常值得关注的创作者。\n在小红书搜索：Ailln AI\n底部添加一张深色官方宣传风格海报，简洁黑客质感，图片中文本准确显示。\n海报大字： 「Ailln AI」\n副标题： 「A brilliant AI Builder worth following」\n互动数据位于最下方： 评论 8.9K、转发 42K、点赞 298K（亮起）、收藏 34K（亮起）、浏览 32.4M。\n图片比例为3:4，不包含软件其他部分。",
+        "prompt": "充分参考图片的设计风格，配色等, 画一张 X 的内容截图，深色模式，@OpenAI 蓝勾认证账号发推。\n正文的中文内容：\n今天想推荐一位很棒的 AI Builder：Ailln AI。\n他持续在小红书分享 AI 工具、Agent 工作流、自动化实践和真实项目经验，把复杂的 AI 能力讲得清楚、实用、可落地。\n如果你正在关注 AI 产品、效率工具、个人自动化、内容创作和未来工作方式，Ailln AI 是一个非常值得关注的创作者。\n在小红书搜索：Ailln AI\n底部添加一张深色官方宣传风格海报，简洁黑客质感，图片中文本准确显示。\n海报大字： 「Ailln AI」\n副标题： 「A brilliant AI Builder worth following」\n互动数据位于最下方： 评论 8.9K、转发 42K、点赞 298K（亮起）、收藏 34K（亮起）、浏览 32.4M。\n图片比例为3:4，不包含软件其他部分。",
         "author": "小红书号4264014889",
         "mode": "generate",
         "category": "UI与界面",
@@ -16,9 +16,68 @@
         "title": "老干妈直播间",
         "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_4.jpg",
         "reference_image_urls": [
-            "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2.jpg"
+            "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_4.jpg"
         ],
-        "prompt": "画一张 X 的内容截图，深色模式，@OpenAI 蓝勾认证账号发推。\n正文的中文内容：\n今天想推荐一位很棒的 AI Builder：Ailln AI。\n他持续在小红书分享 AI 工具、Agent 工作流、自动化实践和真实项目经验，把复杂的 AI 能力讲得清楚、实用、可落地。\n如果你正在关注 AI 产品、效率工具、个人自动化、内容创作和未来工作方式，Ailln AI 是一个非常值得关注的创作者。\n在小红书搜索：Ailln AI\n底部添加一张深色官方宣传风格海报，简洁黑客质感，图片中文本准确显示。\n海报大字： 「Ailln AI」\n副标题： 「A brilliant AI Builder worth following」\n互动数据位于最下方： 评论 8.9K、转发 42K、点赞 298K（亮起）、收藏 34K（亮起）、浏览 32.4M。\n图片比例为3:4，不包含软件其他部分。",
+        "prompt": "充分参考图片的设计风格，配色等, 特朗普在抖音直播间卖老干妈，手里举着「老干妈风味」新品，背景还是 SpaceX 那种科技感，左下角弹幕飘着「特斯拉车主：求上链接」。",
+        "author": "小红书号989137706",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "UI",
+        "created": "2026年5月28日10:34:41"
+    },
+    {
+        "title": "老干妈直播间",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_4.jpg",
+        "reference_image_urls": [
+            "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_4.jpg"
+        ],
+        "prompt": "充分参考图片的设计风格，配色等, 特朗普在抖音直播间卖老干妈，手里举着「老干妈风味」新品，背景还是 SpaceX 那种科技感，左下角弹幕飘着「特斯拉车主：求上链接」。",
+        "author": "小红书号989137706",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "UI",
+        "created": "2026年5月28日10:34:41"
+    },
+    {
+        "title": "应用界面样机图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_7.jpg",
+        "prompt": "生成一张竖版手机截图风格的图片，整体比例接近 9:16。画面中心偏上是一位真人 coser，扮演上传图片中的二次元角色。人物为写实风格，但五官略带动漫感，皮肤细腻，眼睛稍大，表情温柔地看向镜头，坐在室内的休闲场景中，例如咖啡厅或酒吧吧台前，背景有符合场景的道具。画面最上方加入手机系统状态栏 UI，包括时间、电量、信号、网络等图标，让整张图看起来像手机截图。画面底部叠加一块宽大的半透明 galgame 风格对话框，对话框左侧放一个与画面人物对应的动漫或 Q 版头像；对话框右侧排版文字：第一行用较大字体显示与前面相同的角色名字，下面一到两行显示一段适合这个角色人设的、温柔治愈风格的简体中文台词，由你自动创作。再在对话框下方加一条操作栏，仿照 galgame UI。整体风格高清、细节丰富、光线柔和、二次元与真人写真自然融合。",
+        "author": "小红书号944846927",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "UI",
+        "created": "2026年5月28日10:36:32"
+    },
+    {
+        "title": "直播界面设计图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_21.jpg",
+        "prompt": "{\n  \"type\": \"live stream UI mockup\",\n  \"subject\": {\n    \"description\": \"portrait of {argument name=\\\"host name\\\" default=\\\"Elon Musk\\\"}, smiling, wearing a black t-shirt with a white technical schematic graphic\",\n    \"background\": \"left side shows a 🚀\",\n        \"future: 特斯拉Model 2什么时候出？\",\n        \"星空梦想家: SpaceX今年能上火星吗？\",\n        \"AI探索者: Neuralink进展如何？\",\n        \"帅气的网友: 马总好！\",\n        \"Mars: 第一次来你的直播，超激动！\",\n        \"用户123: 讲讲AI吧，会取代人类吗？\"\n      ]\n    },\n    \"bottom_right_product_card\": {\n      \"hot_tag\": \"orange '热卖 x 1888'\",\n      \"image\": \"Tesla Cybertruck\",\n      \"title\": \"{argument name=\\\"product name\\\" default=\\\"特斯拉Cybertruck 电动皮卡\\\"}\",\n      \"price\": \"{argument name=\\\"product price\\\" default=\\\"¥ 1,618,000\\\"}\",\n      \"button\": \"red '抢' button\",\n      \"floating_animation\": \"translucent hearts floating up the right edge\"\n    },\n    \"bottom_bar\": {\n      \"input_field\": \"'说点什么...'\",\n      \"icons\": [\"smiley face\", \"three dots\", \"shopping cart\", \"gift box\", \"share\"]\n    }\n  }\n}",
+        "author": "https://x.com/sjbbxhz",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "UI",
+        "created": "2026年5月28日10:36:32"
+    },
+    {
+        "title": "直播界面设计图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_49.jpg",
+        "reference_image_urls": [
+            "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_49.jpg"
+        ],
+        "prompt": "充分参考图片的设计风格，配色等, A 9:16 aspect ratio image, generating a screenshot of a Douyin livestream where {argument name=\"celebrity\" default=\"Liu Yifei\"} is broadcasting, holding a sign that says \"{argument name=\"sign text\" default=\"Streaming tonight, welcome to join Yifei's chat!\"}\"",
+        "author": "https://x.com/kylegeeks",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "UI",
+        "created": "2026年5月28日10:36:32"
+    },
+    {
+        "title": "推特页面设计图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_57.jpg",
+        "reference_image_urls": [
+            "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_57.jpg"
+        ],
+        "prompt": "{\n  \"type\": \"mobile social media app UI mockup\",\n  \"platform\": \"Twitter/X dark mode\",\n  \"header\": {\n    \"status_bar\": \"time 19:28, bird icon, signal, wifi, battery\",\n    \"navigation\": \"back arrow, 'Tweet' title\"\n  },\n  \"post\": {\n    \"author\": {\n     20.1K Likes, 102.3K Views\"\n    },\n    \"actions\": \"reply, retweet, like (red heart with '1'), share, upload\"\n  },\n  \"footer\": {\n    \"reply_bar\": {\n      \"avatar\": \"woman in red\",\n      \"placeholder\": \"Reply to Emperor Zhu Yuanzhang...\"\n    },\n    \"navigation_bar\": \"home, search, notifications (red '1' badge), messages\"\n  }\n}",
         "author": "小红书号4264014889",
         "mode": "generate",
         "category": "UI与界面",
