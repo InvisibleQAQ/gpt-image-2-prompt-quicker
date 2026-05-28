@@ -138,7 +138,7 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 
 - `extension/pages/onboarding.html` + `onboarding.js`: first-install onboarding opened by the background worker
 - `extension/pages/uninstall.html`: uninstall feedback page set through `chrome.runtime.setUninstallURL`
-- root `index.html`: public landing page / promo site, not part of the extension runtime
+- root `index.html`: public landing page / promo site, not part of the extension runtime; it fetches the same remote `prompts.json` / `config.json` as the extension and must bind card actions with DOM listeners rather than inline event-handler strings because prompt text can contain quotes
 - root `privacy.html`: static privacy page
 - root `code-reward-models.md`: research note comparing open code reward models, pairwise training, and pairwise-vs-scalar inference
 - `docs/`: study-oriented architecture notes for learning this repository and cloning its extension patterns; start at `docs/README.md`

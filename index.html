@@ -1207,8 +1207,8 @@
     </div>
 
     <script>
-        const GITHUB_PROMPTS_URL = 'https://raw.githubusercontent.com/glidea/banana-prompt-quicker/main/prompts.json';
-        const GITHUB_CONFIG_URL = 'https://raw.githubusercontent.com/glidea/banana-prompt-quicker/main/config.json';
+        const GITHUB_PROMPTS_URL = 'https://raw.githubusercontent.com/InvisibleQAQ/gpt-image-2-prompt-quicker/main/prompts.json';
+        const GITHUB_CONFIG_URL = 'https://raw.githubusercontent.com/InvisibleQAQ/gpt-image-2-prompt-quicker/main/config.json';
         let allPrompts = [];
         let currentFilter = 'all';
         let currentCategory = 'all';
@@ -1431,6 +1431,48 @@
         });
 
         // Render Prompts
+        function createActionIcon(type) {
+            const svgNS = 'http://www.w3.org/2000/svg';
+            const svg = document.createElementNS(svgNS, 'svg');
+            svg.setAttribute('width', '16');
+            svg.setAttribute('height', '16');
+            svg.setAttribute('viewBox', '0 0 24 24');
+            svg.setAttribute('fill', 'none');
+            svg.setAttribute('stroke', 'currentColor');
+            svg.setAttribute('stroke-width', '2');
+            svg.setAttribute('stroke-linecap', 'round');
+            svg.setAttribute('stroke-linejoin', 'round');
+
+            if (type === 'source') {
+                const path = document.createElementNS(svgNS, 'path');
+                path.setAttribute('d', 'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6');
+                const polyline = document.createElementNS(svgNS, 'polyline');
+                polyline.setAttribute('points', '15 3 21 3 21 9');
+                const line = document.createElementNS(svgNS, 'line');
+                line.setAttribute('x1', '10');
+                line.setAttribute('y1', '14');
+                line.setAttribute('x2', '21');
+                line.setAttribute('y2', '3');
+                svg.appendChild(path);
+                svg.appendChild(polyline);
+                svg.appendChild(line);
+                return svg;
+            }
+
+            const rect = document.createElementNS(svgNS, 'rect');
+            rect.setAttribute('x', '9');
+            rect.setAttribute('y', '9');
+            rect.setAttribute('width', '13');
+            rect.setAttribute('height', '13');
+            rect.setAttribute('rx', '2');
+            rect.setAttribute('ry', '2');
+            const path = document.createElementNS(svgNS, 'path');
+            path.setAttribute('d', 'M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1');
+            svg.appendChild(rect);
+            svg.appendChild(path);
+            return svg;
+        }
+
         function renderPrompts(prompts) {
             grid.innerHTML = '';
 
@@ -1444,42 +1486,77 @@
             prompts.forEach(prompt => {
                 const card = document.createElement('div');
                 card.className = 'card';
-                // card.onclick removed to prevent conflict with buttons
 
-                const modeBadgeClass = prompt.mode === 'edit' ? 'badge-edit' : 'badge-generate';
-                const modeLabel = prompt.mode === 'edit' ? '编辑' : '文生图';
+                const image = document.createElement('img');
+                image.className = 'card-image';
+                image.loading = 'lazy';
+                image.src = prompt.preview;
+                image.alt = prompt.title;
 
-                // Use encodeURIComponent to safely handle all special characters including newlines
-                const safePrompt = encodeURIComponent(prompt.prompt);
+                const content = document.createElement('div');
+                content.className = 'card-content';
 
-                card.innerHTML = `
-                    <img src="${prompt.preview}" alt="${prompt.title}" class="card-image" loading="lazy">
-                    <div class="card-content">
-                        <div class="card-title" title="${prompt.title}">${prompt.title}</div>
-                        <div class="card-meta">
-                            <div class="author">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                <span>${prompt.author}</span>
-                            </div>
-                            <div style="display: flex; gap: 6px; align-items: center;">
-                                ${prompt.sub_category ? `<span class="badge badge-subcategory">${prompt.sub_category}</span>` : ''}
-                                <span class="badge ${modeBadgeClass}">${modeLabel}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copy-overlay">
-                        ${prompt.link ? `
-                            <a href="${prompt.link}" target="_blank" class="action-btn" title="查看来源">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                                来源
-                            </a>
-                        ` : ''}
-                        <button class="action-btn" onclick="copyToClipboard(decodeURIComponent('${safePrompt}'))">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                            复制
-                        </button>
-                    </div>
-                `;
+                const title = document.createElement('div');
+                title.className = 'card-title';
+                title.title = prompt.title;
+                title.textContent = prompt.title;
+                content.appendChild(title);
+
+                const meta = document.createElement('div');
+                meta.className = 'card-meta';
+
+                const author = document.createElement('div');
+                author.className = 'author';
+                author.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span></span>';
+                author.querySelector('span').textContent = prompt.author;
+                meta.appendChild(author);
+
+                const badgeGroup = document.createElement('div');
+                badgeGroup.style.display = 'flex';
+                badgeGroup.style.gap = '6px';
+                badgeGroup.style.alignItems = 'center';
+
+                if (prompt.sub_category) {
+                    const subCategoryBadge = document.createElement('span');
+                    subCategoryBadge.className = 'badge badge-subcategory';
+                    subCategoryBadge.textContent = prompt.sub_category;
+                    badgeGroup.appendChild(subCategoryBadge);
+                }
+
+                const modeBadge = document.createElement('span');
+                modeBadge.className = `badge ${prompt.mode === 'edit' ? 'badge-edit' : 'badge-generate'}`;
+                modeBadge.textContent = prompt.mode === 'edit' ? '编辑' : '文生图';
+                badgeGroup.appendChild(modeBadge);
+
+                meta.appendChild(badgeGroup);
+                content.appendChild(meta);
+
+                const overlay = document.createElement('div');
+                overlay.className = 'copy-overlay';
+
+                if (prompt.link) {
+                    const sourceLink = document.createElement('a');
+                    sourceLink.href = prompt.link;
+                    sourceLink.target = '_blank';
+                    sourceLink.rel = 'noopener noreferrer';
+                    sourceLink.className = 'action-btn';
+                    sourceLink.title = '查看来源';
+                    sourceLink.appendChild(createActionIcon('source'));
+                    sourceLink.appendChild(document.createTextNode('来源'));
+                    overlay.appendChild(sourceLink);
+                }
+
+                const copyButton = document.createElement('button');
+                copyButton.type = 'button';
+                copyButton.className = 'action-btn';
+                copyButton.appendChild(createActionIcon('copy'));
+                copyButton.appendChild(document.createTextNode('复制'));
+                copyButton.addEventListener('click', () => copyToClipboard(prompt.prompt));
+                overlay.appendChild(copyButton);
+
+                card.appendChild(image);
+                card.appendChild(content);
+                card.appendChild(overlay);
                 fragment.appendChild(card);
             });
 
@@ -1495,11 +1572,6 @@
             oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
             let filtered = allPrompts.filter(prompt => {
-                // Filter out prompts with reference images for the web gallery
-                if (prompt.reference_image_urls && prompt.reference_image_urls.length > 0) {
-                    return false;
-                }
-
                 const matchesSearch = prompt.title.toLowerCase().includes(searchTerm) ||
                     prompt.author.toLowerCase().includes(searchTerm) ||
                     prompt.prompt.toLowerCase().includes(searchTerm) ||
