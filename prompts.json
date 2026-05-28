@@ -65,10 +65,200 @@
             "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_57.jpg"
         ],
         "prompt": "{\n  \"type\": \"mobile social media app UI mockup\",\n  \"platform\": \"Twitter/X dark mode\",\n  \"header\": {\n    \"status_bar\": \"time 19:28, bird icon, signal, wifi, battery\",\n    \"navigation\": \"back arrow, 'Tweet' title\"\n  },\n  \"post\": {\n    \"author\": {\n     20.1K Likes, 102.3K Views\"\n    },\n    \"actions\": \"reply, retweet, like (red heart with '1'), share, upload\"\n  },\n  \"footer\": {\n    \"reply_bar\": {\n      \"avatar\": \"woman in red\",\n      \"placeholder\": \"Reply to Emperor Zhu Yuanzhang...\"\n    },\n    \"navigation_bar\": \"home, search, notifications (red '1' badge), messages\"\n  }\n}",
-        "author": "小红书号4264014889",
+        "author": "https://x.com/liyue_ai",
         "mode": "generate",
         "category": "UI与界面",
         "sub_category": "UI",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "游戏界面截图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_91.jpg",
+        "prompt": "9-slot inventory hotbar. The hotbar contains, from left to right: a selected blue tool with a green highlight box, a green tool, a knife, a wrench with the number '3', a piece of meat with '6', a lantern with '24', a dirt block with '10', a bucket, and a sponge block.",
+        "author": "https://x.com/wolfaidev",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "视频封面界面图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_92.jpg",
+        "prompt": "An anime-style YouTube stream thumbnail featuring a cheerful female VTuber. She has long {argument name=\"hair color\" default=\"pink with light blue inner highlights\"} hair, blue eyes, and wears black and white cat-ear headphones with a boom mic. She wears a white collared shirt with a black and pink star ribbon and a black choker, smiling with one hand near her chin. The background is a gaming room with {argument name=\"room lighting\" default=\"purple and blue neon\"} lighting, showing a desk equipped with 1 white keyboard, 1 mug, 1 glowing cat figure, 1 game controller, and 1 streaming microphone. The left side features large, bold, pop-art Japanese typography: a bright pink top word \"{argument name=\"main text line 1\" default=\"雑談\"}\" and a bright blue bottom word \"{argument name=\"main text line 2\" default=\"配信\"}\". Below is a pink banner reading \"{argument name=\"subtitle text\" default=\"今夜もゆるっとトーク!\"}\". A red \"LIVE\" badge sits in the top left. Floating speech bubbles, stars, and hearts decorate the composition.",
+        "author": "https://x.com/Yuupapa_free",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "插画艺术风格创作",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_93.jpg",
+        "prompt": "{\n    \"type\": \"VTuber stream thumbnail\",\n    \"style\": \"anime, highly detailed, cute, sparkly, overwhelmingly pink color palette\",\n    \"character\": {\n      \"description\": \"anime girl with brown hair in twin buns, amber eyes, smiling gently\",\n      \"outfit\": \"pink kimono combined with a white frilly maid apron, cherry blossom hair accessories\",\n      \"pose\": \"holding a pink microphone decorated with a flower near her face\"\n    },\n    \"layout\": {\n      \"background\": \"pink gradient with sparkles, glowing hearts, and decorative pink bows\",\n      \"text_sections\": [\n        {\n          \"type\": \"top ribbon\",\n          \"text\": \"{argument name=\\\"top subtitle\\\" default=\\\"まったりおしゃべりしよ〜🤍\\\"}\"\n        },\n        {\n          \"type\": \"main title\",\n          \"text\": \"{argument name=\\\"main title\\\" default=\\\"雑談配信\\\"}\",\n          \"decorations\": \"surrounded by 3 large peach illustrations\"\n        },\n        {\n          \"type\": \"middle ribbon\",\n          \"text\": \"{argument name=\\\"middle subtitle\\\" default=\\\"みんなと楽しい時間を過ごしたいなっ♡\\\"}\"\n        },\n        {\n          \"type\": \"bullet points\",\n          \"position\": \"bottom left\",\n          \"count\": 3,\n          \"icon\": \"peach\",\n          \"labels\": [\n            \"{argument name=\\\"bullet 1\\\" default=\\\"初見さん〇\\\"}\",\n            \"{argument name=\\\"bullet 2\\\" default=\\\"ポイント回収〇\\\"}\",\n            \"ROMO\"\n          ]\n        },\n        {\n          \"type\": \"speech bubble\",\n          \"position\": \"bottom right\",\n          \"text\": \"コメント大歓迎♪ いっぱいお話し しようねっ♡\"\n        }\n      ]\n    }\n  }",
+        "author": "https://x.com/sayaka_aiart",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "绘画艺术风格图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_94.jpg",
+        "prompt": "{\n    \"type\": \"VTuber stream thumbnail\",\n    \"theme\": \"pastel pink, soft, cute, lace, ribbons, hearts, bunny motif\",\n    \"character\": {\n      \"position\": \"right side, waist-up\",\n      \"appearance\": \"anime girl, {argument name=\\\"hair color\\\" default=\\\"pastel pink\\\"} long wavy hair, large grey eyes, blush, pink heart earrings\",\n      \"accessories\": \"white bunny ears, large pink bow on head\",\n      \"outfit\": \"white frilly dress with lace, large pink ribbon bow at collar with heart gem\"\n    },\n    \"layout\": {\n      \"background\": \"soft pink with subtle sparkles, lace patterns, floating hearts\",\n      \"text_elements\": [\n        {\n          \"type\": \"main title\",\n          \"position\": \"top left\",\n          \"style\": \"large stylized pink text with white outline\",\n          \"text\": \"{argument name=\\\"main title\\\" default=\\\"雑談配信\\\"}\"\n        },\n        {\n          \"type\": \"speech bubble\",\n          \"position\": \"above main title\",\n          \"text\": \"まったり\"\n        },\n        {\n          \"type\": \"circular badge\",\n          \"position\": \"top right\",\n          \"details\": \"lace-edged with small pink bow\",\n          \"text\": \"きてくれてありがとう♡\"\n        },\n        {\n          \"type\": \"heart badge\",\n          \"position\": \"bottom right\",\n          \"details\": \"large lace-edged heart\",\n          \"text\": \"みんなとおしゃべりできるの楽しみにしてるね♡\"\n        }\n      ],\n      \"list_section\": {\n        \"position\": \"bottom left\",\n        \"count\": 3,\n        \"style\": \"horizontal pill-shaped banners with lace edges, each featuring a pink heart with white bunny ears and a tiny bow on the left\",\n        \"items\": [\n          \"{argument name=\\\"list item 1\\\" default=\\\"初見さん〇\\\"}\",\n          \"{argument name=\\\"list item 2\\\" default=\\\"ポイント回収〇\\\"}\",\n          \"{argument name=\\\"list item 3\\\" default=\\\"ROM〇\\\"}\"\n        ]\n      }\n    }\n  }",
+        "author": "https://x.com/sayaka_aiart",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "品牌视觉识别图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_95.jpg",
+        "prompt": "{\n    \"type\": \"anime-style livestream thumbnail\",\n    \"character\": {\n      \"hair\": \"{argument name=\\\"hair color\\\" default=\\\"short silver hair with cyan underlights\\\"}\",\n      \"eyes\": \"large bright blue\",\n      \"outfit\": \"white collared shirt, black tie with silver accents, black jacket, black beret with a large blue heart jewel, blue jewel brooch, black choker\",\n      \"pose\": \"smiling gently, looking at viewer, positioned on the right side\"\n    },\n    \"background\": \"pastel blue with white clouds, sparkles, stars, small bows, and a subtle grid pattern\",\n    \"typography_and_ui\": {\n      \"top_left_speech_bubble\": \"まったりおしゃべりしよ〜♡\",\n      \"main_title\": {\n        \"text\": \"{argument name=\\\"main title\\\" default=\\\"雑談配信\\\"}\",\n        \"style\": \"large, soft blue gradient, white outline, decorated with small hearts, positioned on the middle-left\"\n      },\n      \"bottom_left_badges\": {\n        \"count\": 3,\n        \"style\": \"white pill-shaped buttons with a purple heart icon on the left\",\n        \"labels\": [\n          \"{argument name=\\\"badge 1 text\\\" default=\\\"初見さん〇\\\"}\",\n          \"{argument name=\\\"badge 2 text\\\" default=\\\"ポイント回収〇\\\"}\",\n          \"{argument name=\\\"badge 3 text\\\" default=\\\"ROM〇\\\"}\"\n        ]\n      },\n      \"bottom_right_cloud_bubble\": \"気軽にコメントしてね♡\"\n    }\n  }",
+        "author": "https://x.com/sayaka_aiart",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "主题海报版式设计",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_96.jpg",
+        "prompt": "{\n    \"type\": \"VTuber stream thumbnail\",\n    \"character\": {\n      \"hair\": \"long blonde twin tails with pink gradient ends\",\n      \"eyes\": \"large pink anime eyes\",\n      \"expression\": \"cheerful smile with a small fang, making a peace sign near the eye\",\n      \"outfit\": \"black top with harness straps, black heart-ring choker, multiple ear piercings including a cross dangle, black nail polish\"\n    },\n    \"background\": \"vibrant neon pink and black leopard print with glowing yellow accents, sparkles, and floating hearts\",\n    \"typography_and_layout\": {\n      \"main_title\": {\n        \"position\": \"top left\",\n        \"style\": \"large, bold, 3D, pink and black with white outlines\",\n        \"text\": \"{argument name=\\\"main title\\\" default=\\\"雑談配信\\\"}\"\n      },\n      \"top_right_text\": {\n        \"style\": \"casual handwritten style with a heart\",\n        \"text\": \"{argument name=\\\"top right text\\\" default=\\\"まったり話そ〜♡\\\"}\"\n      },\n      \"bottom_left_banners\": {\n        \"count\": 3,\n        \"style\": \"glowing pill-shaped banners with heart icons on the left\",\n        \"colors\": [\"pink\", \"yellow\", \"purple\"],\n        \"labels\": [\n          \"{argument name=\\\"banner 1 text\\\" default=\\\"初見さん〇\\\"}\",\n          \"{argument name=\\\"banner 2 text\\\" default=\\\"ポイント回収〇\\\"}\",\n          \"{argument name=\\\"banner 3 text\\\" default=\\\"ROM〇\\\"}\"\n        ]\n      },\n      \"bottom_right_text\": {\n        \"style\": \"casual handwritten style with a heart, yellow text with pink outline\",\n        \"text\": \"気軽にコメントしてねっ♡\"\n      }\n    }\n  }",
+        "author": "https://x.com/sayaka_aiart",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "视频封面界面图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_103.jpg",
+        "prompt": "{argument name=\"pianist\" default=\"Vladimir Horowitz\"} performs a {argument name=\"event\" default=\"live piano recital\"} streamed on {argument name=\"platform\" default=\"YouTube\"}",
+        "author": "https://x.com/bowowwoaaa2",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "界面交互设计图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_104.jpg",
+        "prompt": "{\n    \"type\": \"YouTube livestream UI\",\n    \"top_nav\": {\n      \"logo\": \"YouTube Premium\",\n      \"search\": \"{argument name=\\\"search query\\\" default=\\\"bilal fraiha\\\"}\",\n      \"icons\": 3\n    },\n    \"player\": {\n      \"subjects\": [\n        \"{argument name=\\\"female guest\\\" default=\\\"Sydney Sweeney\\\"} in white cardigan\",\n        \"bearded man in beige jacket laughing\"\n      ],\n      \"bg\": \"couch, 2 silver play buttons, ram logo 'SARDI'\",\n      \"overlays\": {\n        \"chat\": {\"pos\": \"left\", \"count\": 15, \"desc\": \"colored usernames, white text\"},\n        \"goal\": {\"pos\": \"top right\", \"text\": \"TONIGHT'S GOAL: 0 to 25\"},\n        \"banner\": {\"pos\": \"bottom center\", \"text\": \"K {argument name=\\\"streamer name\\\" default=\\\"MOREBILAL\\\"}\"}\n      },\n      \"controls\": {\"count\": 10}\n    },\n    \"details\": {\n      \"title\": \"{argument name=\\\"video title\\\" default=\\\"FULL STREAM | سيدني سويني مع بلال\\\"}\",\n      \"channel\": \"{argument name=\\\"channel name\\\" default=\\\"More Bilal No Filter\\\"}\",\n      \"buttons\": 5\n    }\n  }",
+        "author": "https://x.com/marouane53",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "应用界面样机图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_107.jpg",
+        "prompt": "{\"type\": \"YouTube desktop dark mode UI mockup\", \"header\": {\"logo\": \"YouTube\", \"search_bar\": \"Search\", \"icons_count\": 5, \"icons\": [\"search\", \"mic\", \"create\", \"notifications\", \"profile\"]}, \"video_player\": {\"top_left_badge\": \"LIVE\", \"left_side\": {\"subject\": \"{argument name=\\\"presenter description\\\" default=\\\"man in green sweater at wooden podium\\\"}\", \"podium_logo\": \"OpenAI\"}, \"right_side_presentation\": {\"text_elements\": [\"OpenAI\", \"INTRODUCING\", \"{argument name=\\\"product name\\\" default=\\\"GPT-Image-2\\\"}\", \"{argument name=\\\"tagline\\\" default=\\\"More Realistic. More Useful. More Creative.\\\"}\"], \"sample_images_count\": 4, \"sample_images\": [\"mountain lake with boat\", \"woman portrait with dappled light\", \"cute robot with lantern in forest\", \"starry night cafe painting\"]}, \"bottom_controls_count\": 10, \"bottom_controls\": [\"pause\", \"next\", \"volume\", \"LIVE\", \"red progress bar\", \"CC\", \"settings\", \"miniplayer\", \"theater mode\", \"fullscreen\"]}, \"video_details\": {\"title\": \"{argument name=\\\"video title\\\" default=\\\"OpenAI Live: Introducing GPT-Image-2\\\"}\", \"channel\": {\"name\": \"{argument name=\\\"channel name\\\" default=\\\"OpenAI\\\"}\", \"verified\": true, \"subscribers\": \"1.36M\", \"button\": \"Subscribe\"}, \"action_buttons_count\": 5, \"action_buttons\": [\"Like 12K\", \"Dislike 497\", \"Share\", \"Save\", \"More\"], \"description_box\": {\"stats\": \"95,237 watching now Started streaming 7 minutes ago\", \"tags\": \"#OpenAI #GPTImage2 #AI\", \"text\": \"Join us for a special live event as we introduce GPT-Image-2, our latest and most advanced image generation model. See new capabilities, live demos, and hear from the team ...more\"}}}",
+        "author": "https://x.com/tehno_maniak",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "综合应用场景图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_108.jpg",
+        "prompt": "{argument name=\"subject\" default=\"A beautiful internet celebrity\"} is live-streaming a {argument name=\"activity\" default=\"game\"}.",
+        "author": "https://x.com/marouane53",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "视频封面界面图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_110.jpg",
+        "prompt": "Thumbnail for a YouTube unboxing video, a video of {argument name=\"topic\" default=\"opening all overdue bills\"}, {argument name=\"quantity\" default=\"100 in a row\"}",
+        "author": "https://x.com/TlanoAI",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "视频封面界面图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_111.jpg",
+        "prompt": "A YouTube thumbnail-style collage for a {argument name=\"overall mood\" default=\"dark, dramatic, true crime investigation\"}. In the center is a highly detailed, close-up portrait of an {argument name=\"central figure\" default=\"older man with grey hair and deep wrinkles resembling Jeffrey Epstein\"}, wearing a black polo shirt, with a faint red glowing outline separating him from the background. On the left side, a {argument name=\"left background scene\" default=\"tropical island with luxury villas and a flying airplane in a dark sky\"}. Below the island, a conspiracy board motif features exactly 2 red push pins connected by 3 thick red strings. On the top right side, a hazy, sepia-toned depiction of the {argument name=\"right background scene\" default=\"US Capitol building with the silhouettes of 3 men in suits facing it\"}. On the bottom right, an open manila folder containing a {argument name=\"document type\" default=\"heavily redacted dossier with thick black marker lines and a smaller photograph of the central man\"}. The overall composition is cinematic, intense, and heavily stylized for a documentary video.",
+        "author": "https://x.com/mirochill",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "界面交互设计图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_131.jpg",
+        "prompt": "{\n    \"type\": \"UI/UX landing page mockup\",\n    \"theme\": \"dark mode, sleek modern aesthetic, glassmorphism, {argument name=\\\"primary accent color\\\" default=\\\"neon purple and blue\\\"} glowing accents\",\n    \"header\": {\n      \"logo\": \"{argument name=\\\"brand name\\\" default=\\\"goViralX\\\"}\",\n      \"top_right_tag\": \"VIRAL CAMPAIGN CASE STUDY\"\n    },\n    \"layout\": {\n      \"sections\": [\n        {\n          \"name\": \"Hero\",\n          \"headline\": \"{argument name=\\\"hero headline\\\" default=\\\"How We Created 10M+ Viral Impact\\\"}\",\n          \"subheadline\": \"3天引爆全网, 助力品牌实现指数级增长\",\n          \"stats_row\": {\n            \"count\": 4,\n            \"labels\": [\"总播放量\", \"互动率\", \"转化咨询\", \"执行周期\"],\n            \"values\": [\"{argument name=\\\"main statistic\\\" default=\\\"10,240,000+\\\"}\", \"18.7%\", \"3,200+\", \"72小时\"]\n          },\n          \"visual\": \"cinematic shot of a person in a hoodie looking at glowing digital screens and graphs, large play button overlay\"\n        },\n        {\n          \"name\": \"Strategy\",\n          \"title\": \"Our 3-Day Execution Strategy\",\n          \"layout_type\": \"vertical timeline\",\n          \"steps_count\": 3,\n          \"elements_per_step\": [\"timeline node\", \"title\", \"bullet points\", \"video thumbnail with play button\", \"description box\"]\n        },\n        {\n          \"name\": \"Performance\",\n          \"title\": \"Data-Driven Performance\",\n          \"left_column\": {\n            \"stat_cards_count\": 4,\n            \"values\": [\"10M+\", \"43%\", \"28,000+\", \"3,200+\"]\n          },\n          \"right_column\": {\n            \"charts_count\": 2,\n            \"chart_1\": \"line graph showing 7-day growth peaking at Day 3\",\n            \"chart_2\": \"horizontal segmented bar chart showing platform distribution (TikTok 52%, Instagram 24%, X 15%, YouTube 9%)\"\n          }\n        },\n        {\n          \"name\": \"Keys to Success\",\n          \"title\": \"The 3 Keys to Viral Success\",\n          \"cards_count\": 3,\n          \"card_elements\": [\"glowing icon (fire, target, antenna)\", \"title\", \"description\", \"VIEW DETAIL link\"]\n        },\n        {\n          \"name\": \"Social Proof\",\n          \"title\": \"TRUSTED BY CREATORS & BRANDS\",\n          \"left_column\": {\n            \"logos_count\": 8,\n            \"grid\": \"2x4\",\n            \"brands\": [\"SHEIN\", \"SHOPLINE\", \"Blueglass\", \"instacart\", \"lemon8\", \"mi\", \"CIDER\", \"bellroy\"]\n          },\n          \"right_column\": {\n            \"testimonial_cards_count\": 2,\n            \"elements\": [\"quote\", \"author title (SaaS Founder, Growth Manager)\"]\n          }\n        },\n        {\n          \"name\": \"Call to Action\",\n          \"title\": \"READY TO GO VIRAL?\",\n          \"interactive_elements\": [\"text input field\", \"glowing button with text '{argument name=\\\"call to action text\\\" default=\\\"获取专属增长方案 ->\\\"}'\"],\n          \"visual\": \"3D render of a rocket ship taking off with purple and blue flames\"\n        }\n      ]\n    }\n  }",
+        "author": "https://x.com/IndieDevHailey",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "综合应用场景图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_148.jpg",
+        "prompt": "A {argument name=\"platform\" default=\"Taobao\"} product detail page for {argument name=\"robot model\" default=\"T-800 robot\"}, displaying: front, side, and back three-view drawings of the robot, product price, product details, functions, and usage scenarios, etc.",
+        "author": "https://x.com/alanlovelq",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "直播界面设计图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_149.jpg",
+        "prompt": "{\n    \"type\": \"mobile livestream e-commerce interface mockup\",\n    \"subject\": {\n      \"person\": \"Elon Musk\",\n      \"clothing\": \"black t-shirt with SPACEX logo\",\n      \"pose\": \"gesturing towards camera with both hands, explaining enthusiastically\",\n      \"watermark\": \"@Proof AI\"\n    },\n    \"background\": {\n      \"setting\": \"large display screen\",\n      \"image\": \"Mars landscape with Starship rocket and dome habitats\",\n      \"text\": [\n        \"SPACEX\",\n        \"{argument name=\\\"background title\\\" default=\\\"移民火星计划\\\"}\"\n      ]\n    },\n    \"ui_layout\": {\n      \"header\": {\n        \"broadcaster_info\": {\n          \"name\": \"{argument name=\\\"broadcaster name\\\" default=\\\"ElonMusk\\\"}\",\n          \"stats\": \"75.8万本场点赞\",\n          \"follow_button\": \"关注\"\n        },\n        \"viewer_stats\": {\n          \"avatars_count\": 3,\n          \"text\": \"10万+\",\n          \"close_button\": \"X\"\n        },\n        \"tags\": [\n          \"带货总榜第1名\",\n          \"更多直播 >\"\n        ]\n      },\n      \"product_card\": {\n        \"position\": \"mid-right\",\n        \"status\": \"讲解中\",\n        \"image\": \"Mars dome habitats\",\n        \"title\": \"{argument name=\\\"product title\\\" default=\\\"火星移民基础套餐\\\"}\",\n        \"price\": \"{argument name=\\\"product price\\\" default=\\\"¥99.00\\\"}\",\n        \"action_button\": \"抢\"\n      },\n      \"chat_overlay\": {\n        \"position\": \"bottom-left\",\n        \"join_alert\": \"星辰大海 加入了直播间\",\n        \"messages_count\": 7,\n        \"messages\": [\n          \"{argument name=\\\"top chat message\\\" default=\\\"梦想家: 支持马斯克！！🚀\\\"}\",\n          \"火星弟弟: 多少钱一位？\",\n          \"科技迷: 太酷了！想去火星！\",\n          \"未来已来: 如何报名？\",\n          \"小火箭: 🌹🌹🌹\",\n          \"宇宙无敌: 讲解一下细节\",\n          \"东方不败: 老马牛逼！👍👍👍\"\n        ]\n      },\n      \"bottom_action_bar\": {\n        \"input_placeholder\": \"说点什么...\",\n        \"icons_count\": 4,\n        \"icons\": [\"shopping cart\", \"gift box\", \"heart planet\", \"plus sign\"]\n      },\n      \"floating_reactions\": {\n        \"position\": \"bottom-right\",\n        \"elements\": \"stack of floating hearts, thumbs up, and laughing emojis\"\n      }\n    }\n  }",
+        "author": "https://x.com/JCutcut47692",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "直播界面设计图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_152.jpg",
+        "prompt": "{\n    \"type\": \"mobile livestream e-commerce interface mockup\",\n    \"subject\": {\n      \"person\": \"Elon Musk\",\n      \"clothing\": \"black t-shirt with SPACEX logo\",\n      \"pose\": \"gesturing towards camera with both hands, explaining enthusiastically\",\n      \"watermark\": \"@Proof AI\"\n    },\n    \"background\": {\n      \"setting\": \"large display screen\",\n      \"image\": \"Mars landscape with Starship rocket and dome habitats\",\n      \"text\": [\n        \"SPACEX\",\n        \"{argument name=\\\"background title\\\" default=\\\"移民火星计划\\\"}\"\n      ]\n    },\n    \"ui_layout\": {\n      \"header\": {\n        \"broadcaster_info\": {\n          \"name\": \"{argument name=\\\"broadcaster name\\\" default=\\\"ElonMusk\\\"}\",\n          \"stats\": \"75.8万本场点赞\",\n          \"follow_button\": \"关注\"\n        },\n        \"viewer_stats\": {\n          \"avatars_count\": 3,\n          \"text\": \"10万+\",\n          \"close_button\": \"X\"\n        },\n        \"tags\": [\n          \"带货总榜第1名\",\n          \"更多直播 >\"\n        ]\n      },\n      \"product_card\": {\n        \"position\": \"mid-right\",\n        \"status\": \"讲解中\",\n        \"image\": \"Mars dome habitats\",\n        \"title\": \"{argument name=\\\"product title\\\" default=\\\"火星移民基础套餐\\\"}\",\n        \"price\": \"{argument name=\\\"product price\\\" default=\\\"¥99.00\\\"}\",\n        \"action_button\": \"抢\"\n      },\n      \"chat_overlay\": {\n        \"position\": \"bottom-left\",\n        \"join_alert\": \"星辰大海 加入了直播间\",\n        \"messages_count\": 7,\n        \"messages\": [\n          \"{argument name=\\\"top chat message\\\" default=\\\"梦想家: 支持马斯克！！🚀\\\"}\",\n          \"火星弟弟: 多少钱一位？\",\n          \"科技迷: 太酷了！想去火星！\",\n          \"未来已来: 如何报名？\",\n          \"小火箭: 🌹🌹🌹\",\n          \"宇宙无敌: 讲解一下细节\",\n          \"东方不败: 老马牛逼！👍👍👍\"\n        ]\n      },\n      \"bottom_action_bar\": {\n        \"input_placeholder\": \"说点什么...\",\n        \"icons_count\": 4,\n        \"icons\": [\"shopping cart\", \"gift box\", \"heart planet\", \"plus sign\"]\n      },\n      \"floating_reactions\": {\n        \"position\": \"bottom-right\",\n        \"elements\": \"stack of floating hearts, thumbs up, and laughing emojis\"\n      }\n    }\n  }",
+        "author": "https://x.com/coder_left",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "应用界面样机图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_156.jpg",
+        "prompt": "{\n    \"type\": \"mobile live-streaming e-commerce interface mockup\",\n    \"subject\": {\n      \"description\": \"young Asian woman, long dark hair, wearing light-colored floral pajama set with a pink bow, holding the pajama top outward to show the fabric\",\n      \"background\": \"cozy room, clothing rack with pajamas, flowers, warm lighting\"\n    },\n    \"ui_layout\": {\n      \"top_bar\": {\n        \"time\": \"20:34\",\n        \"host_info\": {\n          \"name\": \"{argument name=\\\"host name\\\" default=\\\"小雨睡衣\\\"}\",\n          \"stats\": \"12.8万本场点赞\",\n          \"button\": \"关注\"\n        },\n        \"viewer_info\": {\n          \"avatars_count\": 3,\n          \"total_viewers\": \"1.2万\"\n        }\n      },\n      \"floating_tags\": {\n        \"count\": 2,\n        \"labels\": [\"带货总榜第3名\", \"人气榜\"]\n      },\n      \"widgets\": {\n        \"top_left\": \"red envelope icon with timer 03:45\",\n        \"top_right\": \"floating heart icon with text 直播好物大赏 发现新热爱\"\n      },\n      \"marketing_text_overlay\": {\n        \"position\": \"mid-right\",\n        \"lines_count\": 5,\n        \"lines\": [\n          \"{argument name=\\\"main headline\\\" default=\\\"新款睡衣\\\"}\",\n          \"{argument name=\\\"sub headline\\\" default=\\\"正在秒杀中...\\\"}\",\n          \"亲肤透气\",\n          \"柔软舒适\",\n          \"不起球 不褪色\"\n        ]\n      },\n      \"chat_log\": {\n        \"position\": \"bottom-left\",\n        \"message_count\": 7,\n        \"messages\": [\n          \"32 雨*** 加入了直播间\",\n          \"小***: 好看，多少钱\",\n          \"小***: 拍了，期待发货\",\n          \"C***: 质量看着不错\",\n          \"用***: 身高165，体重120斤，穿多大码？\",\n          \"@***: 主播身上这款有货吗？\",\n          \"晴***: 已拍，坐等收货！\"\n        ]\n      },\n      \"product_card\": {\n        \"position\": \"bottom-right\",\n        \"thumbnail\": \"miniature of the host\",\n        \"title\": \"{argument name=\\\"product title\\\" default=\\\"【小雨睡衣】春季新款家居服套装\\\"}\",\n        \"tags_count\": 2,\n        \"tags\": [\"7天无理由退货\", \"运费险\"],\n        \"price_section\": \"秒杀价 ¥ {argument name=\\\"product price\\\" default=\\\"89.9\\\"}\",\n        \"action_button\": \"抢\"\n      },\n      \"bottom_bar\": {\n        \"input_placeholder\": \"说点什么...\",\n        \"icon_count\": 5,\n        \"icons\": [\"smiley face\", \"shopping cart\", \"heart/gift\", \"gift box\", \"three dots\"]\n      }\n    }\n  }",
+        "author": "https://x.com/linxiaobei888",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "应用界面样机图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_158.jpg",
+        "prompt": "{\n    \"type\": \"mobile live-streaming e-commerce interface mockup\",\n    \"subject\": {\n      \"description\": \"young Asian woman, long dark hair, wearing light-colored floral pajama set with a pink bow, holding the pajama top outward to show the fabric\",\n      \"background\": \"cozy room, clothing rack with pajamas, flowers, warm lighting\"\n    },\n    \"ui_layout\": {\n      \"top_bar\": {\n        \"time\": \"20:34\",\n        \"host_info\": {\n          \"name\": \"{argument name=\\\"host name\\\" default=\\\"小雨睡衣\\\"}\",\n          \"stats\": \"12.8万本场点赞\",\n          \"button\": \"关注\"\n        },\n        \"viewer_info\": {\n          \"avatars_count\": 3,\n          \"total_viewers\": \"1.2万\"\n        }\n      },\n      \"floating_tags\": {\n        \"count\": 2,\n        \"labels\": [\"带货总榜第3名\", \"人气榜\"]\n      },\n      \"widgets\": {\n        \"top_left\": \"red envelope icon with timer 03:45\",\n        \"top_right\": \"floating heart icon with text 直播好物大赏 发现新热爱\"\n      },\n      \"marketing_text_overlay\": {\n        \"position\": \"mid-right\",\n        \"lines_count\": 5,\n        \"lines\": [\n          \"{argument name=\\\"main headline\\\" default=\\\"新款睡衣\\\"}\",\n          \"{argument name=\\\"sub headline\\\" default=\\\"正在秒杀中...\\\"}\",\n          \"亲肤透气\",\n          \"柔软舒适\",\n          \"不起球 不褪色\"\n        ]\n      },\n      \"chat_log\": {\n        \"position\": \"bottom-left\",\n        \"message_count\": 7,\n        \"messages\": [\n          \"32 雨*** 加入了直播间\",\n          \"小***: 好看，多少钱\",\n          \"小***: 拍了，期待发货\",\n          \"C***: 质量看着不错\",\n          \"用***: 身高165，体重120斤，穿多大码？\",\n          \"@***: 主播身上这款有货吗？\",\n          \"晴***: 已拍，坐等收货！\"\n        ]\n      },\n      \"product_card\": {\n        \"position\": \"bottom-right\",\n        \"thumbnail\": \"miniature of the host\",\n        \"title\": \"{argument name=\\\"product title\\\" default=\\\"【小雨睡衣】春季新款家居服套装\\\"}\",\n        \"tags_count\": 2,\n        \"tags\": [\"7天无理由退货\", \"运费险\"],\n        \"price_section\": \"秒杀价 ¥ {argument name=\\\"product price\\\" default=\\\"89.9\\\"}\",\n        \"action_button\": \"抢\"\n      },\n      \"bottom_bar\": {\n        \"input_placeholder\": \"说点什么...\",\n        \"icon_count\": 5,\n        \"icons\": [\"smiley face\", \"shopping cart\", \"heart/gift\", \"gift box\", \"three dots\"]\n      }\n    }\n  }",
+        "author": "https://x.com/coconut_256",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "游戏界面样机图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case2_161.jpg",
+        "prompt": "{\n    \"type\": \"video game screenshot mockup\",\n    \"perspective\": \"third-person over-the-shoulder\",\n    \"character\": {\n      \"description\": \"male protagonist seen from behind\",\n      \"clothing\": \"grey tank top with graphic '{argument name=\\\"shirt graphic\\\" default=\\\"LEONIDA MARINE CENTER\\\"}', camouflage cargo shorts\"\n    },\n    \"environment\": {\n      \"setting\": \"tropical coastal town, dirt road, sunny daytime with scattered clouds\",\n      \"left_side\": \"wooden welcome sign reading 'Welcome to {argument name=\\\"location name\\\" default=\\\"LEONIDA KEYS\\\"} YOUR PARADISE', pink plastic flamingo, tropical foliage, distant water tower\",\n      \"center\": \"green building with 'FISH' sign and marlin graphic, sign reading 'BAIT TACKLE ICE BEER WINE', pedestrians walking\",\n      \"right_side\": \"two-story wooden building 'Brian's Boat Works & Marina', 'Brian's Bar' neon sign, parked pickup truck, jet skis on a trailer\"\n    },\n    \"ui_elements\": {\n      \"count\": 5,\n      \"components\": [\n        {\n          \"position\": \"top-left\",\n          \"type\": \"mission objective\",\n          \"text\": \"{argument name=\\\"mission title\\\" default=\\\"MEET RAUL\\\"}\\n{argument name=\\\"mission description\\\" default=\\\"Raul has some work for you at his boatyard\\\"}\"\n        },\n        {\n          \"position\": \"top-right\",\n          \"type\": \"status HUD\",\n          \"text\": \"13:47\\n$1,142\",\n          \"icon\": \"pink palm tree\"\n        },\n        {\n          \"position\": \"bottom-left\",\n          \"type\": \"minimap\",\n          \"description\": \"circular map with purple border, white map icons including 'N' for north\"\n        },\n        {\n          \"position\": \"bottom-left, right of minimap\",\n          \"type\": \"location text\",\n          \"text\": \"{argument name=\\\"location name\\\" default=\\\"LEONIDA KEYS\\\"}\\nPALM ISLAND\"\n        },\n        {\n          \"position\": \"bottom-right\",\n          \"type\": \"watermark\",\n          \"text\": \"{argument name=\\\"game title\\\" default=\\\"GTA VI\\\"}\\nPRE-ALPHA FOOTAGE\"\n        }\n      ]\n    }\n  }",
+        "author": "https://x.com/DanDaniDaniel01",
+        "mode": "generate",
+        "category": "UI与界面",
+        "sub_category": "界面",
         "created": "2026年5月28日09:40:59"
     }
 ]
