@@ -33,6 +33,7 @@ class ChatGPTSite extends BaseSite {
 
     async insertPrompt(promptData) {
         const promptText = typeof promptData === 'string' ? promptData : promptData.prompt;
+        const referenceImages = typeof promptData === 'object' ? promptData.referenceImages : null;
         const el = await this.findPromptInput();
         if (!el || !this.isEditableElement(el)) {
             console.log('Banana: ChatGPT insertPrompt debug', {
@@ -49,13 +50,19 @@ class ChatGPTSite extends BaseSite {
             id: el.id || null,
             className: el.className || null,
             isContentEditable: !!el.isContentEditable,
-            textLength: promptText?.length || 0
+            textLength: promptText?.length || 0,
+            referenceImageCount: referenceImages?.length || 0
         });
 
         if (!el.isContentEditable) {
             console.log('Banana: ChatGPT insertPrompt path', 'textarea-fallback');
-            await super.insertPrompt(promptText);
+            await super.insertPrompt(promptData);
             return;
+        }
+
+        if (referenceImages && referenceImages.length > 0) {
+            await this.insertImages(referenceImages);
+            await new Promise(r => setTimeout(r, 800));
         }
 
         el.focus();

@@ -143,32 +143,34 @@ test('ChatGPT prompt input lookup should prefer the visible ProseMirror editor o
   assert.equal(result, proseMirror);
 });
 
-test('ChatGPT prompt insertion should not upload reference images when inserting a prompt card', async () => {
+test('ChatGPT prompt insertion should upload reference images before inserting text', async () => {
   const context = loadSites();
   const ChatGPTSite = context.ChatGPTSite;
   const site = new ChatGPTSite();
   const editor = createContentEditableElement();
-  let insertImagesCalls = 0;
+  const imagePayload = ['data:image/jpeg;base64,abc'];
+  const insertImagesCalls = [];
 
   site.findPromptInput = async () => editor;
-  site.insertImages = async () => {
-    insertImagesCalls += 1;
+  site.insertImages = async (images) => {
+    insertImagesCalls.push(images);
   };
 
   await site.insertPrompt({
     prompt: 'hello world',
-    referenceImages: ['data:image/jpeg;base64,abc']
+    referenceImages: imagePayload
   });
 
-  assert.equal(insertImagesCalls, 0);
+  assert.deepEqual(insertImagesCalls, [imagePayload]);
 });
 
-test('ChatGPT prompt insertion should dispatch an input event with insertText semantics', async () => {
+test('ChatGPT prompt insertion should dispatch an input event with insertText semantics after uploading images', async () => {
   const context = loadSites();
   const ChatGPTSite = context.ChatGPTSite;
   const site = new ChatGPTSite();
   const editor = createContentEditableElement();
   const events = [];
+  let insertImagesCalls = 0;
 
   editor.dispatchEvent = (event) => {
     events.push(event);
@@ -176,7 +178,7 @@ test('ChatGPT prompt insertion should dispatch an input event with insertText se
 
   site.findPromptInput = async () => editor;
   site.insertImages = async () => {
-    throw new Error('should not upload images for ChatGPT prompt insertion');
+    insertImagesCalls += 1;
   };
 
   await site.insertPrompt({
@@ -184,8 +186,31 @@ test('ChatGPT prompt insertion should dispatch an input event with insertText se
     referenceImages: ['data:image/jpeg;base64,abc']
   });
 
+  assert.equal(insertImagesCalls, 1);
   assert.equal(editor.focused, true);
   assert.ok(events.some(event => event.type === 'input' && event.inputType === 'insertText' && event.data === 'line 1\nline 2'));
+});
+
+test('ChatGPT prompt insertion should pass the full prompt payload to textarea fallback', async () => {
+  const context = loadSites();
+  const ChatGPTSite = context.ChatGPTSite;
+  const BaseSite = context.BaseSite;
+  const site = new ChatGPTSite();
+  const textarea = createTextareaElement();
+  const payload = {
+    prompt: 'fallback text',
+    referenceImages: ['data:image/jpeg;base64,abc']
+  };
+  let forwardedPayload = null;
+
+  site.findPromptInput = async () => textarea;
+  BaseSite.prototype.insertPrompt = async function(promptData) {
+    forwardedPayload = promptData;
+  };
+
+  await site.insertPrompt(payload);
+
+  assert.equal(forwardedPayload, payload);
 });
 
 test('ChatGPT prompt insertion should emit debug logs for the chosen input path', async () => {
