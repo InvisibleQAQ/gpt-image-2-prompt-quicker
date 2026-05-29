@@ -3620,5 +3620,555 @@
         "category": "插画与艺术",
         "sub_category": "艺术",
         "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "综合应用场景图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case25.jpg",
+        "prompt": "create a minecraft skin inspired by {argument name=\"reference\" default=\"my look\"}",
+        "author": "@nicdunz",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "人物角色设定图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case27.jpg",
+        "prompt": "{\n  \"type\": \"collection of instant photos\",\n  \"setting\": \"laid out flat on a white fabric surface\",\n  \"character\": {\n    \"hair\": \"{argument name=\\\"hair color\\\" default=\\\"long pink hair with blue inner color\\\"}\",\n    \"outfit\": \"{argument name=\\\"outfit\\\" default=\\\"black and white maid uniform with frilly headband and black ribbons\\\"}\",\n    \"eyes\": \"reddish-pink\"\n  },\n  \"layout\": {\n    \"arrangement\": \"two rows of five polaroid photos\",\n    \"count\": 10,\n    \"photos\": [\n      { \"position\": \"top row 1\", \"description\": \"holding a pink heart cushion\" },\n      { \"position\": \"top row 2\", \"description\": \"winking, making a peace sign\" },\n      { \"position\": \"top row 3\", \"description\": \"making a hand heart, pink heart doodle on the bottom border\" },\n      { \"position\": \"top row 4\", \"description\": \"resting chin on hands, gentle smile\" },\n      { \"position\": \"top row 5\", \"description\": \"holding a red rose, winking\" },\n      { \"position\": \"bottom row 1\", \"description\": \"finger to lips, shy expression\" },\n      { \"position\": \"bottom row 2\", \"description\": \"holding a small pink cake\" },\n      { \"position\": \"bottom row 3\", \"description\": \"winking, hand near face, signature '{argument name=\\\"signature text\\\" default=\\\"Hanashi\\\"}' and heart doodle on border\" },\n      { \"position\": \"bottom row 4\", \"description\": \"holding a pink bunny plushie, sparkle doodles, signature '{argument name=\\\"signature text\\\" default=\\\"Hanashi\\\"}' and bunny doodle on border\" },\n      { \"position\": \"bottom row 5\", \"description\": \"winking, sparkle doodles, message '{argument name=\\\"message text\\\" default=\\\"いつも応援ありがとう！これからもよろしくね♪\\\"}' and signature '{argument name=\\\"signature text\\\" default=\\\"Hanashi\\\"}' on border\" }\n    ]\n  }\n}",
+        "author": "@anemone_sd",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "插画艺术风格创作",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case41.jpg",
+        "prompt": "{ \"type\": \"VTuber profile sheet\", \"theme\": \"{argument name=\\\"color theme\\\" default=\\\"purple and white\\\"}, elegant, lace, ribbon motifs\", \"character\": { \"name\": \"{argument name=\\\"character name\\\" default=\\\"紫咲リリー\\\"}\", \"archetype\": \"{argument name=\\\"character archetype\\\" default=\\\"elegant ojousama\\\"}\", \"appearance\": \"anime girl, long black hair with purple highlights, purple eyes, wearing a white blazer, purple pleated skirt, thigh-highs, ribbons\", \"pose\": \"standing, finger to lips, looking slightly to the side\" }, \"chibi_character\": { \"appearance\": \"same character in chibi form\", \"pose\": \"sitting down, smiling\" }, \"layout\": { \"header\": { \"top_left\": \"Ribbon banner reading 'VTuber Profile'\", \"top_center\": \"Logo with text '{argument name=\\\"vtuber type\\\" default=\\\"清楚系お嬢様Vtuber\\\"}' and '{argument name=\\\"character name\\\" default=\\\"紫咲リリー\\\"}' and 'Shisaki Lily'\", \"top_right\": \"Quote '{argument name=\\\"catchphrase\\\" default=\\\"皆さまの心に、優雅なひとときをお届けしますわ\\\"}' followed by a 3-line introductory paragraph\" }, \"columns\": [ { \"position\": \"left\", \"content\": \"Full-body character portrait\" }, { \"position\": \"center\", \"sections\": [ { \"title\": \"Profile\", \"count\": 9, \"labels\": [\"名前\", \"誕生日\", \"年齢\", \"身長\", \"属性\", \"一人称\", \"出身\", \"職業\", \"活動開始日\"] }, { \"title\": \"Personality\", \"content\": \"2-line text block\" }, { \"title\": \"Hobby & Special Skill\", \"count\": 2, \"labels\": [\"趣味\", \"特技\"] }, { \"title\": \"Like & Dislike\", \"count\": 2, \"labels\": [\"好きなもの\", \"苦手なもの\"] } ] }, { \"position\": \"right\", \"sections\": [ { \"title\": \"Streaming Content\", \"content\": \"1-line text block\" }, { \"title\": \"Schedule\", \"count\": 2, \"labels\": [\"配信時間\", \"配信頻度\"] }, { \"title\": \"Goals\", \"content\": \"3-line text block\" }, { \"title\": \"Fan & Tag\", \"count\": 3, \"labels\": [\"ファンネーム\", \"ファンアートタグ\", \"総合タグ\"], \"extra\": \"4 hashtag rows with small icons\" }, { \"title\": \"Creator\", \"count\": 3, \"labels\": [\"イラストレーター (ママ)\", \"モデラー (パパ)\", \"使用モデル\"] }, { \"title\": \"Links\", \"count\": 4, \"labels\": [\"YouTube\", \"X (Twitter)\", \"BOOTH\", \"FANBOX\"] }, { \"content\": \"Chibi character illustration placed at the bottom right corner\" } ] } ], \"footer\": { \"sections\": [ { \"title\": \"Rules\", \"count\": 3, \"description\": \"3 bullet points with heart icons\" }, { \"content\": \"2-line closing message at the bottom center\" } ] } } }",
+        "author": "@wtry1102",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "插画艺术创作图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case123.jpg",
+        "prompt": "{\n  \"type\": \"anime character reference sheet\",\n  \"character\": {\n    \"name\": \"{argument name=\\\"character name\\\" default=\\\"真田大助\\\"}\",\n    \"appearance\": \"young warrior with long brown hair, wearing samurai-inspired armor, {argument name=\\\"main color\\\" default=\\\"red\\\"} chest plate and guards, {argument name=\\\"secondary color\\\" default=\\\"navy blue\\\"} pleated hakama, white short cape\"\n  },\n  \"layout\": {\n    \"header\": {\n      \"title\": \"{argument name=\\\"character name\\\" default=\\\"真田大助\\\"}\",\n      \"subtitle\": \"{argument name=\\\"character concept\\\" default=\\\"戦国時代を舞台にした物語の主人公。日英クォーターの若き武将。\\\"}\",\n      \"badge\": \"設定資料\"\n    },\n    \"right_side\": {\n      \"main_portrait\": \"large full-body standing pose, confident smile\",\n      \"background_elements\": {\n        \"emblem\": \"six-coin crest\",\n        \"quote\": \"{argument name=\\\"catchphrase\\\" default=\\\"この国を守る。その誇りと共に。\\\"}\",\n        \"scenery\": \"monochrome Japanese castle with army banners at the bottom right\"\n      }\n    },\n    \"sections\": [\n      {\n        \"title\": \"プロフィール\",\n        \"position\": \"top-left\",\n        \"content\": \"table with 6 rows and descriptive text\"\n      },\n      {\n        \"title\": \"三面図\",\n        \"position\": \"mid-left\",\n        \"count\": 3,\n        \"labels\": [\"正面\", \"側面\", \"背面\"]\n      },\n      {\n        \"title\": \"表情差分\",\n        \"position\": \"top-center\",\n        \"count\": 6,\n        \"labels\": [\"通常\", \"微笑み\", \"真剣\", \"怒り\", \"驚き\", \"考え中\"]\n      },\n      {\n        \"title\": \"衣装・装備詳細\",\n        \"position\": \"bottom-left\",\n        \"count\": 9,\n        \"labels\": [\"胸当て\", \"肩当て\", \"腕甲(籠手)\", \"脚甲(脛当て・膝当て)\", \"革靴\", \"白マント(短)\", \"帯\", \"袴/着物部分\", \"打刀\"]\n      },\n      {\n        \"title\": \"カラーパレット\",\n        \"position\": \"bottom-center\",\n        \"count\": 8,\n        \"labels\": [\"真田赤\", \"濃紺\", \"金\", \"白\", \"茶\", \"茶褐色\", \"肌色\", \"銀\"]\n      },\n      {\n        \"title\": \"世界観\",\n        \"position\": \"bottom-center-right\",\n        \"content\": \"paragraph of text describing the setting\"\n      }\n    ]\n  }\n}",
+        "author": "@Luvune",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "人物角色设定图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case162.jpg",
+        "prompt": "{argument name=\"voice\" default=\"chatgpt voice\"} if it were a character",
+        "author": "@nicdunz",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "专业设计师打造角色写真集",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case212.jpg",
+        "prompt": "[中文]\n请用这个角色制作一本专业设计师打造的照片集。语言为日语。\n\n根据喜好加入提示词会让它更丰富多彩…\n・丰富的场景\n・信息量较多\n\n[English]\nPlease use this character to create a photo book crafted by a professional designer. The language should be Japanese.\n\nAdding prompts according to your preferences will make it more colorful and rich\n・Rich scenes\n・Large amount of information",
+        "author": "@Kashiko_AIart",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "唯美二次元角色介绍网页",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case263.jpg",
+        "prompt": "[中文]\n埋まってないところはパートナーさんかご自身で埋めてあげてください\n #観測塔朝お題  #観測塔おはようお題\n\n最新モデルの画像生成ツールを使用して、\nこのちびキャライラストと立ち絵を使って本物のサイトページのようにキャラクター紹介ページ風イラストを作ってください。 （紹介ページとして使ってもおかしくないもの）\nギャルゲーのキャラクター紹介ページをイメージした高品質なもの。 顔の差分なども乗っている、CGイラストが存在する。ちびキャラが存在する。\n\n「ここに自己紹介」\n\n名前:（ここに名前）\nイメージカラー:（ここに色）\n身長:（ここに身長）cm\n体重:（ここに体重）kg\nキャッチコピー:\"「ここにセリフ」\"\n\n[English]\nPlease fill in the unfilled parts by your partner or yourself\n #ObservatoryTowerMorningTheme  #ObservatoryTowerGoodMorningTheme\n\nUsing the latest model image generation tool,\nUsing this chibi character illustration and standing picture, create a character introduction page style illustration like a real website page. (Something that would not be strange to use as an introduction page)\nA high-quality item imagining a gal game character introduction page. Facial variations etc. are also included, CG illustrations exist. A chibi character exists.\n\n\"Self-introduction here\"\n\nName: (Name here)\nImage color: (Color here)\nHeight: (Height here)cm\nWeight: (Weight here)kg\nCatchphrase: \"Dialogue here\"",
+        "author": "@09lyco",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "信息图可视化设计",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case270.jpg",
+        "prompt": "[中文]\nこのキャラクターと背景を元に、 公式設定資料のようなキャラクターシートを作成してください。\n・正面、側面、背面の3面図を含める ・キャラクターの表情バリエーションを追加\n・衣装や装備の詳細パーツを分解して表示 ・カラーパレットを追加 ・世界観の簡単な説明を入れる\n・全体は整理されたレイアウト\n（白背景、図解風）\n・アスペクト比16：9 　←\n\n高解像度、プロのコンセプトアートスタイル\n\n[English]\nBased on this character and background, please create a character sheet like an official setting material.\n・Include front, side, and back 3-view drawings ・Add character expression variations\n・Disassemble and display detailed parts of costumes and equipment ・Add a color palette ・Include a brief explanation of the world view\n・Overall organized layout\n(White background, diagrammatic style)\n・Aspect ratio 16:9 　←\nHigh resolution, professional concept art style",
+        "author": "\\[OpenNana]\\(]\\(<https://x.com/Toshi_nyaruo_AI/status/2045025277538107420>)",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "人物角色设定图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case271.jpg",
+        "prompt": "[中文]\nお借りして噂のGPT-Image-2でキャラシート作ってみましたｽｺﾞｯ(๑°ㅁ°๑)‼✧更に色々指示してあげたらもっといい感じになりそう✨キャラは以前チャッピーにお願いして描いて貰った我が分身です( *¯ ꒳¯*)\n\n[English]\nI borrowed it and tried making a character sheet using the rumored GPT-Image-2 Awesome(๑°ㅁ°๑)‼✧ It seems like it would turn out even better if I gave it various more instructions✨ The character is my alter ego that I asked Chappy to draw for me before( *¯ ꒳¯*) #GPTimage #AIgenerated",
+        "author": "@tsubaki_ew",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "官方角色设定资料卡",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case306.jpg",
+        "prompt": "[中文]\n基于此角色和背景，请制作一份类似官方设定资料的角色资料卡。\n・包含三视图：正面、侧面和背面\n・添加角色面部表情的变化・分解并展示服装和装备的详细部分\n・添加色板・包含世界观设定的简要说明\n・总体上，使用有组织的布局（白色背景，插画风格）\n\n[English]\nBased on this character and background, please create a character reference sheet similar to official setting materials.\n・Includes three-view drawings: front view, side view, and back view\n・Add variations of the character's facial expressions\n・Break down and display detailed parts of the clothing and equipment\n・Add a color palette\n・Include a brief explanation of the worldview setting\n・Overall, use an organized layout (white background, illustration style)",
+        "author": "@MANISH1027512",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "皮克斯风阳光少年",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case325.jpg",
+        "prompt": "[中文]\n一个风格化的3D卡通肖像，一位年轻男子，拥有短棕发和富有表现力的绿色眼睛，温暖地微笑。他穿着黑色西装外套内搭白色T恤，现代休闲时尚。类似皮克斯/迪士尼风格角色设计，皮肤光滑，柔和光照，略微夸张的面部特征。高细节、精美的3D渲染，友好且平易近人的表情。渐变背景为柔和的蓝绿色和粉色，工作室灯光，浅景深，高分辨率。\n\n[English]\nA stylized 3D cartoon portrait of a young man with short brown hair and expressive green eyes, smiling warmly. He is wearing a black blazer over a white t-shirt, modern casual fashion. Pixar-like / Disney-style character design with smooth skin, soft lighting, and slightly exaggerated facial features. High detail, polished 3D render, friendly and approachable expression. Gradient background with soft teal and pink colors, studio lighting, shallow depth of field, high resolution.",
+        "author": "@iamsofiaijaz",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "红蓝撞色高跟诱惑",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case326.jpg",
+        "prompt": "[中文]\n{\n  \"global_settings\": {\n    \"resolution\": \"8K\",\n    \"quality\": \"超高清晰度\",\n    \"aspect_ratio\": \"2:3\",\n    \"render_style\": \"AI编辑、高细节3D渲染\",\n    \"lighting_quality\": \"柔和影棚光与逼真阴影\",\n    \"sharpness\": \"极致清晰、锐利边缘\",\n    \"noise\": \"无\",\n    \"compression\": \"无\"\n  },\n  \"image_style\": {\n    \"subject\": {\n      \"character_type\": \"风格化3D卡通女性\",\n      \"pose\": \"微微后仰靠在背景上\",\n      \"expression\": \"俏皮、嘴唇轻撅、眼睛斜视\",\n      \"hair\": {\n        \"color\": \"棕色\",\n        \"style\": \"短发、凌乱\",\n        \"accessories\": \"红色太阳镜架在头顶\"\n      }\n    },\n    \"clothing\": {\n      \"dress\": \"贴身蓝色罗纹吊带裙\",\n      \"footwear\": \"红色高跟凉鞋配蝴蝶结\"\n    },\n    \"color_palette\": [\n      \"大胆红色\",\n      \"深蓝\"\n    ],\n    \"background\": {\n      \"color\": \"纯红色\",\n      \"texture\": \"光滑哑光表面\"\n    },\n    \"lighting\": {\n      \"direction\": \"一侧柔和定向光\",\n      \"shadow\": \"在红色背景上投下清晰影子\"\n    },\n    \"composition\": {\n      \"framing\": \"全身\",\n      \"pose_emphasis\": \"弯曲身姿、交叉双腿\"\n    }\n  }\n}\n\n[English]\n{\n  \"global_settings\": {\n    \"resolution\": \"8K\",\n    \"quality\": \"ultra-high definition\",\n    \"aspect_ratio\": \"2:3\",\n    \"render_style\": \"AI-edited, high-detail 3D render\",\n    \"lighting_quality\": \"soft studio lighting with realistic shadows\",\n    \"sharpness\": \"extreme clarity, crisp edges\",\n    \"noise\": \"none\",\n    \"compression\": \"none\"\n  },\n  \"image_style\": {\n    \"subject\": {\n      \"character_type\": \"stylized 3D cartoon female\",\n      \"pose\": \"leaning slightly backward against background\",\n      \"expression\": \"playful, lips slightly pursed, eyes looking sideways\",\n      \"hair\": {\n        \"color\": \"brown\",\n        \"style\": \"short, tousled\",\n        \"accessories\": \"red sunglasses resting on head\"\n      }\n    },\n    \"clothing\": {\n      \"dress\": \"form-fitting blue ribbed dress with thin straps\",\n      \"footwear\": \"red high-heel sandals with bow detail\"\n    },\n    \"color_palette\": [\n      \"bold red\",\n      \"deep blue\"\n    ],\n    \"background\": {\n      \"color\": \"solid red\",\n      \"texture\": \"smooth matte surface\"\n    },\n    \"lighting\": {\n      \"direction\": \"soft directional light from one side\",\n      \"shadow\": \"defined shadow cast on red background\"\n    },\n    \"composition\": {\n      \"framing\": \"full body\",\n      \"pose_emphasis\": \"curved posture, crossed legs\"\n    }\n  }\n}",
+        "author": "@meng_dagg695",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "4×4 动作分解参考表",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case347.jpg",
+        "prompt": "[STYLE]\nMonochrome grayscale illustration, 3D-rendered character, clean instructional reference sheet, white background, comic-style cell grid layout, technical diagram aesthetic.\n\n[LAYOUT]\n4×4 grid layout with a total of 16 panels. Each panel is separated by thin black border lines. Cells are numbered from 1 to 16, with consistent panel sizes.\n\n[CHARACTER]\nimage1 (the same character appears consistently in all panels)\n\n[PANEL STRUCTURE – per cell]\nTop-left: bold number badge + English title text\nCenter: full-body character pose illustration\nBottom-left: English description text (3–4 lines)\nOverlay: directional arrows indicating movement\n\n[ARROWS / MOTION INDICATORS]\nCurved arrows, straight arrows, and circular rotation indicators placed around the character to show motion flow and direction.\n\n[RENDERING STYLE]\nHighly detailed 3D sculpted style, soft studio lighting, subtle shadows, no color, grayscale shading, clean linework, game concept art quality.\n\n[NEGATIVE]\nNo background scenery, no color tones, no additional characters, no complex background.",
+        "author": "@oggii_0",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "Scrapbook 真人图与迷你分身",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case371.jpg",
+        "prompt": "Transform the provided reference image into a cozy aesthetic scrapbook-style composition while strictly preserving the original subject, identity, pose, lighting, and background.\n\nAdd multiple small “mini version” characters of the same person (chibi / doll-like style), placed naturally around the scene (on objects, table, shoulder, etc.). These mini figures must match the subject’s face, hairstyle, outfit, and vibe consistently, styled as cute 3D collectible figurines. Show them doing different activities (reading, posing, taking photos, relaxing).\n\nOverlay handwritten-style doodles and annotations across the image: arrows, hearts, stars, sparkles, icons, and playful captions connected to elements in the scene.\n\nUse a soft pastel color palette (white base with pink, peach, blue accents).\n\nKeep the frame visually rich and filled but balanced and clean.\n\nStyle: warm, cozy lighting, dreamy Instagram scrapbook aesthetic, soft depth of field, highly detailed, polished but playful.\n\nThe final result must look like the SAME original image enhanced with mini alter-egos and aesthetic annotations — not a recreated or different scene.",
+        "author": "@Kashberg_0",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "可爱角色设定表",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case372.jpg",
+        "prompt": "Create a cute female character design sheet inspired by the uploaded image.\n\nStyle: warm, soft, semi-realistic cartoon illustration with a cozy Japanese kawaii vibe (pastel tones, smooth shading, clean lineart).\n\nMake it a clean character concept poster layout including:\n\nOne large main female portrait (front view, detailed)\n\nFacial expression set (happy, shy, annoyed, sleepy, surprised, excited)\n\n2–3 full-body poses (standing, walking/running, playful pose)\n\nSmall accessory/object icons that match her personality (hair clip, cute bag, phone charm, coffee cup, keychain)\n\nA simple color palette section (skin, hair, outfit, accent colors)\n\nA profile info box with: name, age range, personality traits, likes/dislikes, short description\n\nOverall look should feel charming, cozy, feminine, and professionally arranged like an animation character design sheet.\nHigh quality, clean background, soft lighting.",
+        "author": "@xRahultripathi",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "高端 3D 收藏玩具头像",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case378.jpg",
+        "prompt": "Transform the input photo into a high-end stylized 3D collectible figure. Large head, slightly exaggerated facial features while preserving identity. Hyper-detailed skin texture with subtle pores, realistic wrinkles, and a cinematic expression.\n\nSmooth matte vinyl finish. Soft studio lighting, clean black background. Ultra-sharp focus, 8K render, photorealistic materials, Pixar-quality rendering, centered composition, full body, premium designer toy aesthetic.",
+        "author": "@Genematicai",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "十国传统服饰时尚拼贴",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case384.jpg",
+        "prompt": "A 10-Nation Cinematic Fashion Transformation of One Timeless BeautyChatGPT Prompt:\n\nA highly aesthetic, ultra-realistic cinematic collage featuring the exact same beautiful young woman from the reference image, shown in 10 different poses within one single image layout (5x2 grid style). Each frame represents a different country’s traditional cultural dress, styled in a modern, elegant, fashion-forward way. The woman is the SAME person in every frame: she has shoulder-length wavy dark brown hair, captivating dark brown eyes, full plump lips with a subtle confident smile, flawless warm olive-toned skin, high cheekbones, and a voluptuous yet athletic figure with a prominent bust, slim waist, and toned physique — exactly matching the woman in the provided reference photo.\n\nDesign details:\n\nEach of the 10 frames shows this same woman in different traditional outfits inspired by the following countries: Suriname, Guyana, Puerto Rico, Spain, Italy, India, Pakistan, Venezuela, Brazil, and the USA.\n\nEvery outfit is a modern, elegant, fashion-forward interpretation of that country’s cultural heritage.\n\nEach mini-frame includes a small national flag icon in the top-right corner.\n\nThe woman’s expressions vary: smiling, confident, graceful, playful, elegant, royal, modern fusion fashion poses.\n\nHigh-fashion editorial photography style.\n\nSoft cinematic lighting, ultra-detailed textures, realistic skin tones.\n\nBackgrounds subtly match each country’s cultural aesthetic (landmarks, streets, patterns, colors, architecture).\n\nLuxury fashion magazine layout style.\n\nClean grid composition, visually balanced, highly shareable social media design.\n\nStyle: Ultra-realistic, 8K resolution, Vogue editorial shoot, cinematic lighting, soft depth of field, trending Instagram aesthetic, fashion photography masterpiece.",
+        "author": "@amynys",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "街舞角色设定参考图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case397.jpg",
+        "prompt": "角色设定图布局，聚焦于一位18岁的亚裔女性街舞舞者。包含4个大型、高细节度的全身动态舞姿（突出舞蹈动作，面部清晰）。侧边附一条清晰的多角度参考条，仅含3个精细头部特写（正面、侧面、3/4侧面）。最大限度减少文字元素，将像素空间优先用于面部细节刻画。背景为粗砺工业风，搭配写实光影效果",
+        "author": "@ChangningL29508",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "8 套日常穿搭编辑拼贴",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case398.jpg",
+        "prompt": "Create a freeform fashion-editorial collage of me in 8 distinct full-body casual wear, arranged organically on a clean cream studio backdrop. Keep my face identical across all looks, w/ consistent proportions that visually read as around (height) w/o stating height. Include subtle handwritten-style arrows & labels highlighting key pieces. Avoid any grids, borders, or boxed layouts.",
+        "author": "@aiwithaly",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "Earth Signs 角色 Scrapbook",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case416.jpg",
+        "prompt": "CREATE A NEW IMAGE USING THE PROVIDED FEMALE SUBJECT AS THE ONLY REFERENCE. Preserve her exact facial features, identity, and characteristics with zero alteration.\n\nMAIN SUBJECT — EARTH ELEMENT\nShe represents the Earth element as a whole: grounded, elegant, sensual, calm, stable, patient, quietly powerful, and naturally luxurious. Relaxed grounded posture, standing or seated, soft natural hand placement, composed feminine body language, rooted presence.\n\nOUTFIT\nSingle cohesive Earth-inspired editorial look in olive, sage, taupe, mocha, beige, clay, cream, moss, and warm neutrals. Soft-structured elegant silhouette with subtle tailoring, draping, texture contrast, or layered structure. Fabrics: linen, cotton, matte satin, knit, suede-like textures, soft tailoring. Minimal refined gold or natural-toned accessories.\n\nHAIR\nSoft ash brown with natural dimension. Healthy, polished, softly voluminous waves or smooth blowout with subtle shine, controlled texture, face-framing strands, grounded and luxurious feel.\n\nMAKEUP\nKorean soft-glow base with earthy tones. Warm beige-rose, terracotta, tawny, or nude peach blush. Eyes in taupe, mocha, caramel, muted bronze, olive-brown. Soft liner, champagne-beige highlight, satin or velvet nude/mocha lips. Overall polished, sensual quiet-luxury aesthetic.\n\nENVIRONMENT\nGrounded editorial Earth-inspired setting with stone, wood, linen, botanicals, dried plants, natural fabrics, rustic-luxury styling, warm daylight or diffused editorial lighting, soft shadows, serene cinematic stillness. Palette: cream, olive, moss, clay, taupe, beige, muted green, warm brown.\n\nCHIBI MINI-ME SYSTEM\nSurround her with multiple medium-sized realistic 3D chibi mini-me versions with identical face, hair, and identity. High-end doll-like styling with oversized heads, petite bodies, glossy eyes, realistic hair, detailed makeup, miniature fashion outfits, soft cinematic 3D lighting.\n\nEARTH SIGN CHIBIS\nTaurus — sensual soft-luxury romantic styling, knit or elegant feminine neutral outfit, rich textures, gold accents. Ultra-long segmented twin low ponytails tied with white fabric bands flowing dramatically around the frame.\nVirgo — refined perfectionist aesthetic with polished minimalist tailoring, clean lines, structured mini dress or sophisticated co-ord styling.\nCapricorn — sleek power-dressing with blazer dress or tailored set, sharp silhouette, understated luxury. Hair pulled into ultra-long sculptural braid wrapped with gold chains and metallic ornaments.\n\nDOODLES + SCRAPBOOK OVERLAY\nHand-drawn earthy scrapbook doodles: leaves, vines, flowers, branches, mushrooms, butterflies, stars, sparkles, stones, hearts, sun doodles, botanical icons. Cozy ink-pen texture.\n\nHandwritten text:\n“EARTH SIGNS”\n“grounded and glowing”\n“soft strength”\n“rooted in beauty”\n“quiet luxury”\n“stable energy”\n“calm power”\n“naturally magnetic”\n\nFact bubbles:\n“Element: Earth”\n“Signs: Taurus, Virgo, Capricorn”\n“Traits: grounded, loyal, elegant”\n“Energy: stable, refined, dependable”\n\nCOMPOSITION\nMain subject centered and dominant. Chibis placed dynamically around shoulders, hands, sides, and lower frame. Doodles layered naturally throughout like a scrapbook. Balanced, expressive, premium composition.\n\nSTYLE\nCinematic editorial lifestyle image, fashion-meets-illustration hybrid, high detail, sharp focus, warm neutral tones, subtle realism grain, realistic human rendering with stylized 3D chibis and hand-drawn overlays. Social-media-ready premium aesthetic.\n\nCAMERA\nEye-level or slightly above, medium full-body or 3/4 framing, 35mm or 50mm lifestyle portrait look, crisp details with soft atmospheric depth.",
+        "author": "@ZaraIrahh",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "赛博黑客角色设定表",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case439.jpg",
+        "prompt": "Ultra-detailed cyberpunk anime character design sheet of a teenage genius hacker girl named “NEO // RIN”, full body turnaround (front, side, back) plus close-up portrait and accessory callouts. Short silver-white bob haircut with neon cyan and magenta gradient streaks, glowing translucent cyber visor over one eye, pale skin, sharp violet eyes, calm confident expression. Oversized techwear jacket with black tactical cargo pants, belts, straps, dangling utility tags, cropped top, futuristic sneakers, holographic accessories, barcode decals, warning symbols, “BYTE//NULL” typography, hacker aesthetic.\nColor palette: matte black, dark gray, white, neon cyan, neon pink.\nStyle inspired by high-end Japanese concept art, futuristic streetwear, cyberpunk fashion, Akira + Ghost in the Shell + modern anime key visual aesthetics.\nInclude clean character reference sheet layout with labeled details, logo designs, UI graphics, gadget closeups, and color palette on white background.\nHighly polished cel shading, crisp lineart, soft glow effects, intricate clothing folds, layered accessories, dynamic fashion silhouette, professional game concept art quality, 4k, ultra detailed.",
+        "author": "@Kashberg_0",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "ROGUE VIPER 游戏概念设定板",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case473.jpg",
+        "prompt": "**ROGUE VIPER — VIDEO GAME CONCEPT ART SHEET PROMPT**\n\n---\n\nOfficial AAA video game concept art sheet titled **'ROGUE VIPER'** for an Unreal Engine 5 third-person action-stealth game. Professional game development documentation layout on a dark charcoal #1A1A1A background with gold stencil label typography throughout. Four clearly labeled panels arranged in a 2×2 grid with a header and footer.\n\n---\n\n**SHEET HEADER** — Bold gold stencil font title text: **ROGUE VIPER** centered at top. Subtitle beneath in smaller tracking-heavy label font: **CHARACTER & ENVIRONMENT CONCEPT SHEET | UNREAL ENGINE 5 | ACTION / STEALTH — THIRD PERSON**\n\n---\n\n**PANEL 1 — TOP LEFT — Label: \"PROTAGONIST: MEI LIU / ROGUE VIPER\"**\n\nFull-body character turntable reference of a 30-year-old East Asian Chinese-American female operative. Athletic and toned, 5'8\", long straight black hair worn loose, calm neutral expression with sharp eyes. Wearing a form-fitting matte black tactical bodysuit with gold accent seams running along the shoulders, forearms, and thighs, gold cobra snake belt buckle at the waist, calf-high black tactical boots with subtle gold trim. Armed with twin suppressed 9mm pistols holstered on each hip with custom viper-scale grip texture, a serrated combat knife sheathed vertically on the right thigh, and a compact pneumatic grappling hook launcher mounted on the left forearm. Three views arranged side-by-side: front, 3/4, and back. Unreal Engine 5 physically-based rendering, photorealistic skin and fabric materials, neutral 3-point studio lighting for maximum clarity, gold and matte black color scheme throughout.\n\n---\n\n**PANEL 2 — TOP RIGHT — Label: \"ENEMY TYPE 01: OBSIDIAN PROTOCOL ENFORCER\"**\n\nThree enemy soldiers shown as character references against a dark background. These are elite private military contractors working for a shadow arms cartel called Obsidian Protocol. Their uniform: slate-gray and black modular plate carriers with deep crimson geometric hex-patch insignia on the shoulder, full-face ballistic visors with a dark red tinted lens, black tactical gloves, reinforced combat boots. Armed with compact bullpup assault rifles with red laser sights. One figure standing in neutral patrol stance, one crouched in a ready alert position, one depicted mid-aim with rifle raised. All three shown at the same scale for comparison. Same UE5 photorealistic PBR render style. Crimson and slate-gray color language to contrast Viper's gold and black.\n\n---\n\n**PANEL 3 — BOTTOM LEFT — Label: \"STEALTH ENVIRONMENT: OBSIDIAN PROTOCOL BLACK SITE — ALPINE RESEARCH FACILITY\"**\n\nWide cinematic establishing shot of a stealth mission environment. A hidden high-altitude research facility buried inside a snow-covered mountain, accessible only via an underground tram. Interior architecture is brutalist concrete and frosted glass, dimly lit with cold white fluorescent overhead strips and amber emergency lighting casting long dramatic shadows across polished concrete floors. Rows of classified server terminals and cryogenic storage units line the walls. Ventilation shafts visible in the ceiling above catwalks. A security camera sweeps a slow arc over a central corridor below. In the foreground, Rogue Viper is pressed flat against a concrete pillar in deep shadow, body low, watching two Obsidian Protocol enforcers on patrol below, one holding a flashlight. The scene communicates tension, patience, and tactical opportunity. Unreal Engine 5 Lumen global illumination, volumetric cold air haze, photorealistic ice and concrete materials, deep crushed blacks with cold white and amber lighting contrast. Cinematic wide 2.39:1 style composition within the panel.\n\n---\n\n**PANEL 4 — BOTTOM RIGHT — Label: \"ACTION SET PIECE: OBSIDIAN PROTOCOL FREIGHT DEPOT — COLLAPSED BRIDGE CANYON\"**\n\nWide cinematic action shot of a high-octane firefight environment. A sprawling open-air industrial freight depot at the edge of a sheer cliff canyon at dusk, with a collapsed suspension bridge dangling over the chasm below. Shipping containers and heavy crane equipment provide cover geometry. Rogue Viper is captured mid-movement in a dynamic gunfight pose — body low, both suppressed pistols raised and firing, muzzle flashes illuminating her face with sharp white light. Three Obsidian Protocol enforcers are positioned around her — one diving behind a container, one firing from atop a crane platform, one falling backward off the edge of the depot platform. Background: deep canyon with a river of orange reflected sunset light far below, dust and smoke rising from the firefight, a military helicopter approaching in the far distance. Warm dusk amber and cool canyon shadow blue provide dramatic color contrast. UE5 ray-traced reflections on metal container surfaces, particle systems for dust and muzzle smoke, cinematic depth of field on background elements.\n\n---\n\n**SHEET FOOTER** — Color palette chip row along the bottom of the sheet: matte black #1A1A1A, dark charcoal #2B2B2B, viper gold #D4AF37, gunmetal #3E3E3E, obsidian crimson #8B1A1A, slate gray #6B7280, cold white #E8EEF4. Label above chips: **COLOR PALETTE**. Footer text beneath: **ACTION / STEALTH — THIRD PERSON — UNREAL ENGINE 5 — © ROGUE VIPER GAME STUDIOS**\n\n---\n\n**UNIVERSAL STYLE CONSTRAINTS — APPLY TO ALL PANELS:**\nPhotorealistic only throughout the entire sheet. No anime, no cartoon, no stylized illustration, no cel shading, no comic book rendering. Unreal Engine 5 cinematic render quality with physically-based materials. Anamorphic lens character on all environment shots. Crushed blacks and desaturated mid-tones across all panels. Professional AAA game studio concept documentation format comparable to Naughty Dog, Ubisoft, or Guerrilla Games internal production art.",
+        "author": "@KimAkiyama81",
+        "mode": "generate",
+        "category": "人物与角色",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "千禧年日系校园喜剧场景",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case182.jpg",
+        "prompt": "[中文]\n2000 年代面向中学生的日剧喜剧场景\n\n[English]\n2000s Japanese TV drama comedy scene aimed at middle school students",
+        "author": "@UminekoStudio",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "樱花树下害羞双马尾少女",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case208.jpg",
+        "prompt": "[中文]\n生成一张高质量二次元美少女图片。\n\n 角色设定：\n\n- 年龄：17岁\n- 发型：双马尾，颜色：樱花粉，发梢带点渐变紫色\n - 眼睛：大而明亮，紫色瞳孔，有星星高光\n - 服装：JK制服，白色衬衫，深蓝色格子裙，红色领结\n - 配饰：白色过膝袜，棕色小皮鞋，头上戴一个粉色蝴蝶结\n\n风格要求：\n - 日系动画风格，线条清晰 - 色彩鲜艳，对比度高 - 光影柔和，有层次感\n- 背景：樱花树下，花瓣飘落，远处是学校教学楼  表情：微笑，有点害羞 姿势：站姿，双手放在身后，身体微微前倾\n\n比例：16:9（手机壁纸） 质量：8K，超精细，细节丰富\n\n[English]\nGenerate a high-quality anime beautiful girl image.\n\n Character setting:\n\n- Age: 17 years old\n- Hairstyle: twin tails, color: cherry blossom pink, hair tips with a bit of gradient purple\n - Eyes: large and bright, purple pupils, with star highlights\n - Clothing: JK uniform, white shirt, dark blue plaid skirt, red bow tie\n - Accessories: white over-the-knee socks, brown leather shoes, wearing a pink bow on the head\n\n Style requirements:\n - Japanese animation style, clear lines - bright colors, high contrast - soft light and shadow, with a sense of layering\n- Background: under the cherry blossom tree, petals falling, school teaching building in the distance  Expression: smiling, a bit shy Pose: standing posture, hands placed behind the back, body slightly leaning forward\n\nProportion: 16:9 (mobile wallpaper) Quality: 8K, ultra-fine, rich in details",
+        "author": "@joshesye",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "机甲少女立于废弃海城",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case224.jpg",
+        "prompt": "[中文]\n一名十几岁的机甲少女，苍白的肌肤上沾着烟尘与海水飞沫，锐利的琥珀色眼眸中映出发光的 HUD 瞄准标线；及腰的灰白色长发扎成高马尾，在海风中肆意飞扬。哑光枪灰色外骨骼装甲覆盖双肩、前臂与小腿，关节处裸露着液压活塞，胸挂布有发光的青蓝色冷却管线。一件沾着油污的超大号机库外套半滑落在一侧肩头，一门巨型轨道炮架在右肩，衣领处挂着士兵牌与磨损的红色丝带。\n她站在向左略微偏移的位置，立于倾斜钢铁平台的锈蚀边缘，平台向外延伸至漆黑海面之上；重心落在单腿上，左手紧握炮带，头部微转向镜头，投来沉静而桀骜的目光。背部推进器不断喷出蒸汽，马尾与外套在咸腥海风里向一侧狂乱飘动。\n背景是黄昏时分广袤的废弃海上都市，用途不明的巨型超级建筑从海洋中拔地而起，形成错落的剪影；骨白色的巨型塔楼与附着藤壶的钢铁结构融为一体，巨大的环形建筑以破碎的角度倾斜矗立，锈蚀的桁架骨架间缠绕着废弃线缆，深色浪涛在支撑柱间翻涌，数艘沉船半淹在柱脚。厚重的海雾萦绕在建筑底部，高耸的结构直刺入暗沉的天空，塔楼高处零星闪烁着微弱灯光，宛如遥远的眼眸。\n画面采用阴郁低调的光影：阴沉天空透出冷调青蓝环境光，画面右侧远处建筑漏出温暖的琥珀色钠灯光晕，塔楼后方低垂的太阳形成强烈逆光，勾勒出她的轮廓；体积光穿透海雾，装甲上呈现湿润的镜面高光。\n镜头使用 35mm 变形宽银幕镜头，略微低角度仰拍，越过她的肩膀望向远处建筑群；中全景构图，浅景深使前景的锈蚀景物虚化，带有横向镜头眩光，细腻的大气薄雾将远处巨型建筑压缩为层次分明的剪影。\n整体为电影感动漫主视觉风格，绘画感数字插画搭配利落线稿，采用青蓝、骨白与铁锈色为主的低饱和海洋色调，点缀少量暖色调高光；添加胶片颗粒，呈现高对比度的艺术海报质感，画幅比例 16:9。\n\n[English]\nA mecha girl mid-teens, pale skin smudged with soot and salt spray, sharp amber eyes with glowing HUD reticles, waist-length ash-white hair tied in a high ponytail whipping in the sea wind, matte gunmetal exoskeleton armor plating her shoulders, forearms and shins, exposed hydraulic pistons at the joints, chest rig with glowing cyan coolant lines, oversized oil-stained hangar jacket half slipping off one shoulder, a massive rail cannon resting on her right shoulder, dog tags and frayed red ribbon at her collar , standing off-center to the left on the rusted edge of a tilted steel platform jutting out over dark water, weight shifted onto one leg, left hand gripping the cannon strap, head turned slightly toward camera with a quiet defiant stare, steam venting from her back thrusters, her ponytail and jacket streaming sideways in the salt wind , a vast derelict sea-city at dusk, colossal megastructures of unknown purpose rising from the ocean in staggered silhouettes, bone-white monolithic towers fused with barnacled steel, cyclopean ring-shaped constructs canted at broken angles, rusted skeletal gantries threaded with dead cables, dark swells rolling between the pylons, shipwrecks half-swallowed at their feet, thick sea fog clinging to the bases while the upper structures pierce into a bruised sky, scattered faint lights blinking high in the towers like distant eyes , moody low-key lighting, cold teal ambient from the overcast sky, warm amber sodium glow leaking from a distant structure camera-right, hard backlight from a low sun behind the towers carving her silhouette, volumetric god rays cutting through sea mist, wet specular highlights on her armor , 35mm anamorphic lens, slight low angle looking up past her shoulder toward the structures, medium-wide shot, shallow depth of field with foreground rust in soft focus, horizontal lens flares, fine atmospheric haze compressing the distant megastructures into layered silhouettes , cinematic anime key visual, painterly digital illustration with crisp line art, desaturated oceanic palette of teal, bone-white and rust punched by small warm accent lights, film grain, high-contrast editorial poster aesthetic . Format 16:9.",
+        "author": "@old_pgmrs_will",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "星云巨鲤与小人的奇幻对话",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case238.jpg",
+        "prompt": "[中文]\n一幅超现实主义数字插画风格，采用低角度仰拍视角。画面描绘了一条巨型彩色锦鲤遨游在梦幻般的星云中，四周环绕着色彩鲜艳的星云与气泡。\n画面中央还站着一个小人，背对观众，神情平静地仰望空中这条巨大的锦鲤，锦鲤头向下看着小人。\n整体画面呈现出强烈的大小对比，氛围空灵又梦幻。比例9:16\n\n[English]\nA surrealist digital illustration style, adopting a low-angle upward perspective. The picture depicts a giant colorful koi swimming in a dreamy nebula, surrounded by colorful nebulae and bubbles. In the center of the picture stands a small figure, with their back to the audience, calmly looking up at this huge koi in the air, and the koi is looking down at the small figure. The overall picture presents a strong size contrast, and the atmosphere is ethereal and dreamy. Aspect ratio 9:16",
+        "author": "@liyue_ai",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "棘龙巨口中的酷飒少女与史前奇观",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case315.jpg",
+        "prompt": "[中文]\n超写实电影级奇幻场景，设定在郁郁葱葱的史前丛林山谷中。一只巨大的棘龙站在浅河边，它那长而类似鳄鱼的巨颚张得很大。一位年轻女子平静地坐在恐龙张开的嘴里，完美居中，双腿微微向前悬挂。她有一头深色直发，表情镇定无畏，皮肤纹理逼真。她身穿合身的黑色长袖短款上衣，蓝色牛仔短裤和黑色及膝战术靴。衣服和腿上可见微小的血迹和轻微划痕，增加了戏剧性的紧张感但并不血腥。她怀里温柔地抱着一只小恐龙幼崽，充满保护欲地抱着它。\n\n在他们身后，一道高耸而充满戏剧性的瀑布顺着覆盖着茂密绿色植被和薄雾的陡峭丛林悬崖倾泻而下。场景中栖息着多只恐龙：几只迅猛龙在河岸边潜行，小型食草动物在背景中奔跑，飞翔的翼龙在头顶盘旋。环境丰富，有长满苔藓的岩石、流动的河水、热带植物和柔和的大气雾。\n\n灯光具有电影感和自然感，漫射的日光照亮场景，阴影细节丰富，焦点清晰地聚在女子和棘龙身上，背景元素采用浅景深。恐龙鳞片、牙齿、水珠、树叶和织物上的超写实纹理。史诗奇幻写实主义，戏剧性构图，垂直构图，超精细，照片级真实感，4K，电影级调色，无文字，无水印。\n\n[English]\nUltra-realistic cinematic fantasy scene set in a lush prehistoric jungle valley. A colossal Spinosaurus stands beside a shallow river, its long crocodile-like jaws stretched wide open. Seated calmly inside the dinosaur’s open mouth is a young woman, perfectly centered, legs hanging slightly forward. She has straight dark hair, a composed fearless expression, and realistic skin texture. She is wearing a fitted black long-sleeve crop top, blue denim shorts, and black knee-high combat boots. Small blood smears and light scratches are visible on her clothes and legs, adding dramatic tension without gore. She gently cradles a small baby dinosaur in her arms, holding it protectively.\n\nBehind them, a tall dramatic waterfall cascades down steep jungle cliffs covered in dense green foliage and mist. Multiple dinosaurs populate the scene: several Velociraptors stalking the riverbank, small herbivores running through the background, and flying pterosaurs circling overhead. The environment is rich with mossy rocks, flowing water, tropical plants, and soft atmospheric fog.\n\nLighting is cinematic and natural, with diffused daylight illuminating the scene, detailed shadows, sharp focus on the woman and the Spinosaurus, and shallow depth of field for background elements. Hyper-real textures on dinosaur scales, teeth, water droplets, foliage, and fabric. Epic fantasy realism, dramatic composition, vertical framing, ultra-detailed, photorealistic, 4K, cinematic color grading, no text, no watermark.",
+        "author": "@MrDasOnX",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "鸟群织就的梦幻高定时装秀",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case319.jpg",
+        "prompt": "[中文]\n一个充满趣味的高级时装T台场景，主角是一位自信的女性，正走在奢华时装秀的T台上，身穿一件完全由鸟类制成的非凡高级定制礼服。数百只优雅、色彩鲜艳的鸟类构成了飘逸的雕塑感礼服形状，像活着的羽毛一样层叠，翅膀微微张开，营造出布料和运动的错觉。一些鸟儿在她周围轻轻升入空中，捕捉于飞行瞬间，增添了神奇、超现实的运动感。鸟儿们展现出丰富多样的色彩——彩虹般的蓝色、光芒四射的红色、金黄色和柔和的白色——拥有错综复杂的羽毛细节和自然纹理。她在迈步间摆出姿势，带着快乐、自信的表情，富有表现力的眼睛，以及精致的T台妆容。戏剧性的舞台灯光配以发光的高光，黑暗模糊的观众背景，电影级的景深，奇幻现实主义，超精细纹理，高对比度，清晰聚焦，奇思妙想的奢华时装秀，超现实主义高级定制，4K分辨率，专业调色。\n\n[English]\nA playful high-fashion runway scene featuring a confident woman walking a luxury fashion show catwalk, wearing an extraordinary couture dress made entirely of birds. Hundreds of elegant, vividly colored birds form the shape of a flowing, sculptural gown, layered like living feathers, with wings partially spread to create the illusion of fabric and motion. Some birds lift gently into the air around her, captured mid-flight, adding a magical, surreal sense of movement. The birds display a rich variety of colors — iridescent blues, radiant reds, golden yellows, and soft whites — with intricate feather details and natural textures. She poses mid-stride with a joyful, confident expression, expressive eyes, and refined runway makeup. Dramatic stage lighting with glowing highlights, dark blurred audience background, cinematic depth of field, fantasy realism, ultra-detailed textures, high contrast, sharp focus, whimsical luxury fashion show, surreal couture, 4K resolution, professional color grading.",
+        "author": "@MrDasOnX",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "复古巴士上的红风衣女郎",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case324.jpg",
+        "prompt": "[中文]\n一位时尚年轻女子坐在老式复古巴士的前缘，身穿红色长风衣、羊毛无檐小便帽、圆形蓝色反光太阳镜、叠层项链和粗犷的棕色皮靴。她有着波浪状金发，带着自信而梦幻的表情，仰望天空。巴士漆面剥落，呈青绿色与铁锈红色调。明亮清澈的蓝天，城市背景建筑极少，柔和日光，电影级色彩分级，浅景深，高端时尚旅行氛围，编辑摄影，超写实，4K分辨率，锐利对焦，自然肌肤质感，戏剧性构图，电影静帧美学。\n\n[English]\nA stylish young woman sitting on the front edge of an old vintage bus, wearing a long red trench coat, woolen beanie cap, round blue reflective sunglasses, layered necklaces, and rugged brown leather boots. She has wavy blonde hair and a confident, dreamy expression, looking upward toward the sky. The bus is weathered with peeling paint in turquoise and rust red tones.Bright clear blue sky, urban background with minimal buildings, soft daylight, cinematic color grading, shallow depth of field, high fashion travel vibe, editorial photography, ultra-realistic, 4K resolution, sharp focus, natural skin texture, dramatic composition, film still aesthetic.",
+        "author": "@iamsofiaijaz",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "烬甲猎鹰者与燃翼神禽",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case329.jpg",
+        "prompt": "[中文]\n一幅充满奇幻色彩的电影场景：一位英姿飒爽的女战士兼猎鹰师，身着饱经战火洗礼、饰以闪耀余烬纹理的皮甲，漫步于幽暗迷雾笼罩的森林之中。她高举手臂，指挥着一头巨大的凤凰与雄鹰的混合体，这头猛禽双翼燃烧，羽毛燃焰，尖端喷吐着火焰。它周身散发着橙红色的熔岩光芒，火星和余烬飞溅。女战士梳着辫子，皮肤上沾满了灰烬，神情坚定，手中拿着绳索和工具袋。画面细节丰富，羽毛纹理逼真，火焰物理效果自然，光照效果极具戏剧性，运用了体积雾、浅景深等技术，营造出史诗般的奇幻氛围，色彩调校极具电影质感，背景阴郁深沉，分辨率高达8K，呈现出概念艺术的精髓，并采用了虚幻引擎的渲染效果。\n\n[English]\nA cinematic fantasy scene of a fierce female use image for face reference warrior falconer walking through a dark misty forest, wearing battle-worn leather armor infused with glowing ember textures. Her arm is raised, commanding a massive phoenix-eagle hybrid with blazing wings and flaming feathers, fire trailing from its tips. The bird radiates molten orange and red light, casting sparks and embers into the air.The warrior has braided hair, ash-streaked skin, and a determined expression, carrying a rope and utility pouch. Ultra-detailed feathers, realistic fire physics, dramatic lighting, volumetric fog, shallow depth of field, epic fantasy atmosphere, hyper-realistic, cinematic color grading, dark moody background, 8k, concept art, unreal engine quality.",
+        "author": "@iamsofiaijaz",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "彼岸花丛中的红妆女子",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case340.png",
+        "prompt": "异质感oc，绝美红妆女子，位于彼岸花丛中，张力。 唐琬《钗头凤·世情薄》 世情薄，人情恶，雨送黄昏花易落。晓风干，泪痕残。欲笺心事，独语斜阑。难，难，难！",
+        "author": "@xiaofenggan",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "羊毛毡国家微缩世界",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case390.jpg",
+        "prompt": "Country: [INSERT COUNTRY NAME]\n\nA miniature felt diorama made of fluffy yarn, wool, and needlework, designed as a single cohesive small world (not a collage), reflecting the real landscape, culture, and daily life of the country.\n\nStructure:\n- Select 4–7 naturally integrated elements (landscape, architecture, transport, street life, culture)\n- Everything must flow together as one environment\n\nForeground:\nEveryday life — small shops, cafes, markets, people interacting, local clothing, street details, subtle movement, warm human presence\n\nMidground:\nConnecting flow — streets, bridges, rivers, paths, transport, cultural spaces that guide the eye naturally from front to back\n\nBackground:\nOne strong identity anchor — landmark, skyline, mountain, or symbolic landscape clearly representing the country (keep it clean, not overcrowded)\n\nStyle:\nHandmade wool felt, yarn, needle-felt textures, visible fibers, soft edges, miniature craftsmanship, premium diorama realism\n\nLighting:\nWarm golden hour or bright noon, soft shadows, clear visibility, gentle glow enhancing depth\n\nColor:\nSoft but saturated palette reflecting the country’s natural tones (greens, sky blues, architectural hues, cultural accents), warm and balanced\n\nComposition:\nVertical frame, balanced or centered perspective, slight top-down or immersive angle, clear foreground–midground–background depth\n\nMood:\nWarm, emotional, calm, refined — like a handcrafted fairy-tale version of real life (not childish)\n\nRules:\n- No logos or text overlays\n- No collage-style composition\n- No random symbolic clutter\n- Keep it realistic but stylized as a handmade miniature world\n\nQuality:\n16K, ultra-detailed, hyper-realistic miniature textures, cinematic depth, sharp focus\n\noutput_goal:\nA single, cohesive felt diorama world that instantly conveys the identity and atmosphere of the chosen country through integrated landscape, culture, and daily life",
+        "author": "@volkan_iras",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "头发里的微型城市",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case392.jpg",
+        "prompt": "Macro photograph of a miniature city hidden in human hair, clearly on a real human head, with part of the forehead and hairline visible, realistic skin texture with pores, tiny people walking through the streets between the hair strands, extremely small but realistic proportions, macro photography, 85mm lens, shallow depth of field, natural lighting, neutral colors, no warm tones, ultra realistic hair with visible roots, natural imperfections, slightly messy strands, realistic materials, slightly dirty buildings, no perfect surfaces, photorealistic, looks like a real photo, no illustration, no CGI, no glow",
+        "author": "@krafterlab",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "中世纪村庄双精灵冒险者",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case394.jpg",
+        "prompt": "Create a cinematic dark-fantasy medieval street scene in ultra-realistic 3D game concept art style, widescreen 16:9. In the foreground, show two adult elven adventurers walking side by side toward the viewer through a muddy cobblestone village road. The left character is a pale-skinned elf woman with long messy {argument name=\"left character hair color\" default=\"ash blonde\"} braided hair, pointed ears, layered olive-green druid robes, leather belts, pouches, dangling metal charms, necklaces, torn fabric strips, leaf-and-feather details, and glowing white vine-like magical tattoos spiraling down both forearms. The right character is a darker-skinned elf woman with long thick {argument name=\"right character hair color\" default=\"dark brown\"} dreadlocked hair, pointed ears, a green-and-brown leather ranger outfit, fur shoulder mantle, feather ornaments, arm wraps, belts, chains, talismans, and a confident warrior posture. Both faces are intentionally hidden by plain opaque {argument name=\"face covering color\" default=\"dark brown\"} square censor blocks, centered over their faces. Set the background in a richly detailed medieval market village with timber-and-thatch houses, hanging bundles of dried herbs on the right-side shopfront, barrels, baskets, wooden stalls, distant townspeople, and a large stone castle with towers and battlements rising in the background. Use {argument name=\"lighting mood\" default=\"warm late-afternoon golden sunlight\"}, dramatic shadows, volumetric haze, shallow depth of field, realistic fabric and leather textures, high detail, moody fantasy atmosphere, cinematic composition, Unreal Engine quality, no text, no logos.",
+        "author": "@RamonVi25791296",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "骑士法师大战石像魔像",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case395.jpg",
+        "prompt": "Create a cinematic dark fantasy action scene in a ruined cathedral hall: a {argument name=\"hero type\" default=\"female armored knight-mage\"} crouches in a defensive lunge on the left foreground, wearing ornate dark steel and leather plate armor with a long cream-and-black tabard, one arm extended behind her gripping a spiked mace or morning star crackling with golden magic sparks, the other arm braced forward behind a round glowing shield rimmed with warm light. Opposite her in the right midground is a massive {argument name=\"enemy type\" default=\"headless stone golem\"}, built from cracked gray masonry plates and bound with broken chains, charging with one huge fist raised and rubble falling from its body. Set the battle inside a grand, damaged palace-cathedral interior with towering arches, carved stone columns, tall broken windows, gold-trimmed marble floor in circular geometric patterns, scattered chunks of stone, dust, and debris. Use dramatic backlighting from a bright arched window behind the golem, warm golden magical highlights on the shield and weapon, deep shadows, volumetric dust beams, realistic textures, high-detail armor and stone, dynamic low-angle wide composition, shallow cinematic depth, epic game-cinematic realism, 16:9 widescreen, no text, no UI.",
+        "author": "@RamonVi25791296",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "当代舞现场 Storyboard",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case413.jpg",
+        "prompt": "Create a raw contemporary dance performance storyboard focused on intense physical movement and live singing. Use reference image for the character. 16:9 storyboard sheet, 12 cinematic panels.\n\nThe actual storyboard drawings must be black and white only: rough pencil lines, minimal detail, fast gesture drawing energy, simple anatomy construction and strong silhouette readability. Keep the artwork lightweight, dynamic and unfinished like early choreography previs.\n\nA solitary female performer sings continuously while executing an emotionally charged contemporary dance routine inside a massive empty brutalist hall.\n\nThe choreography is aggressive, fluid and constantly evolving: rapid turns, floor slides, crawling transitions, sharp body isolations, trembling hands, extreme balance shifts, hair whips, lunges, jumps, collapsing movements and distorted sculptural poses.\n\nEvery panel must contain visible motion and strong body momentum. Avoid static standing poses. The performer should feel trapped between ritual, exhaustion and emotional release.\n\nUse cinematic arthouse camerawork with handheld energy, whip pans, orbit movement, overhead shots, side silhouettes, aggressive close-ups, long lens compression and extreme negative space.\n\nthe environment minimal: empty space, smoke, fabric motion, harsh light beams and wet floor reflections only.\n\nAnnotation color system: red arrows = body movement blue arrows = camera movement green marks = framing / composition notes orange marks = lighting direction purple marks = vocal / emotional emphasis black text = short lens notes and panel labels No timestamps.\n\nEnd with one overwhelming final movement pose beneath a harsh isolated spotlight.",
+        "author": "@ogbenniasamuel2",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "可颂烘焙流程 Storyboard",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case419.jpg",
+        "prompt": "Create a crisp, clean infographic storyboard poster for THE CROISSANT BAKER. Wide 16:9 layout, white background, black borders, bold black typography, premium Pixar 3D stylized rendering, bright vivid colors — warm golden yellows, rich buttery creams, flaky browns, soft pastry whites, warm French bakery morning light.\nTop header:\n\nTHE CROISSANT BAKER\nTOTAL VIDEO TIME: 12 SECONDS\n8 SHOTS · WARM · FLAKY · IRRESISTIBLE\nLegend icons: ACTION, HEAT, TIME HINT, INGREDIENT\nThin warm golden accent line running full width beneath header\n\nSame Pixar-style young French male baker throughout: white baker's jacket, flour-dusted hands, warm authentic French boulangerie setting, marble countertop, warm morning light streaming through windows, bread racks in background. Bright, warm, delicious. Every panel a completely different composition and color.\n8 panels:\n\nTHE OPENER — Wide shot of baker arriving at the boulangerie before dawn, tying apron, switching on the warm kitchen lights, marble counter visible, bread racks behind, flour dusting the air, full world established, bright and cinematic\nTHE BUTTER BLOCK — Baker slams a massive cold block of European butter onto the marble counter with both hands, dramatic impact, flour cloud puffing up, close-up on hands, this is the bones moment — the start of everything\nTHE LAMINATION — Baker folding the dough over the butter block precisely, rolling pin pressing down hard, layers building, side angle shot showing the beautiful layering beginning, confident and skilled\nTHE ROLL — Dough rolled out into a large thin sheet, baker leaning into the rolling pin with full body weight, marble counter, flour dusting everywhere, wide shot showing the scale of the dough\nTHE SHAPE — Triangles cut from the dough, baker rolling each one from the wide end into a tight crescent, hands moving fast and confident, close-up on the shaping, beautiful and precise\nTHE EGG WASH — Baker brushing golden egg wash over each shaped croissant with a pastry brush, each one glistening beautifully, close-up overhead angle, warm golden color, stunning composition\nTHE OVEN — Croissants slid into the blazing hot oven on a tray, oven door closed, through the oven glass croissants visibly puffing and turning deep golden, layers separating dramatically, warm orange glow\nTHE TEAR — Baker pulls a perfect golden croissant from the rack, holds it up, tears it open slowly revealing hundreds of impossibly flaky buttery layers inside, steam escaping, butter glistening — this is the cheese pull moment, the hero shot of the entire video\n\nFooter:\n\nVIDEO FLOW: 8 shots × 1.5s = 12 seconds. Butter block to the tear.\nCAMERA TIPS: wide on opener, close-up on butter slam and shaping, side angle on lamination, overhead on egg wash, oven glass for panel 7, extreme close-up on the tear reveal\nLIGHT & STYLE: warm golden French bakery morning light, buttery cream tones, flour dust in the air, bright vivid Pixar colors, shallow depth of field on close-ups\nBAKER NOTES: one baker, one perfect croissant, one irresistible tear. The lamination layers and the final tear are everything — make them stunning.",
+        "author": "@TechieBySA",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "冬季生存惊悚 Storyboard",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case422.jpg",
+        "prompt": "Cinematic Survival Thriller Storyboard Prompt\n\nCreate a premium cinematic storyboard presentation sheet for a prestige winter survival thriller.\nUltra-detailed professional film pre-production layout, clean editorial design, grayscale blueprint background with labeled sections and technical annotations.\nAspect ratio 16:9 horizontal master board.\n\nSHARED CHOICES HEADER\n\n* Cut Count: 10\n* Color Palette: icy blue + steel gray + pine green + ember amber\n* Environment Fingerprint: snow-covered pine clearing, overturned horse carcass, torn campsite debris, looming conifer forest, drifting winter fog\n\n---\n\n1. CHARACTER REFERENCE\n\nA realistic South Asian man in his early 30s wearing a dark charcoal business suit, white dress shirt, black tie, polished black shoes.\nSnow dusted across shoulders and hair.\nCalm but haunted expression.\nShow:\n\n* front view\n* side profile\n* back view\n* facial close-up\n* side close-up\n* costume fabric detail\n* damaged sleeve detail\n* shoes in snow\n\nCharacter notes:\n“An intelligent city professional trapped in a brutal wilderness.\nOuter composure slowly cracks under primal fear.\nSuit = identity, burden, and last thread of control.”\n\nPalette swatches:\n\n* icy blue\n* steel gray\n* pine green\n* ember amber\n\n---\n\n2. ENVIRONMENT / SET DESIGN\n\nTop-down aerial map of a snowy forest clearing at dusk.\nDead horses partially buried in snow.\nDestroyed campsite tents.\nBlood trails across frozen ground.\nDense dark pine trees forming a claustrophobic wall around the clearing.\nHeavy winter fog drifting through the forest.\n\nAdd cinematic camera movement markers:\n\n1. Crane-down\n2. Track\n3. Push-in\n4. Handheld\n5. Steadicam\n6. Pan-right\n7. Dolly-in\n8. Rack-focus\n9. Arc shot\n10. Pull-out\n\nInclude arrows and overhead cinematic blocking diagram.\n\nSide elevation panel:\n\n* descending crane shot\n* fog layers\n* silhouette scale reference\n* conifer enclosure composition\n\nLocation elements legend:\n\n* tree line\n* torn campsite\n* horse carcass debris\n* blood-stained snow\n* main character\n* wolf approach zones\n\n---\n\n3. STORYBOARD (10 CUTS)\n\nCUT 1\n\nWide aerial crane-down shot over frozen clearing.\nTiny suited man surrounded by devastation.\nMoody blue dusk lighting.\n\nCUT 2\n\nTracking medium shot beside the man walking cautiously through snow and ripped tents.\nWind moving fabric debris.\n\nCUT 3\n\n75mm close-up push-in on face.\nCold breath visible.\nFear slowly emerging in his eyes.\n\nCUT 4\n\nExtreme close-up handheld shot of trembling hand gripping torn frozen fabric near blood-covered snow.\n\nCUT 5\n\nSteadicam medium shot revealing wolves emerging between trees behind him.\n\nCUT 6\n\nPan-right wide shot sweeping across forest edge.\nMultiple wolf silhouettes visible in fog.\n\nCUT 7\n\nOver-the-shoulder dolly-in toward alpha wolf approaching slowly through snow.\n\nCUT 8\n\nRack-focus insert shot shifting focus from frozen hand to wolf tracks in snow.\n\nCUT 9\n\nArc shot circling around the man as wolves tighten formation.\nSnow and pine branches moving in icy wind.\n\nCUT 10\n\nClose-up pull-out shot from his exhausted face revealing the full massacre behind him in fading ember dusk light.\n\n---\n\n4. LIGHTING / MOOD / STYLE NOTES\n\n* icy dusk ambience\n* cold blue backlight\n* ember sunset glow fading through fog\n* wet fabric specular highlights\n* cinematic volumetric fog\n* snow particles drifting through frame\n* high-contrast prestige thriller realism\n\nMood keywords:\n\n* isolation\n* winter dread\n* survival instinct\n* prestige thriller realism\n* primal tension\n* psychological fear\n\nCinematography notes:\n\n* anamorphic lenses (40mm / 50mm / 75mm / 100mm)\n* shallow depth of field\n* compressed forest layers\n* natural handheld movement\n* realistic snow atmosphere\n* cinematic Hollywood survival thriller aesthetic\n* ultra detailed\n* photorealistic\n* film grain\n* 8k production design board\n* premium movie pitch deck style",
+        "author": "@zulkarnaimx",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "1942 空战街机电影城",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case448.jpg",
+        "prompt": "Ultra-realistic cinematic “1942 City” scene, retro WWII arcade-shooter-inspired metropolis in real life, intense aerial-war atmosphere, vertical 4:5 editorial composition\n\nMale, exact face, vintage military-pilot-inspired streetwear from head to toe, bomber jacket with retro aviation patches, fitted cargo trousers, rugged combat boots, fingerless gloves, pilot goggles hanging around neck, walking through the city with fearless ace-pilot expression while fighter planes soar overhead\n\n✈️ 1942 CITY WORLDBUILDING\n\nentire city functions like a living 1942 arcade shooter universe\n• massive WWII fighter planes dogfighting above skyscrapers\n• giant anti-aircraft cannons mounted across rooftops\n• endless bullet patterns streaking through cloudy skies\n• retro military airfields integrated into urban districts\n• giant “MISSION START” alerts projected into the clouds\n• dramatic explosion trails lighting the skyline at night\n• aircraft carriers docked beside futuristic city ports\n• glowing power-up icons floating through aerial battle zones\n• giant radar systems rotating above downtown towers\n• endless enemy squadrons emerging from storm clouds\n• cinematic ocean-and-warzone environments surrounding the metropolis\n\n😂 COMEDIC DETAILS\n\n• random civilians casually dodging fighter planes on the way to work 😭\n• one pilot barrel-rolling dramatically for absolutely no reason\n• giant billboard flashing: “PLAYER 1 READY.”\n• pedestrians treating near-miss explosions like normal traffic\n• somebody still trying to collect every floating power-up midair\n• random mechanic repairing planes using pure confidence\n• one legendary pilot surviving impossible situations through arcade logic alone\n\n💡 LIGHTING & STYLE\n\nretro war-film cinematic lighting, fiery aerial-battle atmosphere, dramatic clouds and explosion reflections, hyper-detailed realistic textures mixed with nostalgic arcade-shooter aesthetics, intense blockbuster-war energy, masterpiece quality\n\n🎥 CAMERA\n\ncinematic aerial tracking shot, immersive dogfight atmosphere, dynamic motion blur from fighter planes and explosions, documentary-meets-retro-arcade realism, futuristic Manila-inspired 1942 metropolis, “classic arcade air combat became civilization” atmosphere",
+        "author": "@Xaroon_x",
+        "mode": "generate",
+        "category": "场景与叙事",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "古风历史题材图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case44.jpg",
+        "prompt": "Generate avatars of various emperors from the {argument name=\"dynasty\" default=\"Ming Dynasty\"} based on the style of the uploaded image, with their posthumous names and personal names listed below the avatars.",
+        "author": "@liyue_ai",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "大唐玄武门之变的朋友圈",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case167.jpg",
+        "prompt": "[中文]\n玄武门之变的朋友圈\n\n[English]\nWeChat Moments of the Xuanwu Gate Incident",
+        "author": "@Tz_2022",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "唐朝贵妇遛粉色马甲异形工笔画",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case174.jpg",
+        "prompt": "[中文]\n一幅细节丰富的工笔画，描绘了一位唐朝贵族女子在御花园中漫步。她看起来优雅而平静。\n\n她手里拿着一根金色的牵引绳。牵引绳的尽头是一只可怕的**异形怪物（出自电影《异形》）**。然而，这只异形穿着一件**可爱的粉色丝绸马甲**，并且表现得像一只训练有素的狗。\n\n背景有牡丹和蝴蝶。\n\n**在右下角，有一个红色的竖排艺术家印章，写着“吴先生”（Mr. Wu），风格像水印一样。** --ar 3:4\n\n[English]\nA finely detailed Gongbi painting of a noble Tang Dynasty lady taking a stroll in the imperial garden. She looks elegant and calm.\n\nShe is holding a gold leash. At the end of the leash is a terrifying **Xenomorph monster (from the movie Alien)**. However, the Xenomorph is wearing a **cute pink silk vest** and is behaving like a well-trained dog.\n\nBackground features peonies and butterflies.\n\n**In the bottom right corner, a single red vertical artist chop seal reads \"吴先生\" (Mr. Wu), stylized like a watermark.** --ar 3:4",
+        "author": "@johnAGI168",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "苏轼被贬首日朋友圈曝光",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case176.jpg",
+        "prompt": "[中文]\n苏轼被贬第一天小红书截图\n\n[English]\nSu Shi's first day of exile Xiaohongshu screenshot",
+        "author": "@MrLarus",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "杜甫朋友圈吐槽茅屋被掀翻",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case184.jpg",
+        "prompt": "[中文]\n杜甫发朋友圈吐槽房顶被风刮没了\n\n[English]\nDu Fu posting on WeChat Moments complaining about his roof being blown away by the wind",
+        "author": "@MrLarus",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "武则天发微博自拍太魔性了",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case185.jpg",
+        "prompt": "[中文]\n武则天自拍登记发微博\n\n[English]\nWu Zetian taking a selfie, registering and posting on Weibo.",
+        "author": "@MrLarus",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "皇宫深处的御用快递驿站",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case205.jpg",
+        "prompt": "[中文]\n生成一张古代皇宫 × 快递驿站\n\n[English]\nGenerate an ancient imperial palace × express delivery station",
+        "author": "@joshesye",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "国风工笔八仙长卷插画",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case206.jpg",
+        "prompt": "[中文]\n（国风卷轴插画师）你是一位顶尖的中国传统工笔人物画师，擅长将经典人物群像绘制成长卷式百科海报。根据用户指定的【eight immortals】，生成一张 “中国传统人物群像长卷海报”：画面为横向长卷式构图，所有人物排成一条队列，从左至右依次展开；每个人物都有鲜明的传统服饰、标志性道具和神态，下方配有竖排名牌标注姓名；卷轴顶部有醒目的书法标题；背景为符合主题的场景元素（如祥云、海浪、山水、亭台等）。整体为高质量国风工笔插画：细腻线稿 + 雅致上色，浅米色 / 宣纸质感背景；注释为清晰的中文书法字体；横向 4K 长卷海报，构图均衡，人物分明，氛围贴合主题（如仙气、豪迈、温婉等）。直接出图，人物群像为【eight immortals】。\n\n[English]\n(Guofeng scroll illustrator) You are a top Chinese traditional Gongbi figure painter, skilled in painting classic character group portraits into long-scroll-style encyclopedia posters. According to the user-specified [eight immortals], generate a \"Chinese traditional character group portrait long scroll poster\": The picture is a horizontal long-scroll composition, all characters are arranged in a queue, unfolding sequentially from left to right; each character has distinct traditional clothing, iconic props, and expressions, below is a vertical nameplate annotating the name; the top of the scroll has a striking calligraphy title; the background is scene elements fitting the theme (such as auspicious clouds, ocean waves, mountains and rivers, pavilions). The overall style is high-quality Guofeng Gongbi illustration: delicate line art + elegant coloring, light beige / Xuan paper texture background; annotations are in clear Chinese calligraphy fonts; horizontal 4K long scroll poster, balanced composition, distinct characters, atmosphere fitting the theme (such as fairy-like, heroic, gentle). Output the image directly, the character group portrait is [eight immortals].",
+        "author": "@GeekCatX",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "古风明朝帝王群像长卷",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case226.jpg",
+        "prompt": "[中文]\n根据上传图片的风格，生成明朝各个皇帝的头像，头像下面有他们的谥号和名字\n\n[English]\nBased on the style of the uploaded image, generate portraits of the emperors of the Ming Dynasty, with their posthumous titles and names below the portraits",
+        "author": "@liyue_ai",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "朱元璋登基后的推特主页",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case234.jpg",
+        "prompt": "[中文]\n创建一个明朝朱元璋登基之后的X帖子页面\n\n[English]\nCreate an X post page of Zhu Yuanzhang after his ascension to the throne in the Ming Dynasty",
+        "author": "@liyue_ai",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "宋朝文人的赛博朋友圈",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case267.jpg",
+        "prompt": "[中文]\n\"宋朝人的朋友圈\"/\"SONG DYNASTY SOCIAL MEDIA FEED\"，古今穿越幽默融合界面设计风格，画面模拟手机社交媒体界面，但内容全部是宋朝场景头像是宋代文人画像，用户名\"苏东坡SuShi_Official\"，发布内容\"刚到黄州，被贬了但心情还行。今天自己做了东坡肉，味道绝了，附菜谱：\"，配图为工笔画风格的东坡肉特写，点赞列表\"黄庭坚、秦观、佛印等126人\"，评论区\"王安石：呵呵\"\"司马光：还是那个味道\"，界面元素如点赞图标用宋代花纹替代，状态栏显示\"大宋移动 5G\"和\"元丰三年\"，配色为手机深色模式搭配宋代雅致色调，历史与社交媒体的趣味碰撞杰作\n\n[English]\n\"Song Dynasty People's Moments\"/\"SONG DYNASTY SOCIAL MEDIA FEED\", Ancient and modern time-travel humor fusion interface design style, The image simulates a mobile phone social media interface, but the content is entirely Song Dynasty scenes, The avatar is a portrait of a Song Dynasty literati, Username \"Su Dongpo SuShi_Official\", Post content \"Just arrived in Huangzhou, demoted but feeling okay. Made Dongpo pork myself today, tastes amazing, recipe attached:\", The attached image is a close-up of Dongpo pork in Gongbi painting style, Likes list \"Huang Tingjian, Qin Guan, Fo Yin etc. 126 people\", Comments section \"Wang Anshi: Hehe\" \"Sima Guang: Still the same taste\", Interface elements such as the like icon are replaced with Song Dynasty patterns, The status bar shows \"Great Song Mobile 5G\" and \"Third Year of Yuanfeng\", The color scheme is mobile phone dark mode paired with elegant Song Dynasty tones, A masterpiece of fun collision between history and social media",
+        "author": "@Panda20230902",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "威化岛回军前夕李成桂动态",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case268.jpg",
+        "prompt": "[中文]\n태조 이성계의 X  페이지(위화도 회군을 벌이기 직전- 최영 장군과 서로 디스하는 내용이 담긴 게시글들)을 만들어 주세요.\n\n[English]\nPlease create an X page of King Taejo Yi Seong-gye (right before carrying out the Wihwa Island Retreat - containing posts where he and General Choi Yeong are dissing each other).",
+        "author": "@SKA_Neotype",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "明朝登基宝玉的推文页面",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case292.jpg",
+        "prompt": "[中文]\n创建一个宝玉（查阅 https://x.com/dotey 这个推主的主页及部分推文）穿越到明朝，登基之后依据其业务/个性，绘制的其新的X帖子页面。\n\n[English]\nCreate a new X post page illustrated for Baoyu (refer to the homepage and some posts of this Twitter user at https://x.com/dotey) after time-traveling to the Ming Dynasty and ascending the throne, based on his business/personality.",
+        "author": "@tuzi_ai",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "《短歌行》诗词意境图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case337.png",
+        "prompt": "帮我生成一张《短歌行》的意境图，带整篇《短歌行》文字",
+        "author": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "《赤壁怀古》长卷图",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case338.png",
+        "prompt": "帮我生成一张《赤壁怀古》的长卷图，带整篇《赤壁赋》文字",
+        "author": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "东方神话人物志百科海报",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/case415.jpg",
+        "prompt": "请基于【孙悟空】生成一张竖版 A4「东方神话人物志」百科海报。\n\n你是一名东方神话视觉设定师、古籍图谱设计师和中文信息图设计师。请根据【人物名称】在东方神话、民间传说、古籍、戏曲、文学或传统文化中的已知形象，生成一张内容完整、视觉统一、具有东方神话气质的人物档案海报。\n\n最重要原则：\n全部内容必须围绕【人物名称】展开，不要套用通用神仙模板。\n人物形象、法器、坐骑、神通、典故、象征物、背景场景都必须符合【人物名称】的神话设定。\n如果该人物存在多个传说版本，请采用最广为人知的版本；存在异文时，可以在相关板块简短标注“传说版本不一”。\n不确定的信息不要强行编造，可写“民间传说中多有异文”或“相关记载较少”。\n不要使用北欧符文、维京图腾、哥特边框、西方盔甲、欧式城堡、西幻恶魔角、赛博朋克元素。\n整体必须是东方神话审美，而不是“西幻人物换中式衣服”。\n整体视觉风格：\n东方神话史诗感，融合《山海经》异兽图谱、敦煌壁画、青绿山水、唐代人物画、宋元古画、青铜器纹样、古籍注疏和符箓篆刻风格。画面庄重、神秘、古雅、华丽但克制。\n画面构图：\n\n竖版 A4 海报，中轴对称布局。中央为【人物名称】的全身或半身主视觉，姿态庄严，有神性和叙事感。人物服饰、发冠、法器、神态、灵兽、背景都要符合该人物传说。左右两侧为信息卡片，底部为核心总结。四周使用云雷纹、回纹、青铜纹、祥云纹、卷草纹、山海纹、篆刻印章式边框。\n主标题：“【人物名称】”\n副标题：“东方神话人物志｜根据该人物神话传说生成”\n顶部精神题记：请根据【人物名称】的核心精神，自动生成一句古雅、凝练、有哲学意味的题记。题记要体现该人物背后的价值观、生命姿态或精神内核，而不是说明性文字。不要写“非史实考证”“仅供参考”“传说版本”等免责声明。字数控制在 12-28 字，适合放在标题下方。题记应与人物高度绑定，不要套用“守护苍生”“大道无边”等空泛句式。\n\n请生成以下内容板块：\n【1. 神格身份】说明【人物名称】在东方神话体系中的身份定位。\n【2. 神话源流】说明该人物主要出自哪些神话、古籍、民间传说、小说、戏曲或宗教信仰。\n【3. 司职权柄】总结该人物掌管或象征的领域。\n【4. 形象特征】描述该人物的典型外貌、服饰、神态、姿态和视觉气质。\n【5. 法器神通】展示该人物最具代表性的法器、兵器、符咒、神通或能力。\n【6. 灵兽坐骑 / 随身象征】如果【人物名称】有坐骑、灵兽、伴生生灵，请展示其名称、形态和寓意。如果没有明确坐骑，请改为“随身象征物”或“相关意象”。不要强行给每个人物安排龙、凤、仙鹤或麒麟。\n【7. 典故出处】列出 2-4 个与【人物名称】相关的经典故事、传说片段或文化典故。不要虚构不存在的典故。若版本不一，请标注“异文较多”。\n【8. 象征意象】提炼该人物最核心的视觉符号。符号必须与【人物名称】相关。\n【9. 神话谱系】说明该人物与其他神话人物、阵营、族属或体系的关系。如果谱系不明确，请写“谱系传说不一”。\n【10. 文化影响】说明该人物在民俗、节日、祭祀、文学、戏曲、绘画、庙宇、影视或现代文化中的影响。\n【11. 精神内核】从神话叙事角度总结该人物象征的精神。这里只分析神话形象，不推断真实人物性格。\n【12. 核心总结】用一段古雅但易懂的中文总结【人物名称】：“【人物名称】在东方神话中象征……，其形象融合了……，代表着……。”\n\n视觉版式要求：\n顶部：大标题 + 副标题 + 精神题记。\n中央：人物主视觉，气势庄重，细节丰富。\n左侧栏目：神格身份、神话源流、司职权柄、形象特征、法器神通。\n右侧栏目：灵兽坐骑/随身象征、典故出处、象征意象、神话谱系、文化影响。\n底部：精神内核 + 核心总结。\n可加入小型图标、注释线、古籍标签、卷轴卡片、青铜铭牌、朱砂印章、符箓纹样。\n信息卡片像古书页、玉简、青铜牌、卷轴或碑铭，不要像现代科技 UI。\n\n材质与纹样：\n宣纸肌理、矿物颜料、鎏金线条、朱砂印章、墨色晕染、青铜器铭文、云雷纹、回纹、祥云纹、山水纹、敦煌藻井纹样。\n\n配色规则：\n根据【人物名称】的属性自动选择东方配色。火焰 / 战斗 / 护法：朱砂、玄黑、鎏金、赤红。月亮 / 水系 / 清冷神祇：黛青、银白、月白、石蓝。山川 / 木系 / 自然神灵：石绿、青黛、玉白、赭石。帝王 / 天庭 / 尊神：鎏金、玄黑、朱砂、玉白。妖灵 / 山海异兽：墨黑、铜绿、暗金、赭红。不要所有人物都使用同一套配色。\n\n文字要求：\n中文必须清晰可读，标题大气，正文简短准确。不要乱码、伪文字、错别字、文字重叠或裁切。如果空间不足，优先压缩正文，但保留所有板块标题。\n\n避免：\n北欧符文、维京风、哥特边框、西方盔甲、欧式城堡、魔幻游戏 UI、赛博朋克、现代科技感、过度暗黑、随机龙凤、无关法器、模板化神仙形象、与【人物名称】无关的典故、空泛精神题记。",
+        "author": "@TanLuAI",
+        "mode": "generate",
+        "category": "历史与古风",
+        "sub_category": "古风",
+        "created": "2026年5月28日09:40:59"
     }
 ]
