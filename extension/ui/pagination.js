@@ -194,35 +194,6 @@ window.UI.Pagination = class PaginationComponent {
             style: `color: ${colors.textSecondary}; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; padding: 8px; border-radius: 50%; cursor: pointer;`
         });
 
-        // Xiaohongshu Link
-        const xhsLink = h('a', {
-            href: 'https://www.xiaohongshu.com/user/profile/5f7dc54d0000000001004afb',
-            target: '_blank',
-            title: '关注我的小红书',
-            style: `
-                color: #FF2442;
-                background: rgba(255, 36, 66, 0.08);
-                transition: all 0.2s ease;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 6px 12px;
-                border-radius: 20px;
-                cursor: pointer;
-                text-decoration: none;
-                gap: 6px;
-                font-weight: 500;
-                font-size: ${mobile ? '12px' : '13px'};
-                border: 1px solid rgba(255, 36, 66, 0.1);
-            `
-        }, [
-            h('span', {
-                style: 'display: flex; align-items: center;',
-                innerHTML: `<svg viewBox="0 0 1024 1024" width="16" height="16" fill="currentColor"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32z m-40 728H184V184h656v656zM312 376h400v80H312z m0 176h400v80H312z" /></svg>`
-            }),
-            h('span', {}, '关注更新')
-        ]);
-
         if (!mobile) {
             githubLink.onmouseenter = () => {
                 githubLink.style.color = colors.text;
@@ -234,21 +205,9 @@ window.UI.Pagination = class PaginationComponent {
                 githubLink.style.background = 'transparent';
                 githubLink.style.transform = 'scale(1)';
             };
-
-            xhsLink.onmouseenter = () => {
-                xhsLink.style.background = 'rgba(255, 36, 66, 0.15)';
-                xhsLink.style.transform = 'scale(1.05)';
-                xhsLink.style.boxShadow = `0 4px 12px ${colors.shadow}`;
-            };
-            xhsLink.onmouseleave = () => {
-                xhsLink.style.background = 'rgba(255, 36, 66, 0.08)';
-                xhsLink.style.transform = 'scale(1)';
-                xhsLink.style.boxShadow = 'none';
-            };
         }
 
         socialContainer.appendChild(githubLink);
-        socialContainer.appendChild(xhsLink);
 
         return socialContainer;
     }

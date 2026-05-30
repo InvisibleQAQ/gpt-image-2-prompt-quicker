@@ -106,6 +106,7 @@ Failure behavior matters: `fetcher.js` falls back to cached data even when expir
   - NSFW toggle
   - recent-week toggle
 - `BananaModal` subscribes to the store and re-renders cards/pagination when state changes.
+- `extension/ui/pagination.js` renders the footer pagination controls plus a GitHub link; keep footer social actions minimal and update this note if they change.
 - Custom prompts, favorites, sort mode, and NSFW setting persist in `chrome.storage.local`.
 
 ### Site adapter design
