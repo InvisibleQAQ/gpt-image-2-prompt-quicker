@@ -146,7 +146,7 @@ class ChatGPTSite extends BaseSite {
 
         if (isImageMode && !existingLabel) {
             const label = window.DOM.create('span', {
-                textContent: 'prompts',
+                textContent: window.I18n ? window.I18n.t('site.button.promptPill', 'prompts') : 'prompts',
                 'aria-hidden': 'true'
             });
 
@@ -165,9 +165,10 @@ class ChatGPTSite extends BaseSite {
             existingLabel.remove();
         }
 
+        const promptButtonLabel = window.I18n ? window.I18n.t('site.button.promptPill', 'prompts') : 'prompts';
         btn.className = 'composer-btn banana-prompt-button';
-        btn.setAttribute('aria-label', 'prompts');
-        btn.setAttribute('title', 'prompts');
+        btn.setAttribute('aria-label', promptButtonLabel);
+        btn.setAttribute('title', promptButtonLabel);
         btn.style.cssText = isImageMode
             ? `
                 display: inline-flex;
@@ -246,8 +247,8 @@ class ChatGPTSite extends BaseSite {
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
             className: 'composer-btn banana-prompt-button',
-            'aria-label': 'prompts',
-            title: 'prompts',
+            'aria-label': window.I18n ? window.I18n.t('site.button.promptPill', 'prompts') : 'prompts',
+            title: window.I18n ? window.I18n.t('site.button.promptPill', 'prompts') : 'prompts',
             type: 'button',
             onmouseenter: (e) => {
                 const isDark = this.getCurrentTheme() === 'dark';

@@ -28,6 +28,7 @@
                 "lib/dom.js",
                 "lib/utils.js",
                 "lib/store.js",
+                "lib/i18n.js",
                 "services/fetcher.js",
                 "services/config.js",
                 "services/prompts.js",

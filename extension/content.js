@@ -1,4 +1,8 @@
 async function init() {
+    if (window.I18n) {
+        await window.I18n.init();
+    }
+
     const hostname = window.location.hostname;
     const config = await window.ConfigManager.get();
 

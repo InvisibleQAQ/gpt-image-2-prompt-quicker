@@ -86,29 +86,45 @@
         <div class="logo-container">
             <img src="../icon128.png" alt="Banana Prompt Quicker" style="width: 72px; height: 72px; object-fit: contain;">
         </div>
-        <h1>很遗憾看到您离开</h1>
-        <p class="subtitle">您的反馈对我们至关重要，能告诉我们原因吗？</p>
+        <h1 data-i18n="uninstall.heading">很遗憾看到您离开</h1>
+        <p class="subtitle" data-i18n="uninstall.subtitle">您的反馈对我们至关重要，能告诉我们原因吗？</p>
 
         <form class="feedback-form" action="https://formsubmit.co/ysking7402@gmail.com" method="POST">
             <!-- Configuration -->
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Banana Prompt Quicker 卸载反馈">
+            <input type="hidden" name="_subject" value="Banana Prompt Quicker 卸载反馈" data-i18n-value="uninstall.subject">
             <input type="hidden" name="_template" value="table">
 
             <div class="form-group">
-                <textarea name="reason" placeholder="请输入您的建议或卸载原因..." required autofocus></textarea>
+                <textarea name="reason" placeholder="请输入您的建议或卸载原因..." data-i18n-placeholder="uninstall.placeholder" required autofocus></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-submit">帮助改进</button>
+            <button type="submit" class="btn btn-primary btn-submit" data-i18n="uninstall.submit">帮助改进</button>
         </form>
 
         <div style="margin-top: 24px;">
             <a href="https://github.com/glidea/banana-prompt-quicker/issues" target="_blank" class="btn btn-text"
                 style="font-size: 13px;">
-                在 GitHub 上反馈问题
+                <span data-i18n="uninstall.githubLink">在 GitHub 上反馈问题</span>
             </a>
         </div>
     </main>
+    <script src="../lib/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await window.I18n.init();
+            document.title = window.I18n.t('uninstall.pageTitle', document.title);
+            document.querySelectorAll('[data-i18n]').forEach((node) => {
+                node.textContent = window.I18n.t(node.dataset.i18n, node.textContent);
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach((node) => {
+                node.placeholder = window.I18n.t(node.dataset.i18nPlaceholder, node.placeholder);
+            });
+            document.querySelectorAll('[data-i18n-value]').forEach((node) => {
+                node.value = window.I18n.t(node.dataset.i18nValue, node.value);
+            });
+        });
+    </script>
 </body>
 
 </html>

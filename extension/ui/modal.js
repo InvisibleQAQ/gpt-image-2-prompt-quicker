@@ -127,6 +127,8 @@ class BananaModal {
             activeFilters: this.store.state.activeFilters,
             sortMode: this.store.state.sortMode,
             nsfwEnabled: this.store.state.nsfwEnabled,
+            recentWeekEnabled: this.store.state.recentWeekEnabled,
+            locale: this.store.state.locale,
             onSearch: (keyword) => {
                 this.store.setSearchKeyword(keyword);
                 this.paginationComponent.resetPage();
@@ -141,6 +143,10 @@ class BananaModal {
             },
             onSortChange: async (mode) => {
                 await this.store.setSortMode(mode);
+                this.paginationComponent.resetPage();
+            },
+            onLocaleChange: async (locale) => {
+                await this.store.setLocale(locale);
                 this.paginationComponent.resetPage();
             },
             onNsfwChange: async (enabled) => {
@@ -212,7 +218,13 @@ class BananaModal {
         // Update search component if categories changed
         if (this.searchComponent) {
             this.searchComponent.props.categories = this.store.state.categories;
-            this.searchComponent.renderCategoryOptions();
+            this.searchComponent.props.selectedCategory = this.store.state.selectedCategory;
+            this.searchComponent.props.activeFilters = this.store.state.activeFilters;
+            this.searchComponent.props.sortMode = this.store.state.sortMode;
+            this.searchComponent.props.nsfwEnabled = this.store.state.nsfwEnabled;
+            this.searchComponent.props.recentWeekEnabled = this.store.state.recentWeekEnabled;
+            this.searchComponent.props.locale = this.store.state.locale;
+            this.searchComponent.updateView();
         }
     }
 
@@ -287,7 +299,7 @@ class BananaModal {
                 color: ${colors.textSecondary};
                 font-size: ${mobile ? '14px' : '16px'};
             `
-        }, '没有找到相关提示词');
+        }, window.I18n ? window.I18n.t('modal.empty', 'No prompts found') : 'No prompts found');
 
         grid.appendChild(placeholder);
     }
@@ -324,7 +336,7 @@ class BananaModal {
                         ...existing,
                         ...promptData,
                         isCustom: true,
-                        author: 'Me'
+                        author: '__CUSTOM_AUTHOR__'
                     };
                     await this.store.updateCustomPrompt(updatedPrompt);
                 } else {
@@ -333,7 +345,7 @@ class BananaModal {
                         ...promptData,
                         id: `custom-${Date.now()}`,
                         isCustom: true,
-                        author: 'Me'
+                        author: '__CUSTOM_AUTHOR__'
                     };
                     await this.store.addCustomPrompt(newPrompt);
                 }

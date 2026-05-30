@@ -54,10 +54,28 @@ window.UI.Pagination = class PaginationComponent {
     updateView() {
         if (!this.element) return;
 
+        const t = (key, fallback) => window.I18n ? window.I18n.t(key, fallback) : (fallback || key);
         const totalPages = this.getTotalPages();
         const paginationControls = this.element.querySelector('#pagination-controls');
 
         if (!paginationControls) return;
+
+        const prevBtn = paginationControls.querySelector('#prev-page-btn');
+        const nextBtn = paginationControls.querySelector('#next-page-btn');
+        const pageInfo = paginationControls.querySelector('#page-info');
+        const githubLink = this.element.querySelector('a[href="https://github.com/glidea/banana-prompt-quicker"]');
+
+        if (prevBtn) {
+            prevBtn.textContent = t('pagination.prev', 'Previous');
+        }
+
+        if (nextBtn) {
+            nextBtn.textContent = t('pagination.next', 'Next');
+        }
+
+        if (githubLink) {
+            githubLink.title = t('pagination.githubTitle', 'Star on GitHub');
+        }
 
         if (totalPages <= 1) {
             paginationControls.style.display = 'none';
@@ -67,10 +85,6 @@ window.UI.Pagination = class PaginationComponent {
         paginationControls.style.display = 'flex';
 
         // Update buttons state
-        const prevBtn = paginationControls.querySelector('#prev-page-btn');
-        const nextBtn = paginationControls.querySelector('#next-page-btn');
-        const pageInfo = paginationControls.querySelector('#page-info');
-
         if (prevBtn) {
             prevBtn.disabled = this.currentPage === 1;
             this.updateButtonStyle(prevBtn, this.currentPage === 1);
@@ -96,6 +110,8 @@ window.UI.Pagination = class PaginationComponent {
         const { colors, mobile } = this;
 
         // Pagination Controls
+        const t = (key, fallback) => window.I18n ? window.I18n.t(key, fallback) : (fallback || key);
+
         const prevBtn = h('button', {
             id: 'prev-page-btn',
             onclick: () => this.changePage(-1),
@@ -111,7 +127,7 @@ window.UI.Pagination = class PaginationComponent {
                     e.target.style.boxShadow = 'none';
                 }
             } : null
-        }, '上一页');
+        }, t('pagination.prev', 'Previous'));
 
         const pageInfo = h('span', {
             id: 'page-info',
@@ -133,7 +149,7 @@ window.UI.Pagination = class PaginationComponent {
                     e.target.style.boxShadow = 'none';
                 }
             } : null
-        }, '下一页');
+        }, t('pagination.next', 'Next'));
 
         const controlsWrapper = h('div', {
             id: 'pagination-controls',
@@ -180,6 +196,7 @@ window.UI.Pagination = class PaginationComponent {
     createSocialLinks() {
         const { h } = window.DOM;
         const { colors, mobile } = this;
+        const t = (key, fallback) => window.I18n ? window.I18n.t(key, fallback) : (fallback || key);
 
         const socialContainer = h('div', {
             style: `display: flex; align-items: center; gap: ${mobile ? '12px' : '16px'}; justify-content: ${mobile ? 'center' : 'flex-end'}; flex-shrink: 0;`
@@ -189,7 +206,7 @@ window.UI.Pagination = class PaginationComponent {
         const githubLink = h('a', {
             href: 'https://github.com/glidea/banana-prompt-quicker',
             target: '_blank',
-            title: 'Star on GitHub',
+            title: t('pagination.githubTitle', 'Star on GitHub'),
             innerHTML: `<svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>`,
             style: `color: ${colors.textSecondary}; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; padding: 8px; border-radius: 50%; cursor: pointer;`
         });

@@ -18,10 +18,10 @@
                 <!-- Slide 1: Features (原 Slide 2) -->
                 <section class="slide" id="slide-1">
                     <div class="content-wrapper">
-                        <h2 class="hero-title"><img src="../icon48.png" alt="Banana Prompt Quicker" class="hero-icon">提示词从未如此优雅</h2>
+                        <h2 class="hero-title"><img src="../icon48.png" alt="Banana Prompt Quicker" class="hero-icon"><span data-i18n="onboarding.heroTitle">提示词从未如此优雅</span></h2>
                         <div class="guide-container">
                             <img src="https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/guide.gif"
-                                alt="Banana Prompt Quicker Guide" class="guide-gif">
+                                alt="Banana Prompt Quicker Guide" data-i18n-alt="onboarding.guideAlt" class="guide-gif">
                         </div>
                     </div>
                 </section>
@@ -29,7 +29,7 @@
                 <!-- Slide 2: Platforms (原 Slide 3) -->
                 <section class="slide" id="slide-2">
                     <div class="content-wrapper">
-                        <h2>选择平台，即刻开始</h2>
+                        <h2 data-i18n="onboarding.choosePlatform">选择平台，即刻开始</h2>
 
                         <div class="platforms-grid">
                             <a href="https://chatgpt.com/" target="_blank" class="platform-card">
@@ -56,7 +56,7 @@
                                         <path d="M3 3l7 7-2 4 4-2 7 7" stroke-width="2.5"></path>
                                     </svg>
                                 </div>
-                                <h3>任意网站，右键插入</h3>
+                                <h3 data-i18n="onboarding.anySite">任意网站，右键插入</h3>
                             </div>
                         </div>
                     </div>
@@ -70,10 +70,11 @@
                 <div class="dot" data-index="1"></div>
             </div>
             <div class="buttons">
-                <button id="btn-next" class="btn btn-primary">下一步</button>
+                <button id="btn-next" class="btn btn-primary" data-i18n="onboarding.next">下一步</button>
             </div>
         </div>
     </main>
+    <script src="../lib/i18n.js"></script>
     <script src="onboarding.js"></script>
 </body>
 

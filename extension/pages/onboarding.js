@@ -1,50 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    if (window.I18n) {
+        await window.I18n.init();
+        document.title = window.I18n.t('onboarding.pageTitle', document.title);
+        document.querySelectorAll('[data-i18n]').forEach((node) => {
+            node.textContent = window.I18n.t(node.dataset.i18n, node.textContent);
+        });
+        document.querySelectorAll('[data-i18n-alt]').forEach((node) => {
+            node.alt = window.I18n.t(node.dataset.i18nAlt, node.alt);
+        });
+    }
+
     const slides = document.querySelector('.slides');
     const dots = document.querySelectorAll('.dot');
     const btnNext = document.getElementById('btn-next');
-    // const btnSkip = document.getElementById('btn-skip');
 
     let currentSlide = 0;
     const totalSlides = 2;
 
-    function updateSlide(index) {
-        currentSlide = index;
-
-        // Update transform
-        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Update dots
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === currentSlide);
-        });
-
-        // Update buttons
+    function updateButtonLabel() {
         if (currentSlide === totalSlides - 1) {
-            btnNext.textContent = '开始使用';
-            // btnSkip.style.display = 'none';
+            btnNext.textContent = window.I18n
+                ? window.I18n.t('onboarding.getStarted', 'Get started')
+                : 'Get started';
         } else {
-            btnNext.textContent = '下一步';
-            // btnSkip.style.display = 'block';
+            btnNext.textContent = window.I18n
+                ? window.I18n.t('onboarding.next', 'Next')
+                : 'Next';
         }
     }
 
-    // Event Listeners
+    function updateSlide(index) {
+        currentSlide = index;
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+        updateButtonLabel();
+    }
+
     btnNext.addEventListener('click', () => {
         if (currentSlide < totalSlides - 1) {
             updateSlide(currentSlide + 1);
         } else {
-            // Last slide action: Close tab or redirect
-            // Ideally we just let them click the platform links,
-            // but if they click "Get Started", we default to ChatGPT
             window.open('https://chatgpt.com/', '_blank');
-            // Optional: Close onboarding tab after delay?
-            // window.close(); 
         }
     });
-
-    // btnSkip.addEventListener('click', () => {
-    //     updateSlide(totalSlides - 1);
-    // });
 
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') {
             if (currentSlide < totalSlides - 1) updateSlide(currentSlide + 1);
@@ -61,4 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentSlide > 0) updateSlide(currentSlide - 1);
         }
     });
+
+    updateButtonLabel();
 });

@@ -154,6 +154,12 @@ function loadSites({ querySelectorShadowDom } = {}) {
         urlToFile: async (url, filename) => ({ url, filename }),
         base64ToFile: (data, filename) => ({ data, filename })
       },
+      I18n: {
+        t: (key, fallback) => ({
+          'site.button.promptPill': '提示词',
+          'site.button.shortcut': '快捷提示'
+        }[key] || fallback || key)
+      },
       getSelection: () => ({
         rangeCount: 0,
         removeAllRanges() {},
@@ -333,12 +339,12 @@ test('ChatGPT button should show prompts text in image mode', () => {
 
   assert.equal(button.tagName, 'BUTTON');
   assert.equal(button.className, 'composer-btn banana-prompt-button');
-  assert.equal(button['aria-label'], 'prompts');
-  assert.equal(button.title, 'prompts');
+  assert.equal(button['aria-label'], '提示词');
+  assert.equal(button.title, '提示词');
   assert.equal(button.children.length, 2);
   assert.equal(button.children[0].tagName, 'IMG');
   assert.equal(button.children[1].tagName, 'SPAN');
-  assert.equal(button.children[1].textContent, 'prompts');
+  assert.equal(button.children[1].textContent, '提示词');
   assert.match(button.style.cssText, /gap:\s*6px/);
   assert.match(button.style.cssText, /padding:\s*0 12px/);
   assert.doesNotMatch(button.style.cssText, /width:\s*36px/);
@@ -391,6 +397,6 @@ test('ChatGPT button should upgrade to prompts pill after switching into image m
   await site._handleMutation();
 
   assert.equal(currentButton.children.length, 2);
-  assert.equal(currentButton.children[1].textContent, 'prompts');
+  assert.equal(currentButton.children[1].textContent, '提示词');
   assert.match(currentButton.style.cssText, /padding:\s*0 12px/);
 });

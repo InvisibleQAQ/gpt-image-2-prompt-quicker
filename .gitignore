@@ -21,3 +21,6 @@ projects/
 .claude/
 .lazygophers/
 banana-prompt-quicker-extension.zip
+category_list.md
+chatgpt_input_default.html
+chatgpt_input_image.html

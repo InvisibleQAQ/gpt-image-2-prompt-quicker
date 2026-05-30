@@ -1,6 +1,9 @@
 window.UI = window.UI || {};
 
 window.UI.PromptForm = class PromptForm {
+    t(key, fallback) {
+        return window.I18n ? window.I18n.t(key, fallback) : (fallback || key);
+    }
     constructor(options = {}) {
         this.categories = options.categories || new Set();
         this.colors = options.colors;
@@ -101,10 +104,9 @@ window.UI.PromptForm = class PromptForm {
 
         // Initialize state
         const addCategories = Array.from(this.categories)
-            .filter(c => c !== '全部')
             .sort((a, b) => a.localeCompare(b));
 
-        this.state.selectedCategory = existingPrompt?.category || addCategories[0];
+        this.state.selectedCategory = existingPrompt?.category || addCategories[0] || '';
         this.state.selectedMode = existingPrompt?.mode || 'generate';
         this.state.selectedFile = null;
         this.state.previewUrl = existingPrompt?.preview || '';
@@ -129,8 +131,8 @@ window.UI.PromptForm = class PromptForm {
             h('div', { style: 'display: flex; flex-direction: column; gap: 4px;' }, [
                 h('h3', {
                     style: 'margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.5px;'
-                }, existingPrompt ? '编辑 Prompt' : '新建 Prompt'),
-                h('span', { style: `font-size: 13px; color: ${colors.textSecondary};` }, '填写详细信息以自定义您的提示词')
+                }, existingPrompt ? this.t('promptForm.title.edit', 'Edit prompt') : this.t('promptForm.title.create', 'New prompt')),
+                h('span', { style: `font-size: 13px; color: ${colors.textSecondary};` }, this.t('promptForm.subtitle', 'Fill in the details to customize your prompt'))
             ]),
             h('button', {
                 innerHTML: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`,
@@ -148,7 +150,7 @@ window.UI.PromptForm = class PromptForm {
         const mainSection = h('div', { style: 'display: flex; flex-direction: column; gap: 16px;' });
 
         // Title Input
-        const titleInput = this.createInput('给它起个名字...');
+        const titleInput = this.createInput(this.t('promptForm.placeholders.title', 'Give it a name...'));
         if (existingPrompt) titleInput.value = existingPrompt.title;
 
         // Category & Sub-Category Row
@@ -159,7 +161,7 @@ window.UI.PromptForm = class PromptForm {
         const categoryContainer = this.createCategoryDropdown(addCategories);
         categoryContainer.style.flex = '1.2';
 
-        const subCategoryInput = this.createInput('子分类 (可选)');
+        const subCategoryInput = this.createInput(this.t('promptForm.placeholders.subCategory', 'Sub-category (optional)'));
         subCategoryInput.style.flex = '1';
         if (existingPrompt?.sub_category) subCategoryInput.value = existingPrompt.sub_category;
 
@@ -175,16 +177,16 @@ window.UI.PromptForm = class PromptForm {
         const refImagesContainer = this.createReferenceImagesUpload();
 
         mediaSection.appendChild(h('div', { style: 'display: flex; flex-direction: column; gap: 8px;' }, [
-            h('span', { style: `font-size: 12px; font-weight: 600; color: ${colors.textSecondary}; text-transform: uppercase;` }, '封面图 (可选)'),
+            h('span', { style: `font-size: 12px; font-weight: 600; color: ${colors.textSecondary}; text-transform: uppercase;` }, this.t('promptForm.labels.coverImage', 'Cover image (optional)')),
             imageContainer
         ]));
         mediaSection.appendChild(h('div', { style: 'display: flex; flex-direction: column; gap: 8px;' }, [
-            h('span', { style: `font-size: 12px; font-weight: 600; color: ${colors.textSecondary}; text-transform: uppercase;` }, '参考图 (可选)'),
+            h('span', { style: `font-size: 12px; font-weight: 600; color: ${colors.textSecondary}; text-transform: uppercase;` }, this.t('promptForm.labels.referenceImages', 'Reference images (optional)')),
             refImagesContainer
         ]));
 
         // Prompt Content
-        const promptInput = this.createInput('在此输入 Prompt 内容...', true);
+        const promptInput = this.createInput(this.t('promptForm.placeholders.prompt', 'Enter prompt content here...'), true);
         if (existingPrompt) promptInput.value = existingPrompt.prompt;
 
         // Buttons
@@ -436,7 +438,7 @@ window.UI.PromptForm = class PromptForm {
             style: 'position: relative; width: 100%; z-index: 10;'
         });
 
-        const categoryTriggerText = h('span', {}, this.state.selectedCategory);
+        const categoryTriggerText = h('span', {}, this.state.selectedCategory || this.t('promptForm.placeholders.category', 'Select a category'));
 
         const categoryArrow = h('span', {
             innerHTML: `<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1L5 5L9 1"/></svg>`,
@@ -455,6 +457,15 @@ window.UI.PromptForm = class PromptForm {
 
         const renderOptions = () => {
             categoryOptions.innerHTML = '';
+
+            if (categories.length === 0) {
+                categoryOptions.appendChild(h('div', {
+                    className: 'apple-dropdown-option',
+                    style: `color: ${colors.textSecondary}; cursor: default;`
+                }, this.t('promptForm.categoryNone', 'No categories yet')));
+                return;
+            }
+
             categories.forEach(cat => {
                 const isSelected = cat === this.state.selectedCategory;
                 const option = h('div', {
@@ -503,8 +514,8 @@ window.UI.PromptForm = class PromptForm {
         const { colors } = this;
 
         const modes = [
-            { value: 'generate', label: '文生图', icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>` },
-            { value: 'edit', label: '编辑', icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>` }
+            { value: 'generate', label: this.t('promptForm.mode.generate', 'Generate'), icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>` },
+            { value: 'edit', label: this.t('promptForm.mode.edit', 'Edit'), icon: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>` }
         ];
 
         const selectedIndex = modes.findIndex(m => m.value === this.state.selectedMode);
@@ -553,7 +564,7 @@ window.UI.PromptForm = class PromptForm {
         const cancelBtn = h('button', {
             style: `padding: ${mobile ? '12px 24px' : '12px 24px'}; border: none; border-radius: 14px; background: ${colors.inputBg}; color: ${colors.text}; cursor: pointer; font-size: 15px; font-weight: 600; transition: all 0.2s ease;`,
             onclick: () => this.close()
-        }, '取消');
+        }, this.t('promptForm.buttons.cancel', 'Cancel'));
 
         if (!mobile) {
             cancelBtn.onmouseenter = () => {
@@ -573,7 +584,7 @@ window.UI.PromptForm = class PromptForm {
                 const promptVal = promptInput.value.trim();
 
                 if (!titleVal || !promptVal) {
-                    alert('请填写标题和内容');
+                    alert(this.t('promptForm.validation.required', 'Please enter both a title and prompt content'));
                     return;
                 }
 
@@ -581,14 +592,14 @@ window.UI.PromptForm = class PromptForm {
 
                 if (this.state.selectedFile) {
                     try {
-                        saveBtn.textContent = '处理中...';
+                        saveBtn.textContent = this.t('promptForm.buttons.processing', 'Processing...');
                         saveBtn.disabled = true;
                         previewDataUrl = await window.Utils.compressImage(this.state.selectedFile);
                     } catch (err) {
                         console.error('图片压缩失败', err);
-                        alert('图片处理失败,将使用默认图标');
+                        alert(this.t('promptForm.errors.imageProcessingFailed', 'Image processing failed. The default icon will be used.'));
                     } finally {
-                        saveBtn.textContent = '保存';
+                        saveBtn.textContent = this.t('promptForm.buttons.save', 'Save');
                         saveBtn.disabled = false;
                     }
                 }
@@ -611,7 +622,7 @@ window.UI.PromptForm = class PromptForm {
 
                 this.close();
             }
-        }, '保存');
+        }, this.t('promptForm.buttons.save', 'Save'));
 
         if (!mobile) {
             saveBtn.onmouseenter = () => {

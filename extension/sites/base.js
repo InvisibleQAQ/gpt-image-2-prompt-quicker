@@ -185,7 +185,7 @@ class BaseSite {
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
             className: 'mat-mdc-tooltip-trigger ms-button-borderless ms-button-icon',
-            title: '快捷提示',
+            title: window.I18n ? window.I18n.t('site.button.shortcut', 'Quick prompts') : 'Quick prompts',
             onmouseenter: (e) => {
                 e.currentTarget.style.background = this.getThemeColors().border;
             },

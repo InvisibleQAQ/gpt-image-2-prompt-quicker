@@ -2,6 +2,7 @@ window.UI = window.UI || {};
 
 window.UI.Card = {
     create(prompt, options = {}) {
+        const t = (key, fallback) => window.I18n ? window.I18n.t(key, fallback) : (fallback || key);
         const {
             favorites = [],
             theme = 'light',
@@ -117,22 +118,22 @@ window.UI.Card = {
                     onInsert(prompt);
                 }
             },
-            title: prompt.link ? '点击查看原贴' : ''
-        }, prompt.author);
+            title: prompt.link ? t('card.authorLinkTitle', 'View original post') : ''
+        }, prompt.isCustom && prompt.author === '__CUSTOM_AUTHOR__' ? t('card.customAuthor', 'Me') : prompt.author);
         if (prompt.link) author.style.textDecoration = 'underline';
 
         // Tags
-        let tagText = '文生图';
+        let tagText = t('card.mode.generate', 'Generate');
         let tagBg = '';
         let tagColor = '';
 
         if (prompt.isFlash) {
-            tagText = '万能';
+            tagText = t('card.mode.flash', 'Universal');
             tagBg = theme === 'dark' ? 'rgba(168, 85, 247, 0.15)' : 'rgba(147, 51, 234, 0.12)';
             tagColor = theme === 'dark' ? '#a855f7' : '#9333ea';
         } else {
             const isEdit = prompt.mode === 'edit';
-            tagText = isEdit ? '编辑' : '文生图';
+            tagText = isEdit ? t('card.mode.edit', 'Edit') : t('card.mode.generate', 'Generate');
             tagBg = theme === 'dark'
                 ? (isEdit ? 'rgba(10, 132, 255, 0.15)' : 'rgba(48, 209, 88, 0.15)')
                 : (isEdit ? 'rgba(0, 122, 255, 0.12)' : 'rgba(52, 199, 89, 0.12)');
@@ -165,7 +166,7 @@ window.UI.Card = {
             const btnColor = theme === 'dark' ? '#e8eaed' : '#5f6368';
 
             const editBtn = h('button', {
-                title: '编辑',
+                title: t('card.actions.edit', 'Edit'),
                 style: `position: absolute; top: 12px; left: 12px; width: ${mobile ? '36px' : '32px'}; height: ${mobile ? '36px' : '32px'}; border-radius: 50%; border: none; background: ${btnBg}; color: ${btnColor}; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; z-index: 2; backdrop-filter: blur(10px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);`,
                 innerHTML: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`,
                 onclick: (e) => {
@@ -175,12 +176,12 @@ window.UI.Card = {
             });
 
             const deleteBtn = h('button', {
-                title: '删除',
+                title: t('card.actions.delete', 'Delete'),
                 style: `position: absolute; top: 12px; left: ${mobile ? '56px' : '48px'}; width: ${mobile ? '36px' : '32px'}; height: ${mobile ? '36px' : '32px'}; border-radius: 50%; border: none; background: ${btnBg}; color: ${btnColor}; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.25s ease; z-index: 2; backdrop-filter: blur(10px); box-shadow: 0 4px 12px rgba(0,0,0,0.15);`,
                 innerHTML: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>`,
                 onclick: (e) => {
                     e.stopPropagation();
-                    if (confirm('确定要删除这个 Prompt 吗？')) {
+                    if (confirm(t('card.deleteConfirm', 'Delete this prompt?'))) {
                         onDelete(prompt.id);
                     }
                 }

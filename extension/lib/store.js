@@ -7,8 +7,9 @@ class Store {
             activeFilters: new Set(),
             selectedCategory: 'all',
             sortMode: 'recommend',
+            locale: 'en',
             keyword: '',
-            categories: new Set(['全部']),
+            categories: new Set(),
             randomMap: new Map(),
             nsfwEnabled: true,
             recentWeekEnabled: false
@@ -32,6 +33,7 @@ class Store {
             this.loadPrompts(),
             this.loadFavorites(),
             this.loadSortMode(),
+            this.loadLocale(),
             this.loadNsfwSetting()
         ]);
         this.notify();
@@ -113,6 +115,28 @@ class Store {
         this.notify();
     }
 
+    async loadLocale() {
+        if (window.I18n) {
+            const locale = await window.I18n.init();
+            this.state.locale = locale;
+            return;
+        }
+
+        const result = await chrome.storage.local.get(['banana-ui-locale']);
+        this.state.locale = result['banana-ui-locale'] || 'en';
+    }
+
+    async setLocale(locale) {
+        const normalizedLocale = window.I18n ? window.I18n.normalizeLocale(locale) : locale;
+        this.state.locale = normalizedLocale;
+        if (window.I18n) {
+            await window.I18n.setLocale(normalizedLocale, { persist: true });
+        } else {
+            await chrome.storage.local.set({ 'banana-ui-locale': normalizedLocale });
+        }
+        this.notify();
+    }
+
     async loadNsfwSetting() {
         const result = await chrome.storage.local.get(['banana-nsfw-enabled']);
         this.state.nsfwEnabled = result['banana-nsfw-enabled'] || true;
@@ -132,7 +156,7 @@ class Store {
     }
 
     updateCategories() {
-        this.state.categories = new Set(['全部']);
+        this.state.categories = new Set();
         this.state.prompts.forEach(p => {
             if (p.category) {
                 // Skip NSFW category if disabled

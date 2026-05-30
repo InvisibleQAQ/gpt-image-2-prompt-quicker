@@ -62,6 +62,7 @@ Important global layers:
    - `dom.js`: DOM helpers, including Shadow DOM-aware querying
    - `utils.js`: client-side image/url helpers
    - `store.js`: in-memory state container backed by `chrome.storage.local`
+   - `i18n.js`: lightweight runtime locale helper for UI shell text only; it owns the `banana-ui-locale` storage key and must load before `sites/*`, `ui/*`, and `content.js`
 2. `extension/services/`
    - `fetcher.js`: shared fetch-with-cache primitive with stale-cache fallback
    - `config.js`: remote `config.json` loader (5 minute cache)
@@ -73,7 +74,7 @@ Important global layers:
 5. `extension/content.js`
    - bootstraps everything after the layers above are present
 
-If you change file names or add new dependencies between these files, update `manifest.json` ordering accordingly.
+If you change file names or add new dependencies between these files, update `manifest.json` ordering accordingly. In particular, `extension/lib/i18n.js` must stay before all UI/site/content scripts that call `window.I18n`. The current locale work only covers UI shell text; do not repurpose it to rewrite `prompts.json` content fields without a separate schema change.
 
 ### Data flow
 
