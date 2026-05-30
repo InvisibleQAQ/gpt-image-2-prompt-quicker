@@ -30,6 +30,68 @@ function createContentEditableElement() {
   };
 }
 
+function createDomNode(tag, props = {}, children = []) {
+  const listeners = {};
+  const attributes = {};
+  const styleState = { cssText: '' };
+  const node = {
+    tagName: String(tag).toUpperCase(),
+    children: [],
+    listeners,
+    attributes,
+    style: styleState,
+    className: '',
+    textContent: '',
+    addEventListener(type, handler) {
+      listeners[type] = handler;
+    },
+    appendChild(child) {
+      this.children.push(child);
+      return child;
+    },
+    setAttribute(name, value) {
+      attributes[name] = value;
+      this[name] = value;
+    }
+  };
+
+  Object.entries(props || {}).forEach(([key, value]) => {
+    if (key === 'className') {
+      node.className = value;
+      return;
+    }
+    if (key === 'textContent') {
+      node.textContent = value;
+      return;
+    }
+    if (key === 'style') {
+      if (typeof value === 'string') {
+        node.style.cssText = value;
+      } else {
+        Object.assign(node.style, value);
+      }
+      return;
+    }
+    if (key.startsWith('on') && typeof value === 'function') {
+      node.addEventListener(key.toLowerCase().substring(2), value);
+      return;
+    }
+    node.setAttribute(key, value);
+  });
+
+  const normalizedChildren = Array.isArray(children) ? children : [children];
+  normalizedChildren.forEach((child) => {
+    if (child === null || child === undefined) return;
+    if (typeof child === 'string' || typeof child === 'number') {
+      node.appendChild({ nodeType: 3, textContent: String(child) });
+      return;
+    }
+    node.appendChild(child);
+  });
+
+  return node;
+}
+
 function loadSites({ querySelectorShadowDom } = {}) {
   const logs = [];
   const baseSitePath = path.join(__dirname, '..', 'sites', 'base.js');
@@ -79,9 +141,14 @@ function loadSites({ querySelectorShadowDom } = {}) {
       observe() {}
       disconnect() {}
     },
+    chrome: {
+      runtime: {
+        getURL: (path) => `chrome-extension://${path}`
+      }
+    },
     window: {
       matchMedia: () => ({ matches: false }),
-      DOM: { querySelectorShadowDom: querySelectorShadowDom || (() => null), create: () => ({}) },
+      DOM: { querySelectorShadowDom: querySelectorShadowDom || (() => null), create: createDomNode },
       ConfigManager: { get: async () => ({ selectors: {} }) },
       Utils: {
         urlToFile: async (url, filename) => ({ url, filename }),
@@ -223,4 +290,107 @@ test('ChatGPT prompt insertion should emit debug logs for the chosen input path'
   await site.insertPrompt({ prompt: 'debug me' });
 
   assert.ok(context.__logs.some(args => args[0] === 'Banana: ChatGPT insertPrompt debug'));
+});
+
+test('ChatGPT button should stay icon-only outside image mode', () => {
+  const context = loadSites();
+  const ChatGPTSite = context.ChatGPTSite;
+  const site = new ChatGPTSite();
+
+  const button = site.createButton();
+
+  assert.equal(button.tagName, 'BUTTON');
+  assert.equal(button.className, 'composer-btn banana-prompt-button');
+  assert.equal(button.children.length, 1);
+  assert.equal(button.children[0].tagName, 'IMG');
+  assert.match(button.style.cssText, /width:\s*36px/);
+  assert.match(button.style.cssText, /padding:\s*0/);
+});
+
+test('ChatGPT button should show prompts text in image mode', () => {
+  const imageEditor = createContentEditableElement();
+  imageEditor.querySelector = (selector) => {
+    if (selector === 'p.placeholder') {
+      return {
+        dataset: { placeholder: 'Describe or edit an image' },
+        getAttribute: () => 'Describe or edit an image'
+      };
+    }
+    return null;
+  };
+
+  const context = loadSites({
+    querySelectorShadowDom: (selector) => {
+      if (selector === '[data-testid="composer-footer-actions"]') return { tagName: 'DIV' };
+      if (selector === '#prompt-textarea.ProseMirror[contenteditable="true"]') return imageEditor;
+      return null;
+    }
+  });
+  const ChatGPTSite = context.ChatGPTSite;
+  const site = new ChatGPTSite();
+
+  const button = site.createButton();
+
+  assert.equal(button.tagName, 'BUTTON');
+  assert.equal(button.className, 'composer-btn banana-prompt-button');
+  assert.equal(button['aria-label'], 'prompts');
+  assert.equal(button.title, 'prompts');
+  assert.equal(button.children.length, 2);
+  assert.equal(button.children[0].tagName, 'IMG');
+  assert.equal(button.children[1].tagName, 'SPAN');
+  assert.equal(button.children[1].textContent, 'prompts');
+  assert.match(button.style.cssText, /gap:\s*6px/);
+  assert.match(button.style.cssText, /padding:\s*0 12px/);
+  assert.doesNotMatch(button.style.cssText, /width:\s*36px/);
+});
+
+test('ChatGPT button should upgrade to prompts pill after switching into image mode', async () => {
+  const defaultEditor = createContentEditableElement();
+  defaultEditor.querySelector = () => ({
+    dataset: { placeholder: 'Ask anything' },
+    getAttribute: () => 'Ask anything'
+  });
+
+  const imageEditor = createContentEditableElement();
+  imageEditor.querySelector = () => ({
+    dataset: { placeholder: 'Describe or edit an image' },
+    getAttribute: () => 'Describe or edit an image'
+  });
+
+  const triggerWrapper = {
+    parentElement: { style: {} },
+    insertAdjacentElement(position, element) {
+      this.inserted = { position, element };
+    }
+  };
+
+  const target = {
+    parentElement: triggerWrapper.parentElement,
+    closest: () => triggerWrapper
+  };
+
+  let currentButton = null;
+  let imageMode = false;
+  const context = loadSites({
+    querySelectorShadowDom: (selector) => {
+      if (selector === '#banana-btn') return currentButton;
+      if (selector === 'button[data-testid="composer-plus-btn"], button#composer-plus-btn') return target;
+      if (selector === '[data-testid="composer-footer-actions"]') return imageMode ? { tagName: 'DIV' } : null;
+      if (selector === '#prompt-textarea.ProseMirror[contenteditable="true"]') return imageMode ? imageEditor : defaultEditor;
+      return null;
+    }
+  });
+  const ChatGPTSite = context.ChatGPTSite;
+  const site = new ChatGPTSite();
+
+  await site._insertButtonIfNotExists();
+  currentButton = triggerWrapper.inserted.element;
+  assert.equal(currentButton.children.length, 1);
+
+  imageMode = true;
+  await site._handleMutation();
+
+  assert.equal(currentButton.children.length, 2);
+  assert.equal(currentButton.children[1].textContent, 'prompts');
+  assert.match(currentButton.style.cssText, /padding:\s*0 12px/);
 });

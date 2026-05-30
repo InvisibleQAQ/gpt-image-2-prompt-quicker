@@ -138,6 +138,95 @@ class ChatGPTSite extends BaseSite {
         return true;
     }
 
+    syncButtonMode(btn) {
+        if (!btn) return;
+
+        const isImageMode = this.isImageMode();
+        const existingLabel = btn.querySelector?.('span');
+
+        if (isImageMode && !existingLabel) {
+            const label = window.DOM.create('span', {
+                textContent: 'prompts',
+                'aria-hidden': 'true'
+            });
+
+            label.style.cssText = `
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1;
+                white-space: nowrap;
+                pointer-events: none;
+            `;
+
+            btn.appendChild(label);
+        }
+
+        if (!isImageMode && existingLabel?.remove) {
+            existingLabel.remove();
+        }
+
+        btn.className = 'composer-btn banana-prompt-button';
+        btn.setAttribute('aria-label', 'prompts');
+        btn.setAttribute('title', 'prompts');
+        btn.style.cssText = isImageMode
+            ? `
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                height: 36px;
+                min-height: 36px;
+                margin-left: 6px;
+                margin-right: 0;
+                border: none;
+                border-radius: 9999px;
+                background: transparent;
+                cursor: pointer;
+                line-height: 1;
+                transition: background-color 0.2s ease;
+                padding: 0 12px;
+                white-space: nowrap;
+                flex-shrink: 0;
+            `
+            : `
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                min-width: 36px;
+                min-height: 36px;
+                margin-left: 6px;
+                margin-right: 0;
+                border: none;
+                border-radius: 9999px;
+                background: transparent;
+                cursor: pointer;
+                line-height: 1;
+                transition: background-color 0.2s ease;
+                padding: 0;
+            `;
+    }
+
+    isImageMode() {
+        const footerActions = window.DOM.querySelectorShadowDom('[data-testid="composer-footer-actions"]');
+        if (footerActions) return true;
+
+        const modeButton = window.DOM.querySelectorShadowDom('button[aria-label="Choose image aspect ratio"]');
+        if (modeButton) return true;
+
+        const promptInput = window.DOM.querySelectorShadowDom('#prompt-textarea.ProseMirror[contenteditable="true"]')
+            || window.DOM.querySelectorShadowDom('div.ProseMirror#prompt-textarea[contenteditable="true"]')
+            || window.DOM.querySelectorShadowDom('textarea[name="prompt-textarea"]');
+        const placeholder = promptInput?.querySelector?.('p.placeholder')?.dataset?.placeholder
+            || promptInput?.querySelector?.('p.placeholder')?.getAttribute?.('data-placeholder')
+            || promptInput?.getAttribute?.('data-placeholder')
+            || promptInput?.placeholder
+            || '';
+
+        return /describe or edit an image/i.test(placeholder);
+    }
+
     createButton() {
         const logo = window.DOM.create('img', {
             src: chrome.runtime.getURL('icon128.png'),
@@ -151,13 +240,14 @@ class ChatGPTSite extends BaseSite {
             display: block;
             object-fit: contain;
             pointer-events: none;
+            flex-shrink: 0;
         `;
 
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
-            className: 'banana-prompt-button',
-            'aria-label': 'image2 prompts',
-            title: 'image2 prompts',
+            className: 'composer-btn banana-prompt-button',
+            'aria-label': 'prompts',
+            title: 'prompts',
             type: 'button',
             onmouseenter: (e) => {
                 const isDark = this.getCurrentTheme() === 'dark';
@@ -173,25 +263,15 @@ class ChatGPTSite extends BaseSite {
             }
         }, [logo]);
 
-        btn.style.cssText = `
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            min-width: 36px;
-            min-height: 36px;
-            margin-left: 6px;
-            margin-right: 0;
-            border: none;
-            border-radius: 9999px;
-            background: transparent;
-            cursor: pointer;
-            line-height: 1;
-            transition: background-color 0.2s ease;
-            padding: 0;
-        `;
-
+        this.syncButtonMode(btn);
         return btn;
+    }
+
+    async _handleMutation() {
+        await super._handleMutation();
+        const btn = window.DOM.querySelectorShadowDom('#banana-btn');
+        if (btn) {
+            this.syncButtonMode(btn);
+        }
     }
 }
