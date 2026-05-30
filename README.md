@@ -40,7 +40,7 @@ https://chromewebstore.google.com/detail/banana-prompt-quicker/hgfgfocicepifboli
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/install.png?raw=true" width="300">
 
 3. 访问 [ChatGPT](https://chatgpt.com/) 开始使用
-> 或在任意网站任意输入框，右键选择【🍌 Insert Banana Prompts】
+> 或在任意网站任意输入框，右键选择【Insert Prompts】
 
 ### 移动端
 
@@ -101,7 +101,7 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
 ### V1.3.0
 <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/v1.3.0-promo.png?raw=true" width="300">
 
-  * 支持在任意网站通过右键菜单进入 Prompt 画廊，插入任意输入框。🍌 Anywhere!
+  * 支持在任意网站通过右键菜单进入 Prompt 画廊，插入任意输入框。Anywhere!
   * 支持灵光模式，引导完成生图需求（"选择比填空容易"）
   * 返回项目主页时保留页面状态
   * 自定义 Prompt 支持上传图片

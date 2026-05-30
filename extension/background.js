@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener((details) => {
 
     chrome.contextMenus.create({
         id: 'banana-prompt',
-        title: 'Insert 🍌 Prompts',
+        title: 'Insert Prompts',
         contexts: ['editable']
     })
 

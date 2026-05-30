@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Banana Prompt Quicker",
     "version": "1.6.0",
-    "description": "Prompts quicker is ALL you 🍌 need",
+    "description": "Prompts quicker is ALL you need",
     "icons": {
         "16": "icon16.png",
         "48": "icon48.png",
@@ -48,6 +48,8 @@
     "web_accessible_resources": [
         {
             "resources": [
+                "icon16.png",
+                "icon48.png",
                 "icon128.png"
             ],
             "matches": [

@@ -15,7 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Load unpacked extension in Chrome: open `chrome://extensions/` → enable Developer mode → **Load unpacked** → select `extension/`
 - After code changes to extension files, use **Reload** on the extension card in `chrome://extensions/`
 - Primary manual test target from the README: `https://chatgpt.com/`
-- Context-menu path matters too: focus any editable field on any site, right click, and trigger `Insert 🍌 Prompts`
+- Context-menu path matters too: focus any editable field on any site, right click, and trigger `Insert Prompts`
 
 ### Repository inspection
 
@@ -114,7 +114,7 @@ Failure behavior matters: `fetcher.js` falls back to cached data even when expir
 
 - tracking the last focused editable element
 - locating the current prompt input
-- polling/mutation-observer logic to keep the Banana button attached
+- polling/mutation-observer logic to keep the prompt launcher button attached
 - generic prompt insertion into textareas or contenteditable fields
 - theme color helpers
 
@@ -124,7 +124,7 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 - target-button lookup
 - theme detection
 - button rendering/placement when platform-specific UI differs
-- `ChatGPTSite` renders the launcher button with the extension icon via `chrome.runtime.getURL('icon128.png')`, so icon asset changes must stay in sync with `manifest.json` web-accessible resources
+- `ChatGPTSite` renders the launcher button with the packaged extension icon via `chrome.runtime.getURL('icon16.png')`; keep icon asset references in sync with `manifest.json` web-accessible resources
 - `ChatGPTSite` must insert the launcher after the native plus button's outer trigger wrapper rather than inside it; otherwise ChatGPT's own plus-button tooltip (`Add files and more`) captures hover for the extension icon. Launcher tooltip/accessibility text is controlled in `extension/sites/chatgpt.js`, while the native plus button keeps ChatGPT's own `aria-label`
 - `ChatGPTSite` keeps the launcher icon-only in the default composer, but switches to an icon + `prompts` pill in image mode when the composer exposes image-footer controls such as `composer-footer-actions` / aspect-ratio controls
 - host-specific prompt insertion quirks (for example, ChatGPT uses a ProseMirror editor, pastes reference images first when present, then inserts text through its custom editor path)
@@ -139,8 +139,8 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 ### Pages outside the extension runtime
 
 - `extension/pages/onboarding.html` + `onboarding.js`: first-install onboarding opened by the background worker; the welcome heading uses the packaged extension icon asset (`extension/icon48.png`) rather than an inline emoji/remote icon
-- `extension/pages/uninstall.html`: uninstall feedback page set through `chrome.runtime.setUninstallURL`
-- root `index.html`: public landing page / promo site, not part of the extension runtime; it fetches the same remote `prompts.json` / `config.json` as the extension and must bind card actions with DOM listeners rather than inline event-handler strings because prompt text can contain quotes
+- `extension/pages/uninstall.html`: uninstall feedback page set through `chrome.runtime.setUninstallURL`; the logo uses the packaged extension icon asset (`extension/icon128.png`)
+- root `index.html`: public landing page / promo site, not part of the extension runtime; it fetches the same remote `prompts.json` / `config.json` as the extension, uses packaged extension icons for favicon/header branding, and must bind card actions with DOM listeners rather than inline event-handler strings because prompt text can contain quotes
 - root `privacy.html`: static privacy page
 - root `code-reward-models.md`: research note comparing open code reward models, pairwise training, and pairwise-vs-scalar inference
 - `docs/`: study-oriented architecture notes for learning this repository and cloning its extension patterns; start at `docs/README.md`

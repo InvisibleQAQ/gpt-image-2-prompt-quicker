@@ -174,11 +174,18 @@ class BaseSite {
     }
 
     createButton() {
+        const logo = window.DOM.create('img', {
+            src: chrome.runtime.getURL('icon16.png'),
+            alt: '',
+            'aria-hidden': 'true'
+        });
+
+        logo.style.cssText = 'width: 18px; height: 18px; display: block; object-fit: contain; pointer-events: none;';
+
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
             className: 'mat-mdc-tooltip-trigger ms-button-borderless ms-button-icon',
             title: '快捷提示',
-            textContent: '🍌',
             onmouseenter: (e) => {
                 e.currentTarget.style.background = this.getThemeColors().border;
             },
@@ -188,11 +195,11 @@ class BaseSite {
             onclick: () => {
                 if (this.modal) this.modal.show();
             }
-        });
+        }, [logo]);
 
         const updateButtonTheme = () => {
             const colors = this.getThemeColors();
-            btn.style.cssText = `width: 40px; height: 40px; border-radius: 50%; border: none; background: ${colors.hover}; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-right: 8px; transition: background-color 0.2s;`;
+            btn.style.cssText = `width: 40px; height: 40px; border-radius: 50%; border: none; background: ${colors.hover}; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-right: 8px; transition: background-color 0.2s; padding: 0;`;
         };
 
         updateButtonTheme();

@@ -229,7 +229,7 @@ class ChatGPTSite extends BaseSite {
 
     createButton() {
         const logo = window.DOM.create('img', {
-            src: chrome.runtime.getURL('icon128.png'),
+            src: chrome.runtime.getURL('icon16.png'),
             alt: '',
             'aria-hidden': 'true'
         });
