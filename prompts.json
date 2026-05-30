@@ -4440,5 +4440,475 @@
         "category": "建筑",
         "sub_category": "建筑",
         "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "skincare-morning-routine-tray",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/skincare-morning-routine-tray.png",
+        "prompt": "Create a 3:4 vertical beauty lifestyle photograph for a premium skincare morning routine. Scene: a travertine bathroom counter beside a soft frosted window, with a minimal glass serum bottle, ceramic cleanser tube, cream jar, folded linen towel, jade roller, small dish of pearl hair clips, and a single dewy white camellia flower. Lighting: natural morning side light, gentle reflections, realistic glass thickness, soft shadows, clean negative space. Aesthetic: quiet luxury, Japanese minimalism meets modern spa editorial, cream / warm stone / translucent pale green palette. No visible brand logos, no readable fake labels except a tiny generic mark \"AM ROUTINE\", no human face, no clutter, no overdone CGI shine.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "场景",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "fragrance-evening-ritual-vanity",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/fragrance-evening-ritual-vanity.png",
+        "prompt": "Create a portrait-oriented premium beauty and lifestyle editorial image for a boutique fragrance evening ritual. Scene: a warm marble vanity beside a softly lit bedroom window at blue hour, with two sculptural perfume bottles, a silk ribbon, pearl hair pins, a small handwritten note, a crystal glass of sparkling water, and a few dewy white flowers. Styling should feel quiet-luxury, feminine, modern, and aspirational, but natural rather than overproduced. Use a palette of champagne gold, warm ivory, dusty rose, soft lavender shadows, and clear glass highlights. Lighting: candle glow mixed with cool evening window light, glossy reflections on marble, shallow depth of field, premium product-photography realism. Composition: vertical magazine still life, elegant negative space, no brand logos, no real-person likeness, no clutter, no text except a tiny tasteful note reading \"EVENING RITUAL\".",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "场景",
+        "sub_category": "场景",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "brand-identity-moss-radio",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/brand-identity-moss-radio.png",
+        "prompt": "Create a square high-end brand identity showcase board for a fictional brand called \"Moss Radio\". The brand should feel analog, cultured, warm, tactile, and design-forward. It operates in independent audio hardware and café-retail and should appeal to creative professionals and music obsessives. The overall mood should be nostalgic but modern. Design a polished modular grid of multiple tiles, each showing a different application of one cohesive visual identity system. Include logo explorations, wordmarks, app icon variations, editorial posters, product cards, landing page fragments, packaging concepts, typography specimens, interface snippets, color palette presentations, sticker systems, patterns, branded mockups, and small motion-inspired compositions. Use Swiss-inspired typography, rounded industrial shapes, and a moss green / parchment / charcoal / copper palette. Dense but elegant layout, sharp alignment, strong hierarchy, premium case-study presentation.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "品牌",
+        "sub_category": "品牌",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "ps1-reboot-brand-kit",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/ps1-reboot-brand-kit.png",
+        "prompt": "Create a clean brand kit presented as one square modular board for a fictional revival of the PlayStation One era called \"PS1 1998 Reboot\". The identity should merge Japanese editorial design, Y2K nostalgia, acid green accents, VHS texture, silver plastics, disc-menu UI motifs, retail stickers, controller packaging, startup-screen typography, and memory-card iconography. Show multiple coordinated tiles including posters, packaging, interface snippets, collectible cards, typography studies, icons, and branded mockups. Keep it polished, cohesive, art-directed, and emotionally nostalgic, like a real top-tier design studio case study rather than generic merch.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "品牌",
+        "sub_category": "品牌",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "playful-brand-kit-mochi-metro",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/playful-brand-kit-mochi-metro.png",
+        "prompt": "Playful brand kit for \"Mochi Metro\", bold colors, fun typography, modern layout, modular square board with logo studies, packaging snippets, posters, app icons, stickers, UI fragments, and a cheerful Tokyo-snack visual system. Crisp alignment, dense but clean, highly polished design presentation.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "品牌",
+        "sub_category": "品牌",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "character-sheet",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/character-sheet.png",
+        "prompt": "Based on this character and background, please create a character reference sheet similar to official setting materials.\n- Includes three-view drawings: front view, side view, and back view\n- Add variations of the character's facial expressions\n- Break down and display detailed parts of the clothing and equipment\n- Add a color palette\n- Include a brief explanation of the worldview setting\n- Overall, use an organized layout (white background, illustration style)",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "elven-archer-sheet",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/elven-archer-sheet.png",
+        "prompt": "Create a fantasy concept art sketchbook page centered on a mystical elven archer with flowing robes. Render the main figure in loose graphite strokes with precise ink detailing. Surround the hero sketch with side views exploring cloak variations, a half-finished bow study with measurements, thumbnail action poses, handwritten annotations about enchanted embroidery patterns, and faint watercolor tests bleeding into the margins in forest-green and silver. The page should feel like a real art director's development sheet: exploratory, beautiful, readable, and richly tactile.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "pixar-kitchen",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/pixar-kitchen.png",
+        "prompt": "A Pixar-quality 3D animation still, landscape 16:9. Cinematic feature-film look, warm studio lighting.\n\nScene: a cozy apartment kitchen at dawn. A small orange tabby kitten sits on the countertop reaching a paw toward a rising soufflé in the oven; oven glow lighting the scene from below. Soft morning light through linen curtains. A wooden chopping board with a half-peeled lemon, a copper whisk with a small cloud of flour still airborne, a tiny succulent in a clay pot.\n\nCharacter: kitten with expressive, slightly oversized eyes (classic Pixar proportions), individually sculpted whiskers, believable fur with micro-groom direction, curious-slightly-worried expression.\n\nArt direction: full-CG Pixar aesthetic — subsurface scattering on ears and whiskers, physically based materials, soft shadow ambient occlusion, volumetric morning beam, shallow depth of field. Clean stylised shapes consistent with \"Luca\", \"Soul\", \"Elemental\" — not photoreal uncanny-valley.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "noir-detective",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/noir-detective.png",
+        "prompt": "A 1940s film-noir black-and-white movie still, landscape 16:9, high contrast. Shot on 35mm with visible grain.\n\nScene: a detective in trench coat and fedora stands alone at a rain-soaked street corner at 2 a.m., cigarette in hand, smoke curling upward. Wet cobblestones reflecting a single buzzing street lamp. A \"HOTEL\" neon sign on brick facade with letters \"HOTE_\" (the L flickered out). A vintage 1946 sedan parked at the curb, tail-lights glowing through drizzle.\n\nLighting: classic chiaroscuro — single hard key light above right, venetian-blind shadows on the wall behind him. Deep blacks, silvered highlights, full tonal range from pure white to pure black. No colour. Frame should feel lifted from \"The Maltese Falcon\", \"Double Indemnity\", or \"The Third Man\".",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "storyboard",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/storyboard.png",
+        "prompt": "A 6-panel film storyboard laid out as a 3×2 grid, landscape 16:9 overall. Each panel is a rectangular pencil-and-marker sketch with a white margin border and a small information strip underneath.\n\nScene: a chase through a rainy Tokyo alleyway, ending in a rooftop jump.\n\nPanel 1 — WIDE establishing: wet neon alleyway, runner entering from left; kanji signage on both walls. Info: \"PANEL 1 · EXT. ALLEY · NIGHT · WIDE / static / 2s\"\nPanel 2 — OTS tracking: runner mid-stride from behind; pursuer silhouette 10 m back. Info: \"PANEL 2 · OTS TRACKING / follow-cam / pan-L 45° / 3s\"\nPanel 3 — Close-up: runner's face, sweat, eyes darting up toward fire escape. Info: \"PANEL 3 · CU RUNNER / static / 1.5s / SFX: breath\"\nPanel 4 — Low angle: runner leaping onto fire-escape ladder; rain streaks. Info: \"PANEL 4 · LOW ANGLE / tilt-up 30° / 2s\"\nPanel 5 — Wide aerial: runner silhouetted against neon skyline, about to leap rooftops. Info: \"PANEL 5 · WIDE AERIAL / crane-down / 4s\"\nPanel 6 — Match cut: runner's boots landing on wet rooftop; splash. Info: \"PANEL 6 · MATCH CUT CU / static / 1s / SFX: splash\"\n\nArt direction: classic animation-school storyboard — pencil line-work, grey marker shading, red-pencil arrow annotations on panels 2 and 5 (camera move and action arc). Off-white paper texture background.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "ghibli-cottage",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/ghibli-cottage.png",
+        "prompt": "A Studio-Ghibli-style hand-painted animation still, landscape 16:9. A small wooden cottage sits on a grassy hillside overlooking a valley at golden hour. A child stands barefoot at the cottage doorway waving to a small furry forest spirit half-hidden in the meadow grass. A distant train cuts across the valley floor, swallows dip overhead.\n\nArt direction: classic Miyazaki / Studio Ghibli watercolor-gouache style. Soft painterly edges, slightly desaturated greens and warm skin tones, visible brush texture in the clouds and grass. Thin ink line art on the characters. Gentle atmospheric perspective. The whole frame should feel like a cel from \"My Neighbor Totoro\" or \"Kiki's Delivery Service\", not a 3D render.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "vhs-grocery-chaos",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/vhs-grocery-chaos.png",
+        "prompt": "Create a chaotic security-camera still from a 1990s grocery store. A man in full medieval armor is frozen mid-sprint stealing several rotisserie chickens past the dairy section. Overhead fluorescent lights reflect off the armor. The floor is baby-blue tile. Add a timestamp reading \"08/13/96 04:44 AM\" and a wall poster saying \"NEW! TOASTER STRUDELS!\". Make it low-fidelity, absurd, slightly intense, with motion blur, VHS color bleed, surveillance noise, and authentic analog-store lighting.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "anderson-symmetric-pastel-hotel",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/anderson-symmetric-pastel-hotel.png",
+        "prompt": "A perfectly symmetrical, wide-angle cinematic shot in the lineage of Wes Anderson's whimsical aesthetic. The scene is a grand glass conservatory filled with exotic plants and pink flamingos, centered on a perfectly placed yellow velvet sofa. The color palette is a strict pastel scheme of 'Millennial Pink', 'Pistachio Green', and 'Mustard Yellow'. Every element in the frame is meticulously arranged, with a flat, front-on perspective that feels like a dollhouse. The lighting is soft and even, with no harsh shadows, giving the scene a surreal, painterly quality. In the center of the frame, a man in a lavender bellhop uniform stands perfectly still, holding a single red rose. The camera is a vintage Panavision, capturing a crisp, detailed image with a slight, nostalgic warmth. The mood is quirky, charming, and highly controlled, emphasizing the beauty of obsessive organization.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "villeneuve-monolithic-desert",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/villeneuve-monolithic-desert.png",
+        "prompt": "A breathtaking cinematic wide shot in the lineage of Denis Villeneuve's monolithic sci-fi. A lone, tiny figure stands before a gargantuan, featureless obsidian slab that rises miles into a dusty orange sky. The scale is incomprehensible, making the person look like a grain of sand. The environment is a vast, flat salt plain under a hazy, dim sun. The lighting is low-contrast and atmospheric, with the monolith's surface reflecting a dull, oily sheen. The color palette is 'Industrial Monochrome': deep blacks, slate greys, and a muted, sandy ochre. There is a sense of immense weight and ancient silence. The camera uses a wide-angle lens with a deep focus to emphasize the terrifying scale of the structure. The mood is one of awe, dread, and the sublime mystery of an advanced, alien intelligence. Minimalist and brutalist in design.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "miyazaki-floating-island-garden",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/miyazaki-floating-island-garden.png",
+        "prompt": "A lush, hand-painted cinematic frame in the lineage of Hayao Miyazaki's dreamlike animation. The scene features a series of small, grassy islands floating in a sea of puffy, white cumulus clouds under a brilliant turquoise sky. Ancient stone ruins covered in vibrant 'Emerald Green' moss sit among flowering fruit trees. A gentle wind is visible through the swaying of long grass and the flight of white birds. The lighting is the bright, optimistic clarity of a summer morning, with soft, painted shadows and a gentle glow on every surface. The color palette is rich and natural: cerulean, spring green, and blossom pink. The composition is open and airy, with a sense of infinite wonder and peace. The textures have a soft, gouache-like quality, with every leaf and blade of grass feeling alive and cared for. It is a world of pure imagination and environmental harmony.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "tarkovsky-misty-dacha-morning",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/tarkovsky-misty-dacha-morning.png",
+        "prompt": "A contemplative, long-take cinematic frame in the lineage of Tarkovsky's slow cinema. A dense, silver mist clings to a neglected apple orchard at dawn. In the center, a simple wooden table with a single glass of water sits among the tall, wet grass. The colors are nearly monochromatic, dominated by 'Mossy Green', 'Cold Grey', and 'Damp Brown', with a single spark of amber from a distant lantern. The lighting is natural and melancholy, filtered through the thick fog and the canopy of trees. There is a profound sense of time passing, silence, and spiritual weight. The camera is static, with a slow, almost imperceptible zoom. The textures are tangible: the rot on the wood, the droplets of dew on the glass, the dampness of the air. The mood is philosophical, lonely, and deeply grounded in the natural world and the memory of a home.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "blade-runner-neo-noir-orange",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/blade-runner-neo-noir-orange.png",
+        "prompt": "A cinematic wide shot in the lineage of Blade Runner 2049, depicting a futuristic city buried in a thick, toxic orange radioactive fog. The silhouettes of crumbling, ancient statues and jagged skyscrapers are barely visible through the haze. A lone hover-vehicle with blue thruster lights cuts through the orange gloom, creating a sharp color contrast. The lighting is oppressive and diffused, with no visible sun, only a constant, eerie orange glow that flattens all features. The color palette is a striking 'Amber and Cobalt' duo-tone. The composition is low-angle, looking up at the oppressive structures of the city. The camera uses a 35mm anamorphic lens, creating a cinematic wide aspect ratio and subtle lens flares. The mood is apocalyptic, lonely, and visually stunning in its desolation, focusing on the atmospheric density and the scale of the ruins.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "expressionist-noir-clockwork-alley",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/expressionist-noir-clockwork-alley.png",
+        "prompt": "A dramatic cinematic wide frame inspired by German Expressionist noir and early silent-film set design, showing a rain-slick clockwork alley at midnight. Tall crooked buildings lean inward like theatrical flats, casting jagged triangular shadows across wet cobblestones. In the center, a solitary courier in a long charcoal coat carries a small glowing brass automaton bird in a glass cage. The palette is deep ink black, tarnished brass, bone white, and one controlled accent of crimson from a distant theatre sign reading \"MIDNIGHT COURIER\". Lighting is high-contrast chiaroscuro with hard backlight, steam from vents, reflected puddles, and sharp silhouettes. Camera: 32mm anamorphic wide shot, low angle, strong leading lines, deep focus, subtle film grain. The scene should feel like a premium production still: surreal, graphic, moody, and meticulously composed, not horror-gory, no real person likeness.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "电影",
+        "sub_category": "电影",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "small-multiples-climate-grid",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/small-multiples-climate-grid.png",
+        "prompt": "Produce a clean editorial data visualization poster showing a 4x3 small-multiples grid of monthly climate charts for 12 fictional cities. Use a white background, generous margins, and a restrained palette of navy, rust, sky blue, olive, and charcoal. Each mini-panel should contain a temperature line and precipitation bars with consistent axes and ultra-legible labels. Include a title block with the in-image text \"Annual Climate Profiles\" and subtitle \"12 Cities, 2025\". Label panels \"Northport\", \"Solmere\", \"Aster Bay\", \"Ridgefall\", \"Halcyon\", \"Verdin\", \"Glass Harbor\", \"Red Mesa\", \"Moonfield\", \"Lake Arden\", \"Cinder Point\", and \"Juniper\". Use month labels \"J F M A M J J A S O N D\" and axis labels \"Temp °C\" and \"Rain mm\". Add numeric legend values \"0\", \"10\", \"20\", \"30\", and \"100\". Keep the composition highly structured, scientifically clear, and visually elegant, with crisp typography, aligned scales, and publication-grade chart rendering.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "信息可视化",
+        "sub_category": "信息可视化",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "network-graph-collaboration-map",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/network-graph-collaboration-map.png",
+        "prompt": "Generate a sophisticated network graph visualization on a dark charcoal canvas showing collaborations across a fictional research consortium called ORBIT GRID. Use glowing node colors in teal, amber, coral, pale blue, and white, with fine connecting lines and clean labels. The composition should be balanced, readable, and intentionally designed rather than random. Include a title in crisp text reading \"ORBIT GRID Collaboration Network\" and a legend with \"Institute\", \"Lab\", \"Project\", and \"Advisory\". Show approximately 36 nodes, with larger hubs labeled \"Helix Center\", \"Nova Lab\", \"Aster Institute\", \"Cinder Bio\", and \"Polar Systems\". Add edge labels sparingly, such as \"shared data\", \"joint grant\", and \"coauthor\". Include a right-side stats card reading \"Nodes 36\", \"Edges 92\", and \"Density 0.146\". Emphasize clean hierarchy, accurate node-label placement, anti-overlap spacing, subtle depth, and crisp typography suited for a polished technical visualization generated by gpt-image-2.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "信息可视化",
+        "sub_category": "信息可视化",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "chord-diagram-energy-flows",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/chord-diagram-energy-flows.png",
+        "prompt": "Create a publication-quality chord diagram visualizing fictional regional energy flows in 2025. Use a bright ivory background with a centered circular composition and a harmonious palette of cobalt, teal, ochre, coral, plum, and graphite. The diagram should feel mathematically precise, with clean arcs, semi-transparent ribbons, and highly legible labels. Add a title block with the in-image text \"Regional Energy Exchange\" and subtitle \"TWh, 2025\". Label outer segments \"North\", \"South\", \"East\", \"West\", \"Coastal\", and \"Grid Reserve\". Include a small legend reading \"Hydro\", \"Solar\", \"Wind\", and \"Storage\". Place tiny numeric ticks around the ring at \"0\", \"50\", \"100\", and \"150\". Use ribbon thickness to imply volume, but keep the composition readable and elegant. Prioritize crisp labels, clear hierarchy, accurate geometry, balanced white space, and a refined data-journalism aesthetic rather than generic infographic styling.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "信息可视化",
+        "sub_category": "信息可视化",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "treemap-startup-budget-allocation",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/treemap-startup-budget-allocation.png",
+        "prompt": "Design a modern treemap infographic showing a fictional company budget allocation for LUMEN BIO in fiscal year 2026. Use a light neutral background and a controlled palette of forest green, desaturated blue, amber, terracotta, lavender-gray, and charcoal outlines. The composition should be a clean rectangular treemap with strong visual grouping and crisp typography. Include a header with the in-image text \"LUMEN BIO Budget Allocation\" and \"FY 2026\". Major blocks should be labeled \"R&D 38%\", \"Manufacturing 22%\", \"Clinical 14%\", \"Operations 10%\", \"Marketing 7%\", \"IT 5%\", and \"Legal 4%\". Within some blocks, add smaller labels like \"Prototypes\", \"Reagents\", \"QA\", \"Cloud\", and \"Field Trials\". Include a compact side legend reading \"Total Budget $84.0M\". Ensure the chart has precise edges, balanced annotation density, clean hierarchy, and sharp text rendering suitable for a technical gallery prompt.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "信息可视化",
+        "sub_category": "信息可视化",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "geographic-choropleth-harvest-yield",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/geographic-choropleth-harvest-yield.png",
+        "prompt": "Produce a polished geographic choropleth map infographic of a fictional agricultural region called the Solterra Basin, showing harvest yield by district. Use a minimalist cartographic style on an off-white background with muted terrain hints and a sequential palette from pale sand to deep green. The map should include 14 clearly separated districts with clean borders, crisp labels, and a right-side legend. Include in-image text: \"Solterra Basin Harvest Yield\", \"2025\", and legend title \"tons / hectare\". Label districts with names such as \"North Vale\", \"Riverbend\", \"Copper Plain\", \"East Orchard\", and \"Cinder Ridge\". Include legend values \"1.2\", \"2.4\", \"3.6\", \"4.8\", and \"6.0\". Add a compact annotation box reading \"Highest yield: East Orchard 5.8\" and \"Lowest yield: Dry Steppe 1.4\". Prioritize clean typography, accurate map-like geometry, balanced composition, subtle cartographic detail, and publication-grade infographic clarity.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "信息可视化",
+        "sub_category": "信息可视化",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "zoo-visitor-wayfinding-map",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/zoo-visitor-wayfinding-map.png",
+        "prompt": "Design a polished visitor wayfinding map for a fictional modern city zoo named \"RIVERGATE ZOO\". Landscape 3:2 orientation (1536×1024), friendly illustrated navigation-map style, clean paths and zones, readable labels, cute animal icons, and practical visitor signage. Include crisp in-image text: \"RIVERGATE ZOO\", \"Main Gate\", \"Panda Forest\", \"Savanna Loop\", \"Aviary\", \"Reptile House\", \"Kids Farm\", \"Cafe\", \"Restrooms\", \"First Aid\", and \"Exit\". Show color-coded walking routes, numbered landmarks, small legend, north arrow, accessibility icons, and soft botanical details. Palette: warm cream paper, zoo green, sky blue, coral, amber, and charcoal labels. Make it charming, useful, and map-like rather than a generic poster; avoid fake sponsor logos and cluttered microtext.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "信息可视化",
+        "sub_category": "信息可视化",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "huashan-5a-scenic-wayfinding-map",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/huashan-5a-scenic-wayfinding-map.png",
+        "prompt": "Design a polished Chinese 5A scenic-area visitor navigation map for Huashan, titled with crisp Chinese text \"华山游览导览图\" and subtitle \"国家5A级旅游景区\". Landscape 3:2 orientation (1536×1024), premium illustrated map style for a visitor center brochure. Show dramatic mountain ridges, cable car routes, trail paths, scenic nodes, and safety icons. Include readable labels: \"北峰\", \"西峰\", \"南峰\", \"东峰\", \"中峰\", \"游客中心\", \"索道\", \"栈道\", \"观景台\", \"卫生间\", \"急救点\". Add a small legend, route colors, elevation hints, north arrow, and a compact note \"请量力而行 注意安全\". Palette: ink-wash mountain gray, pine green, sunrise gold, cinnabar red route marks, and clean black Chinese typography. Make it practical, beautiful, culturally Chinese, and suitable for a tourism wayfinding panel; no fake official seals, no sponsor logos.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "信息可视化",
+        "sub_category": "信息可视化",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "streetwear-tokyo-lookbook",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/streetwear-tokyo-lookbook.png",
+        "prompt": "Full-body lookbook photography of a model standing in the center of a rain-slicked Shibuya crossing at twilight. The model wears an oversized, multi-pocketed technical puffer jacket in 'Electric Cobalt' with reflective silver detailing, paired with wide-leg cargo trousers in matte black and chunky platform sneakers. The composition is a sharp medium-wide shot using a 35mm lens, capturing the vibrant neon signs of the background blurred into a soft bokeh of pinks and cyans. Lighting is dramatic and directional, sourced from the surrounding digital billboards, creating high-contrast highlights on the jacket's texture. The mood is urban and fast-paced, with a subtle film grain characteristic of Portra 400. The image features a clean vertical layout suitable for a fashion magazine, with the text 'NEO-URBAN' subtly embossed in the corner in a minimalist sans-serif font. No brand logos are visible.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "haute-couture-sculptural-runway",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/haute-couture-sculptural-runway.png",
+        "prompt": "High-angle editorial photograph of a haute couture runway show set within a brutalist concrete cathedral. The model is draped in a sculptural gown made of pleated iridescent organza that mimics the fluid movement of liquid mercury. The color palette is dominated by 'Champagne Gold' and 'Shadow Grey'. Lighting is a single, powerful overhead spotlight that creates sharp, dramatic shadows and emphasizes the architectural volume of the garment. The model has a minimalist, ethereal makeup look with silver leaf accents on the brow. The camera uses a 50mm prime lens with a deep depth of field to capture both the intricate texture of the fabric and the cold, vast scale of the concrete architecture in the background. The atmosphere is solemn, artistic, and high-fashion, focusing on the intersection of textile and space.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "y2k-revival-cyber-pop",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/y2k-revival-cyber-pop.png",
+        "prompt": "A vibrant Y2K-inspired fashion editorial shot in a studio with a high-gloss white floor and a curved lavender backdrop. The model is styled in a 'Cyber-Pink' velour tracksuit with butterfly motifs, tinted translucent sunglasses, and frosted blue eyeshadow. The lighting is bright and 'bubbly,' using ring lights to create circular catchlights in the eyes and a soft, glowy skin texture reminiscent of early 2000s music videos. The composition is a close-up fish-eye lens shot, distorting the proportions for a playful, energetic effect. Colors are saturated neon greens, hot pinks, and icy blues. Floating around the model are low-poly 3D heart shapes and plastic-textured stars. The text 'GLOSS' is written in a chunky, 3D chrome bubble font across the top. The overall aesthetic is nostalgic, plastic, and hyper-digital.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "old-money-equestrian-estate",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/old-money-equestrian-estate.png",
+        "prompt": "Quiet luxury editorial photography set on a sprawling English country estate during the golden hour. A model sits gracefully on a stone wall, dressed in a tailored 'Camel' cashmere coat, a silk neck scarf with a heritage print, and dark brown leather riding boots. In the background, a vintage dark green convertible is parked near a stable of limestone and ivy. The lighting is warm and diffused, casting long, soft shadows across the manicured lawn. The color palette is earthy and sophisticated: forest green, rich tan, cream, and mahogany. The camera is a medium-format Hasselblad, producing a rich, creamy texture and incredibly fine detail in the wool and leather. The mood is one of timeless elegance, inherited wealth, and serene countryside life. There are no modern logos or distracting elements; the focus is on quality and tradition.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "avant-garde-organic-high-fashion",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/avant-garde-organic-high-fashion.png",
+        "prompt": "A high-fashion editorial shot in a surreal desert landscape where the sand is white and the sky is a deep, dark indigo. The model wears an avant-garde garment that appears to be grown from bioluminescent fungi and dried desert vines, featuring intricate organic textures and glowing veins of 'Acid Green'. The silhouette is exaggerated and asymmetrical, blending into the surrounding rock formations. The lighting is otherworldly, with the model illuminated by a soft internal glow from the dress and a faint lunar backlight. The composition is a low-angle shot to make the model appear monumental and god-like. The camera uses a wide-angle lens to capture the vast, empty horizon. The color palette is strictly limited to white, indigo, and bioluminescent green, creating a haunting and futuristic aesthetic that challenges the boundaries of clothing.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "editorial-studio-portrait",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/editorial-studio-portrait.png",
+        "prompt": "A high-end studio photoshoot featuring a half-body portrait of a person in their mid-30s to early 40s with a naturally fit build. The subject stands in a relaxed yet confident pose, with a calm, neutral, self-assured expression. They are dressed in modern, minimal casual streetwear, such as a well-fitted t-shirt or a light jacket, using neutral, muted tones. Shot at eye level using an 85mm portrait lens with an aperture of f/2.8, keeping the subject tack sharp while creating a soft, shallow depth of field that gently blurs the background. The lighting is professional studio quality: a softbox key light from the front, subtle fill lighting to balance shadows, and a gentle rim light to separate the subject from the background. Shadows are soft and natural, with accurate, realistic skin tones. The background is a clean studio backdrop with a smooth, minimal texture and a soft neutral gradient, completely distraction-free. The overall style is highly realistic with an editorial fashion portrait look. Color grading is natural and balanced, with no filters or overprocessing. Rendered in ultra-high detail.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "eiffel-tower-luxury-editorial",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/eiffel-tower-luxury-editorial.png",
+        "prompt": "Dramatic, low-angle ground perspective full-body shot captured with a 50mm lens at f/1.4, featuring a stylish bearded man with slicked-back hair and aviator glasses, wearing tailored high-fashion modern clothing, standing on the platform of Trocadéro at night. He is dressed in a structured black velvet blazer over a black cashmere roll-neck sweater, tailored black trousers, and polished black boots, looking up intently at the fully illuminated Eiffel Tower, which dominates the background. Directly behind him is a deep sapphire blue Bugatti Chiron reflecting the surrounding city lights. One foot is planted on the rear tire, with his body leaning casually back. Use a shallow depth of field, rendering distant Parisian street lights and crowd into creamy bokeh. Spotlighting from city lamps creates dramatic, high-contrast shadows. Photorealistic, cinematic, luxury high-fashion editorial aesthetic.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "人物",
+        "sub_category": "人物",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "impasto-floral-swirls",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/impasto-floral-swirls.png",
+        "prompt": "A vivid oil painting in the lineage of post-impressionist impasto, featuring a dense garden of sunflowers and irises. The paint is applied in thick, rhythmic swirls and heavy dollops with a palette knife, creating a tangible 3D texture on the canvas. The color palette is an explosion of 'Chrome Yellow', 'Deep Ultramarine', and 'Vermilion Red', with visible strokes of white lead to indicate shimmering light. The composition is a tight, chaotic floral arrangement that seems to vibrate with energy. The lighting is harsh midday sun, which creates deep shadows within the ridges of the thick paint. There are no flat surfaces; every inch of the 'canvas' is covered in expressive, turbulent movement. The overall effect is one of raw emotion and the physical presence of the medium, focusing on the light-play over the peaks of the oil paint.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "艺术",
+        "sub_category": "艺术",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "impressionist-river-dusk",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/impressionist-river-dusk.png",
+        "prompt": "A serene landscape painting in the lineage of late 19th-century Impressionism, depicting a wide river reflecting a hazy violet and gold sunset. The water is rendered with short, horizontal dabs of color—'Lavender', 'Pale Peach', and 'Sage Green'—that suggest the gentle ripple of the surface. On the banks, weeping willows are suggested by soft, blurred strokes of dark emerald and charcoal. The atmosphere is thick with moisture and light, where the sky and water seem to merge at the horizon. There are no sharp lines or defined edges; the entire scene is a study of light, color, and atmospheric perspective. The lighting is the fleeting 'blue hour,' where the last rays of sun catch the tips of the waves. The mood is tranquil and meditative, capturing a fleeting moment of natural beauty through a soft, atmospheric lens.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "艺术",
+        "sub_category": "艺术",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "hockney-california-backyard",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/hockney-california-backyard.png",
+        "prompt": "A flat, vibrant acrylic painting in the lineage of 1960s California modernism. The scene features a sparkling turquoise swimming pool in the foreground, with highly stylized white splash lines indicating a recent dive. In the background, a minimalist glass-and-steel house sits under a cloudless 'Cerulean' sky, flanked by two perfectly manicured palm trees. The color palette is dominated by saturated primaries: 'Turquoise Blue', 'Lemon Yellow', and 'Terracotta'. The lighting is the flat, shadowless glare of a Los Angeles afternoon, emphasizing the geometric shapes and clean lines of the architecture. The composition is strictly horizontal and balanced, with a sense of artificial stillness and leisure. The texture is smooth and matte, avoiding any visible brushstrokes to maintain a clean, graphic quality. It is a portrait of a sunny, suburban utopia.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "艺术",
+        "sub_category": "艺术",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "rothko-color-field-meditation",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/rothko-color-field-meditation.png",
+        "prompt": "A large-scale abstract painting in the lineage of mid-century Color Field expressionism. The composition consists of three stacked, soft-edged rectangular forms that appear to float against a darker background. The top rectangle is a deep 'Oxblood Red', the middle is a vibrating 'Burnt Orange', and the bottom is a dusty 'Ochre'. The edges of the shapes are hazy and feathered, allowing the colors to bleed into one another and create a sense of profound depth. The texture of the canvas is subtly visible through the thin, layered washes of pigment. There is no representational subject matter; the focus is entirely on the emotional resonance of the color and the monumental scale. The lighting is soft and ambient, making the colors seem to glow from within the canvas. The mood is spiritual, somber, and deeply immersive.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "艺术",
+        "sub_category": "艺术",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "rivera-social-industrial-mural",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/rivera-social-industrial-mural.png",
+        "prompt": "A grand-scale public mural in the lineage of early 20th-century social realism and Mexican muralism. The scene depicts an industrial foundry where diverse workers are engaged in the heroic labor of forging massive steel gears. The figures are rendered with heavy, rounded forms and powerful muscularity, colored in earthy tones of 'Sienna', 'Slate Grey', and 'Iron Rust'. The composition is dense and rhythmic, filled with the interlocking shapes of machinery, pipes, and human bodies. In the center, a golden glow emanates from a crucible of molten metal, illuminating the faces of the workers with a dramatic 'Fire Orange'. The style is bold and graphic, with strong black outlines and a flattened perspective that emphasizes the collective effort. The mural covers a vast curved wall, suggesting a narrative of progress, unity, and the dignity of the working class.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "艺术",
+        "sub_category": "艺术",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "hitman-openai",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/hitman-openai.png",
+        "prompt": "A Hitman level where you are in the OpenAI HQ and your mission is to steal GPT-6 without getting caught",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "gta6-beach",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/gta6-beach.png",
+        "prompt": "GTA 6 in-game footage, very detailed, very realistic. Close-up shot taken from a stationary 4k monitor. (There's a slight blurriness in the image, as it feels like it was taken handheld). A wide, bright environment. Realistic details. The character is walking on the beach with /:dog.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "dark-fantasy-hunt",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/dark-fantasy-hunt.png",
+        "prompt": "Create an original AAA dark-fantasy action RPG screenshot. A silver-haired monster hunter in layered leather armor stands in a ruined marsh at blue hour, sword drawn toward a huge winged swamp beast rising from mist. Cinematic over-the-shoulder framing, believable HUD with health, stamina, potion icons, quest text, and minimap. Wet stones, dead trees, torchlight, moonlit fog, subtle alchemy glyphs, highly detailed materials, dramatic but readable composition, premium next-gen game look, 16:9 landscape.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "epic-fellowship-bridge",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/epic-fellowship-bridge.png",
+        "prompt": "Create an original epic fantasy RPG key-art screenshot. A small fellowship of travelers crosses a colossal ancient stone bridge toward a luminous mountain city at sunrise. One ranger leads, a mage carries a lantern, a dwarf-like smith bears a hammer, and banners whip in the wind. Vast valley below, waterfalls, golden clouds, weathered masonry, cinematic scale, subtle HUD quest marker and compass, richly detailed armor and environment, AAA fantasy adventure tone, 16:9 landscape, highly detailed and uplifting.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "retro-japan-rpg",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/retro-japan-rpg.png",
+        "prompt": "Create an isometric pixel-art RPG screenshot of a traditional Japanese village during cherry blossom season. Sakura petals drift through the air, a samurai player character practices sword moves in the square, villagers watch nearby, and the interface includes an inventory panel, stamina gauge, skill cooldown timers, and subtle quest UI. Cozy retro console feeling, soft ambient pastel lighting, crisp pixel details, 16:9 gameplay composition.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "cyberpunk-europe-action",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/cyberpunk-europe-action.png",
+        "prompt": "Create a third-person cyberpunk action game screenshot set in a neon-soaked European capital at night. The protagonist has glowing cybernetic implants and stands on rain-slick streets near a famous landmark while holograms, drones, and flying traffic crowd the skyline. Add a polished game HUD with health bar, ammo count, radar, stealth/energy meters, and mission overlays. Vivid cyan-magenta palette, wet reflections, cinematic intensity, 16:9.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "anime-open-world",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/anime-open-world.png",
+        "prompt": "Create a third-person over-the-shoulder screenshot from a nostalgic anime-style open-world adventure game. The protagonist stands in a lush forest with detailed foliage and vibrant shading, drawing a bow toward distant enemies. Add a clean on-screen HUD: quest log, compass at the top, character portrait and status effects at bottom left, subtle rain droplets on screen, and sun rays filtering through trees. Keep the composition dynamic, the forest immersive, and the UI believable like a premium action-RPG screenshot.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "mobile-moba-arena-hud",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/mobile-moba-arena-hud.png",
+        "prompt": "Create an original landscape mobile MOBA / action-RPG gameplay screenshot, inspired by competitive lane-battle games but not copying any existing franchise. 16:9 landscape, polished mobile game HUD. Scene: a bright fantasy arena at golden-hour dusk, three stylized heroes clash near a central river bridge and glowing crystal objective. Camera: slightly elevated isometric third-person gameplay view, readable battlefield lanes, minions, spell effects, terrain brush, turret silhouettes, and a boss-objective pit in the distance. HUD design: bottom-left translucent virtual joystick, bottom-right four circular ability buttons with cooldown numbers, ultimate button glowing but 87% charged, top-center score bar reading \"12 - 11\", match timer \"08:42\", team health bars, mini-map in the top-left, item quick slots, gold counter \"3,420\", clean mobile-safe margins, crisp icons, no real game logos. Art direction: premium anime-fantasy 3D mobile game, saturated teal / gold / violet palette, sharp readable UI, dynamic spell VFX, high-detail materials, readable text, screen-capture feel, not a poster, not a mockup board.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "lowpoly-samurai-strategy",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/lowpoly-samurai-strategy.png",
+        "prompt": "Create an isometric low-poly strategy game screenshot of a mountainous Japanese village with rice terraces, torii gates, samurai and archer units in formation, and a tactical RTS interface. Include unit selection boxes, resource counters for rice and wood, fog-of-war minimap, command overlays, and warm daylight with soft shadows. Stylized but readable, modern indie strategy game key art, 16:9.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
+    },
+    {
+        "title": "worldbuilding-nine-panel-set",
+        "preview": "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/worldbuilding-nine-panel-set.png",
+        "prompt": "Create a square 3x3 worldbuilding set for an original dark-fantasy universe called \"Saltwind Reach\". Each panel is a distinct but consistent scene: a storm-battered coastal fortress at dawn, a foggy market street, a knight relic close-up, a handwritten map fragment, a monster silhouette study, a candlelit tavern interior, an alchemist kit flat lay, a moonlit harbor, and a faction banner concept. Keep one cohesive art direction across all nine panels: painterly realism, muted teal / rust / bone palette, cinematic weather, premium concept-art presentation, small caption labels, and strong consistency across costume motifs, architecture, symbols, and lighting. The full board should feel like a polished pre-production worldbuilding sheet rather than a collage of unrelated images.",
+        "author": "github.com/wuyoscar/GPT-Image2-Skill",
+        "mode": "generate",
+        "category": "游戏",
+        "sub_category": "游戏",
+        "created": "2026年5月28日09:40:59"
     }
 ]
