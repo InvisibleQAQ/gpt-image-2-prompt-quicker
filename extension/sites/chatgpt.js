@@ -142,8 +142,8 @@ class ChatGPTSite extends BaseSite {
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
             className: 'composer-btn banana-prompt-button',
-            'aria-label': 'Prompts',
-            title: '快捷提示',
+            'aria-label': 'image2 prompts',
+            title: 'image2 prompts',
             onmouseenter: (e) => {
                 const isDark = this.getCurrentTheme() === 'dark';
                 e.currentTarget.style.backgroundColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.08)';

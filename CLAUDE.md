@@ -125,6 +125,7 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 - theme detection
 - button rendering/placement when platform-specific UI differs
 - `ChatGPTSite` renders the launcher button with the extension icon via `chrome.runtime.getURL('icon128.png')`, so icon asset changes must stay in sync with `manifest.json` web-accessible resources
+- `ChatGPTSite` inserts the launcher immediately after ChatGPT's native composer plus button; launcher tooltip/accessibility text is controlled in `extension/sites/chatgpt.js`, while the native plus button keeps ChatGPT's own `aria-label`
 - host-specific prompt insertion quirks (for example, ChatGPT uses a ProseMirror editor, pastes reference images first when present, then inserts text through its custom editor path)
 
 `DynamicSite` is the escape hatch for unsupported hosts. It reads selectors from remote `config.json`, so selector changes usually belong in `config.json` before code changes.
