@@ -124,6 +124,20 @@ class ChatGPTSite extends BaseSite {
             document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
     }
 
+    insertButton(btn, target) {
+        if (document.getElementById('banana-btn')) return true;
+
+        const triggerWrapper = target.closest('span[data-state]');
+        const container = triggerWrapper?.parentElement || target.parentElement;
+        if (!container) return false;
+
+        container.style.display = 'flex';
+        container.style.alignItems = 'center';
+
+        (triggerWrapper || target).insertAdjacentElement('afterend', btn);
+        return true;
+    }
+
     createButton() {
         const logo = window.DOM.create('img', {
             src: chrome.runtime.getURL('icon128.png'),
@@ -141,9 +155,10 @@ class ChatGPTSite extends BaseSite {
 
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
-            className: 'composer-btn banana-prompt-button',
+            className: 'banana-prompt-button',
             'aria-label': 'image2 prompts',
             title: 'image2 prompts',
+            type: 'button',
             onmouseenter: (e) => {
                 const isDark = this.getCurrentTheme() === 'dark';
                 e.currentTarget.style.backgroundColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.08)';
@@ -174,6 +189,7 @@ class ChatGPTSite extends BaseSite {
             cursor: pointer;
             line-height: 1;
             transition: background-color 0.2s ease;
+            padding: 0;
         `;
 
         return btn;
