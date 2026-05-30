@@ -1,21 +1,18 @@
-const BACKGROUND_MESSAGES = {
-    'zh-CN': {
-        contextMenu: '插入提示词'
-    },
-    en: {
-        contextMenu: 'Insert Prompts'
-    }
-};
+const STORAGE_KEY = 'banana-ui-locale';
 
 function normalizeLocale(locale) {
     return locale && locale.toLowerCase().startsWith('zh') ? 'zh-CN' : 'en';
 }
 
+function getContextMenuTitle(locale) {
+    return normalizeLocale(locale) === 'zh-CN' ? '插入提示词' : 'Insert Prompts';
+}
+
 async function getBackgroundLocale() {
     try {
-        const result = await chrome.storage.local.get(['banana-ui-locale']);
-        if (result['banana-ui-locale']) {
-            return normalizeLocale(result['banana-ui-locale']);
+        const result = await chrome.storage.local.get([STORAGE_KEY]);
+        if (result[STORAGE_KEY]) {
+            return normalizeLocale(result[STORAGE_KEY]);
         }
     } catch (error) {
     }
@@ -35,7 +32,7 @@ async function createContextMenu() {
     chrome.contextMenus.removeAll(() => {
         chrome.contextMenus.create({
             id: 'banana-prompt',
-            title: BACKGROUND_MESSAGES[locale].contextMenu,
+            title: getContextMenuTitle(locale),
             contexts: ['editable']
         });
     });
@@ -56,7 +53,7 @@ chrome.runtime.onStartup?.addListener(() => {
 });
 
 chrome.storage.onChanged?.addListener((changes, areaName) => {
-    if (areaName === 'local' && changes['banana-ui-locale']) {
+    if (areaName === 'local' && changes[STORAGE_KEY]) {
         createContextMenu();
     }
 });

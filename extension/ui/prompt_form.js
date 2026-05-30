@@ -641,6 +641,16 @@ window.UI.PromptForm = class PromptForm {
         return btnContainer;
     }
 
+    getFormData() {
+        return {
+            selectedCategory: this.state.selectedCategory,
+            selectedMode: this.state.selectedMode,
+            selectedFile: this.state.selectedFile,
+            previewUrl: this.state.previewUrl,
+            referenceImages: [...this.state.referenceImages]
+        };
+    }
+
     close() {
         this.cleanupFns.forEach(fn => fn());
         this.cleanupFns = [];

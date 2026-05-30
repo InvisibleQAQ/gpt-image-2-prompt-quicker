@@ -4,7 +4,8 @@ class BaseSite {
         this._buttonInserting = false;
         this._pollTimer = null;
         this._mutationTimer = null;
-        this.lastFocusedElement = document.addEventListener('focusin', (e) => {
+        this.lastFocusedElement = null;
+        document.addEventListener('focusin', (e) => {
             if (this.isEditableElement(e.target)) {
                 this.lastFocusedElement = e.target;
             }
@@ -79,7 +80,8 @@ class BaseSite {
 
     insertButton(btn, target) {
         if (document.getElementById('banana-btn')) return true;
-        target.insertAdjacentElement('afterend', btn)
+        target.insertAdjacentElement('afterend', btn);
+        return true;
     }
 
     async _insertButtonIfNotExists() {
@@ -173,6 +175,18 @@ class BaseSite {
         }
     }
 
+    getButtonLabel() {
+        return window.I18n ? window.I18n.t('site.button.shortcut', 'Quick prompts') : 'Quick prompts';
+    }
+
+    refreshButtonI18n() {
+        const wrapper = window.DOM.querySelectorShadowDom('.button-wrapper');
+        const button = wrapper?.querySelector?.('#banana-btn') || window.DOM.querySelectorShadowDom('#banana-btn');
+        if (button) {
+            button.title = this.getButtonLabel();
+        }
+    }
+
     createButton() {
         const logo = window.DOM.create('img', {
             src: chrome.runtime.getURL('icon16.png'),
@@ -185,7 +199,7 @@ class BaseSite {
         const btn = window.DOM.create('button', {
             id: 'banana-btn',
             className: 'mat-mdc-tooltip-trigger ms-button-borderless ms-button-icon',
-            title: window.I18n ? window.I18n.t('site.button.shortcut', 'Quick prompts') : 'Quick prompts',
+            title: this.getButtonLabel(),
             onmouseenter: (e) => {
                 e.currentTarget.style.background = this.getThemeColors().border;
             },

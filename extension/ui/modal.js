@@ -7,6 +7,8 @@ class BananaModal {
         this.paginationComponent = null;
         this.announcementComponent = null;
         this.promptForm = null;
+        this.currentPromptFormExistingPrompt = null;
+        this.previousLocale = null;
 
         this.keyboardHandler = this.handleKeyboard.bind(this);
         this._isInitialized = false;
@@ -29,6 +31,7 @@ class BananaModal {
             this.onStoreChange();
         });
 
+        this.previousLocale = this.store.state.locale;
         this._isInitialized = true;
     }
 
@@ -211,11 +214,11 @@ class BananaModal {
     }
 
     onStoreChange() {
+        const localeChanged = this.previousLocale !== null && this.previousLocale !== this.store.state.locale;
         const filteredPrompts = this.store.getFilteredPrompts();
         this.paginationComponent.setTotalItems(filteredPrompts.length);
         this.renderCards();
 
-        // Update search component if categories changed
         if (this.searchComponent) {
             this.searchComponent.props.categories = this.store.state.categories;
             this.searchComponent.props.selectedCategory = this.store.state.selectedCategory;
@@ -226,6 +229,17 @@ class BananaModal {
             this.searchComponent.props.locale = this.store.state.locale;
             this.searchComponent.updateView();
         }
+
+        if (localeChanged) {
+            this.site.refreshButtonI18n?.();
+            if (this.promptForm && this.modal?.style.display !== 'none') {
+                const existingPrompt = this.currentPromptFormExistingPrompt;
+                this.promptForm.close();
+                this.showPromptForm(existingPrompt);
+            }
+        }
+
+        this.previousLocale = this.store.state.locale;
     }
 
     renderCards() {
@@ -324,6 +338,7 @@ class BananaModal {
     showPromptForm(existingPrompt = null) {
         const colors = this.site.getThemeColors();
         const mobile = this.isMobile();
+        this.currentPromptFormExistingPrompt = existingPrompt;
 
         this.promptForm = new window.UI.PromptForm({
             categories: this.store.state.categories,
@@ -352,6 +367,7 @@ class BananaModal {
             },
             onCancel: () => {
                 this.promptForm = null;
+                this.currentPromptFormExistingPrompt = null;
             }
         });
 

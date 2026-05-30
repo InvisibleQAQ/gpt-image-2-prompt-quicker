@@ -139,7 +139,7 @@ class Store {
 
     async loadNsfwSetting() {
         const result = await chrome.storage.local.get(['banana-nsfw-enabled']);
-        this.state.nsfwEnabled = result['banana-nsfw-enabled'] || true;
+        this.state.nsfwEnabled = result['banana-nsfw-enabled'] ?? true;
     }
 
     async setNsfwEnabled(enabled) {
