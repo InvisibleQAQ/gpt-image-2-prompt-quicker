@@ -79,20 +79,20 @@ class BaseSite {
     async findTargetButton() { return null; }
 
     insertButton(btn, target) {
-        if (document.getElementById('banana-btn')) return true;
+        if (document.getElementById('image2-btn')) return true;
         target.insertAdjacentElement('afterend', btn);
         return true;
     }
 
     async _insertButtonIfNotExists() {
-        if (window.DOM.querySelectorShadowDom('#banana-btn')) return true;
+        if (window.DOM.querySelectorShadowDom('#image2-btn')) return true;
 
         try {
             const target = await this.findTargetButton();
             if (!target) return false;
 
             // Double check: ensure button doesn't exist globally (Shadow DOM or Document)
-            if (window.DOM.querySelectorShadowDom('#banana-btn')) return true;
+            if (window.DOM.querySelectorShadowDom('#image2-btn')) return true;
 
             const btn = this.createButton();
             if (!btn) return false;
@@ -110,7 +110,7 @@ class BaseSite {
         if (this._buttonInserting) return;
         this._buttonInserting = true;
 
-        if (window.DOM.querySelectorShadowDom('#banana-btn')) {
+        if (window.DOM.querySelectorShadowDom('#image2-btn')) {
             this._buttonInserting = false;
             return;
         }
@@ -162,7 +162,7 @@ class BaseSite {
     }
 
     async _handleMutation() {
-        const btn = window.DOM.querySelectorShadowDom('#banana-btn');
+        const btn = window.DOM.querySelectorShadowDom('#image2-btn');
         const target = await this.findTargetButton();
 
         if (btn && !target) {
@@ -181,7 +181,7 @@ class BaseSite {
 
     refreshButtonI18n() {
         const wrapper = window.DOM.querySelectorShadowDom('.button-wrapper');
-        const button = wrapper?.querySelector?.('#banana-btn') || window.DOM.querySelectorShadowDom('#banana-btn');
+        const button = wrapper?.querySelector?.('#image2-btn') || window.DOM.querySelectorShadowDom('#image2-btn');
         if (button) {
             button.title = this.getButtonLabel();
         }
@@ -197,7 +197,7 @@ class BaseSite {
         logo.style.cssText = 'width: 18px; height: 18px; display: block; object-fit: contain; pointer-events: none;';
 
         const btn = window.DOM.create('button', {
-            id: 'banana-btn',
+            id: 'image2-btn',
             className: 'mat-mdc-tooltip-trigger ms-button-borderless ms-button-icon',
             title: this.getButtonLabel(),
             onmouseenter: (e) => {

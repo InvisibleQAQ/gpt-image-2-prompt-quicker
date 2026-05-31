@@ -129,6 +129,7 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 - theme detection
 - button rendering/placement when platform-specific UI differs
 - `ChatGPTSite` renders the launcher button with the packaged extension icon via `chrome.runtime.getURL('icon16.png')`; keep icon asset references in sync with `manifest.json` web-accessible resources
+- The injected ChatGPT launcher currently uses DOM id `image2-btn` and class `image2-prompt-button`; keep `extension/sites/chatgpt.js`, `extension/sites/base.js`, and `extension/tests/chatgpt_site.test.js` aligned if those selectors change
 - `ChatGPTSite` must insert the launcher after the native plus button's outer trigger wrapper rather than inside it; otherwise ChatGPT's own plus-button tooltip (`Add files and more`) captures hover for the extension icon. Launcher tooltip/accessibility text is controlled in `extension/sites/chatgpt.js`, while the native plus button keeps ChatGPT's own `aria-label`
 - `ChatGPTSite` keeps the launcher icon-only in the default composer, but switches to an icon + `prompts` pill in image mode when the composer exposes image-footer controls such as `composer-footer-actions` / aspect-ratio controls
 - host-specific prompt insertion quirks (for example, ChatGPT uses a ProseMirror editor, pastes reference images first when present, then inserts text through its custom editor path)

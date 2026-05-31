@@ -125,7 +125,7 @@ class ChatGPTSite extends BaseSite {
     }
 
     insertButton(btn, target) {
-        if (document.getElementById('banana-btn')) return true;
+        if (document.getElementById('image2-btn')) return true;
 
         const triggerWrapper = target.closest('span[data-state]');
         const container = triggerWrapper?.parentElement || target.parentElement;
@@ -166,7 +166,7 @@ class ChatGPTSite extends BaseSite {
         }
 
         const promptButtonLabel = this.getButtonLabel();
-        btn.className = 'composer-btn banana-prompt-button';
+        btn.className = 'composer-btn image2-prompt-button';
         btn.setAttribute('aria-label', promptButtonLabel);
         btn.setAttribute('title', promptButtonLabel);
         btn.style.cssText = isImageMode
@@ -233,7 +233,7 @@ class ChatGPTSite extends BaseSite {
     }
 
     refreshButtonI18n() {
-        const btn = window.DOM.querySelectorShadowDom('#banana-btn');
+        const btn = window.DOM.querySelectorShadowDom('#image2-btn');
         if (btn) {
             this.syncButtonMode(btn);
         }
@@ -256,8 +256,8 @@ class ChatGPTSite extends BaseSite {
         `;
 
         const btn = window.DOM.create('button', {
-            id: 'banana-btn',
-            className: 'composer-btn banana-prompt-button',
+            id: 'image2-btn',
+            className: 'composer-btn image2-prompt-button',
             'aria-label': this.getButtonLabel(),
             title: this.getButtonLabel(),
             type: 'button',
@@ -281,7 +281,7 @@ class ChatGPTSite extends BaseSite {
 
     async _handleMutation() {
         await super._handleMutation();
-        const btn = window.DOM.querySelectorShadowDom('#banana-btn');
+        const btn = window.DOM.querySelectorShadowDom('#image2-btn');
         if (btn) {
             this.syncButtonMode(btn);
         }

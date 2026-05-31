@@ -306,7 +306,7 @@ test('ChatGPT button should stay icon-only outside image mode', () => {
   const button = site.createButton();
 
   assert.equal(button.tagName, 'BUTTON');
-  assert.equal(button.className, 'composer-btn banana-prompt-button');
+  assert.equal(button.className, 'composer-btn image2-prompt-button');
   assert.equal(button.children.length, 1);
   assert.equal(button.children[0].tagName, 'IMG');
   assert.match(button.style.cssText, /width:\s*36px/);
@@ -338,7 +338,7 @@ test('ChatGPT button should show prompts text in image mode', () => {
   const button = site.createButton();
 
   assert.equal(button.tagName, 'BUTTON');
-  assert.equal(button.className, 'composer-btn banana-prompt-button');
+  assert.equal(button.className, 'composer-btn image2-prompt-button');
   assert.equal(button['aria-label'], '提示词');
   assert.equal(button.title, '提示词');
   assert.equal(button.children.length, 2);
@@ -379,7 +379,7 @@ test('ChatGPT button should upgrade to prompts pill after switching into image m
   let imageMode = false;
   const context = loadSites({
     querySelectorShadowDom: (selector) => {
-      if (selector === '#banana-btn') return currentButton;
+      if (selector === '#image2-btn') return currentButton;
       if (selector === 'button[data-testid="composer-plus-btn"], button#composer-plus-btn') return target;
       if (selector === '[data-testid="composer-footer-actions"]') return imageMode ? { tagName: 'DIV' } : null;
       if (selector === '#prompt-textarea.ProseMirror[contenteditable="true"]') return imageMode ? imageEditor : defaultEditor;
