@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     if (window.I18n) {
         await window.I18n.init();
+        document.documentElement.lang = window.I18n.getLocale();
         document.title = window.I18n.t('onboarding.pageTitle', document.title);
         document.querySelectorAll('[data-i18n]').forEach((node) => {
             node.textContent = window.I18n.t(node.dataset.i18n, node.textContent);

@@ -202,7 +202,7 @@ class Store {
         const { prompts, keyword, selectedCategory, activeFilters, favorites, sortMode, nsfwEnabled, recentWeekEnabled } = this.state;
 
         const FLASH_MODE_PROMPT = {
-            title: "灵光模式",
+            title: window.I18n ? window.I18n.t('flashMode.title', 'Flash mode') : 'Flash mode',
             preview: "https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/flash_mode.png",
             prompt: `你现在进入【灵光模式: 有灵感就够了】。请按照以下步骤辅助我完成创作：
 1. 需求理解：分析我输入的粗略的想法描述（可能会包含图片）

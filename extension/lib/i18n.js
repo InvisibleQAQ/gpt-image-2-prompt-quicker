@@ -50,6 +50,9 @@
             modal: {
                 empty: '没有找到相关提示词'
             },
+            flashMode: {
+                title: '灵光模式'
+            },
             pagination: {
                 prev: '上一页',
                 next: '下一页',
@@ -163,6 +166,9 @@
             },
             modal: {
                 empty: 'No prompts found'
+            },
+            flashMode: {
+                title: 'Flash mode'
             },
             pagination: {
                 prev: 'Previous',

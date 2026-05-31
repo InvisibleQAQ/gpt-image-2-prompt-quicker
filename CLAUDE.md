@@ -141,8 +141,8 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 
 ### Pages outside the extension runtime
 
-- `extension/pages/onboarding.html` + `onboarding.js`: first-install onboarding opened by the background worker; the welcome heading uses the packaged extension icon asset (`extension/icon48.png`) rather than an inline emoji/remote icon
-- `extension/pages/uninstall.html`: uninstall feedback page set through `chrome.runtime.setUninstallURL`; the logo uses the packaged extension icon asset (`extension/icon128.png`)
+- `extension/pages/onboarding.html` + `onboarding.js`: first-install onboarding opened by the background worker; the welcome heading uses the packaged extension icon asset (`extension/icon48.png`) rather than an inline emoji/remote icon, and locale init should also sync `document.documentElement.lang`
+- `extension/pages/uninstall.html`: uninstall feedback page set through `chrome.runtime.setUninstallURL`; the logo uses the packaged extension icon asset (`extension/icon128.png`), and locale init should also sync `document.documentElement.lang`
 - root `index.html`: public landing page / promo site, not part of the extension runtime; it fetches the same remote `prompts.json` / `config.json` as the extension, uses packaged extension icons for favicon/header branding, and must bind card actions with DOM listeners rather than inline event-handler strings because prompt text can contain quotes
 - root `privacy.html`: static privacy page
 - root `code-reward-models.md`: research note comparing open code reward models, pairwise training, and pairwise-vs-scalar inference

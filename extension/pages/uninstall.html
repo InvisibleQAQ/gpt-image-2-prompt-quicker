@@ -113,6 +113,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             await window.I18n.init();
+            document.documentElement.lang = window.I18n.getLocale();
             document.title = window.I18n.t('uninstall.pageTitle', document.title);
             document.querySelectorAll('[data-i18n]').forEach((node) => {
                 node.textContent = window.I18n.t(node.dataset.i18n, node.textContent);
