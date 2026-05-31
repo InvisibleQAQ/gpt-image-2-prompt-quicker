@@ -1,12 +1,8 @@
-大厂 Go 云原生想转 AI 后端，有机会请联系我~
+直接商店安装: [待补充，见 BRAND_PLACEHOLDERS.md](./BRAND_PLACEHOLDERS.md)
 
 ---
 
-直接商店安装: https://chromewebstore.google.com/detail/banana-prompt-quicker/hgfgfocicepifbolifedlokjkknigoid?authuser=0&hl=zh-CN
-
----
-
-<img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/intro.png?raw=true" width="800">
+<img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/intro.png?raw=true" width="800">
 
 已支持网站：
 * [ChatGPT](https://chatgpt.com/)
@@ -15,17 +11,17 @@
 
 ## 📸 预览
 
-在线网站：https://glidea.github.io/banana-prompt-quicker
+在线网站：[待补充，见 BRAND_PLACEHOLDERS.md](./BRAND_PLACEHOLDERS.md)
 
-<img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/modal.png?raw=true" width="600">
+<img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/modal.png?raw=true" width="600">
 
-<img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/input.png?raw=true" width="300">
+<img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/input.png?raw=true" width="300">
 
 ## 🚀 安装
 
 ### Chrome Web Store 安装
 
-https://chromewebstore.google.com/detail/banana-prompt-quicker/hgfgfocicepifbolifedlokjkknigoid?authuser=0&hl=zh-CN
+[待补充，见 BRAND_PLACEHOLDERS.md](./BRAND_PLACEHOLDERS.md)
 
 ### 手动安装
 
@@ -37,7 +33,7 @@ https://chromewebstore.google.com/detail/banana-prompt-quicker/hgfgfocicepifboli
    - 点击「加载已解压的扩展程序」
    - 选择项目根目录下的 extension 文件夹
 
-<img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/install.png?raw=true" width="300">
+<img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/install.png?raw=true" width="300">
 
 3. 访问 [ChatGPT](https://chatgpt.com/) 开始使用
 > 或在任意网站任意输入框，右键选择【Insert Prompts】
@@ -73,7 +69,7 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
   * 添加更多实用性提示词。按风格推荐穿搭，虚拟旅游，偶像合照...
   * 一键录入 X 等社区所分享的 Prompt
   * 提示词 Trending
-  * 兼容更多 Banana 渠道
+  * 兼容更多 image2 渠道
   * [MAY] Svelte 重构
   * ...
 
@@ -89,7 +85,7 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
   * 卸载原因调研页
 
 ### V1.4.0
-<img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/v1.4.0-promo.png?raw=true" width="300">
+<img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/v1.4.0-promo.png?raw=true" width="300">
 
   * 支持企业版站点适配
   * 支持 Dynamic Site，可在 config.json 中添加 selector 适配其它渠道
@@ -99,7 +95,7 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
   * 运营：公告系统、赞助链接、代码重构
 
 ### V1.3.0
-<img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/v1.3.0-promo.png?raw=true" width="300">
+<img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/v1.3.0-promo.png?raw=true" width="300">
 
   * 支持在任意网站通过右键菜单进入 Prompt 画廊，插入任意输入框。Anywhere!
   * 支持灵光模式，引导完成生图需求（"选择比填空容易"）
@@ -140,19 +136,19 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
       <strong>AI 学习交流社群</strong>
     </td>
     <td align="center">
-      <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/glidea.png?raw=true" width="250">
+      <img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/glidea.png?raw=true" width="250">
       <br>
       <strong><a href="https://glidea.zenfeed.xyz/">我的其它项目</a></strong>
     </td>
     <td align="center">
-      <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/sponsor.png?raw=true" width="300">
+      <img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/sponsor.png?raw=true" width="300">
       <br>
       <strong>🧋请喝杯奶茶</strong>
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
-      <img src="https://github.com/glidea/banana-prompt-quicker/blob/main/images/readnote.png?raw=true" width="400">
+      <img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/readnote.png?raw=true" width="400">
       <br>
       <strong><a href="https://www.xiaohongshu.com/user/profile/5f7dc54d0000000001004afb">📕 小红书账号 - 持续分享 AI 原创</a></strong>
     </td>

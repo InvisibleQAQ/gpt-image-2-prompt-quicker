@@ -131,7 +131,7 @@ async function main() {
         const finalSize = (fs.statSync(outputPath).size / 1024).toFixed(2);
         console.log(`\n✅ 已保存: images/${filename}.jpg (${finalSize} KB)`);
 
-        const cdnUrl = `https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/${filename}.jpg`;
+        const cdnUrl = `https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/${filename}.jpg`;
         console.log(`📋 CDN: ${cdnUrl}`);
 
         try {

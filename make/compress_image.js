@@ -142,7 +142,7 @@ function main() {
         console.log('═'.repeat(40));
 
         // 复制 CDN URL 到剪贴板
-        const cdnUrl = `https://cdn.jsdelivr.net/gh/glidea/banana-prompt-quicker@main/images/${baseName}.jpg`;
+        const cdnUrl = `https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/${baseName}.jpg`;
         console.log(`\n📋 CDN: ${cdnUrl}`);
 
         try {

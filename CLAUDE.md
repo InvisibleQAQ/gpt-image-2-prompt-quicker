@@ -42,6 +42,7 @@ On Linux, expect these scripts to fail unless rewritten to avoid `sips`.
   - one content-script bundle injected on `<all_urls>`
   - permissions for `storage` and `contextMenus`
   - host access for remote JSON/image fetches from GitHub raw and jsDelivr
+  - branding migration note: if site URL / uninstall URL / Chrome Web Store URL / Firefox Gecko ID are still unknown, do not invent replacements; document placeholders in `BRAND_PLACEHOLDERS.md`, and keep old uninstall URL / Gecko ID until real values exist because clearing them breaks functionality or packaging
 - `extension/background.js` handles install-time behavior:
   - opens onboarding page on first install
   - creates the editable-field context menu item
@@ -142,7 +143,7 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 ### Pages outside the extension runtime
 
 - `extension/pages/onboarding.html` + `onboarding.js`: first-install onboarding opened by the background worker; the welcome heading uses the packaged extension icon asset (`extension/icon48.png`) rather than an inline emoji/remote icon, and locale init should also sync `document.documentElement.lang`
-- `extension/pages/uninstall.html`: uninstall feedback page set through `chrome.runtime.setUninstallURL`; the logo uses the packaged extension icon asset (`extension/icon128.png`), and locale init should also sync `document.documentElement.lang`
+- `extension/pages/uninstall.html`: uninstall feedback page set through `chrome.runtime.setUninstallURL`; the logo uses the packaged extension icon asset (`extension/icon128.png`), and locale init should also sync `document.documentElement.lang`; if the new uninstall URL is unknown during rebranding, keep the existing uninstall URL instead of clearing it
 - root `index.html`: public landing page / promo site, not part of the extension runtime; it fetches the same remote `prompts.json` / `config.json` as the extension, uses packaged extension icons for favicon/header branding, and must bind card actions with DOM listeners rather than inline event-handler strings because prompt text can contain quotes
 - root `privacy.html`: static privacy page
 - root `code-reward-models.md`: research note comparing open code reward models, pairwise training, and pairwise-vs-scalar inference
@@ -151,6 +152,7 @@ Derived adapters (`chatgpt.js`, `dynamic.js`) mainly override:
 ## Project-specific constraints
 
 - This project relies on remote JSON hosted from the repository default branch. Changes to `config.json`, `prompts.json`, or `images/` affect runtime behavior after the cache window expires even if extension code is unchanged.
+- Brand migration placeholders live in `BRAND_PLACEHOLDERS.md`; use that file for unresolved public URLs/IDs instead of guessing values in code or docs.
 - `selectors.json` is deprecated; `config.json` is the authoritative selector source.
 - The prompt ingestion workflow is documented in `make/add_prompt.mdc`; follow that when adding prompt entries instead of inventing a new schema.
 - The codebase currently uses plain browser globals and direct DOM construction. Do not introduce a framework or build step unless the task explicitly requires that migration.

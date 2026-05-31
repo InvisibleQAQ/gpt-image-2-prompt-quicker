@@ -101,22 +101,22 @@
                 contextMenu: '插入提示词'
             },
             onboarding: {
-                pageTitle: '欢迎使用 Banana Prompt Quicker',
+                pageTitle: '欢迎使用 image2 prompt quicker',
                 heroTitle: '提示词从未如此优雅',
-                guideAlt: 'Banana Prompt Quicker 使用指南',
+                guideAlt: 'image2 prompt quicker 使用指南',
                 choosePlatform: '选择平台，即刻开始',
                 anySite: '任意网站，右键插入',
                 next: '下一步',
                 getStarted: '开始使用'
             },
             uninstall: {
-                pageTitle: '很遗憾看到您离开 - Banana Prompt Quicker',
+                pageTitle: '很遗憾看到您离开 - image2 prompt quicker',
                 heading: '很遗憾看到您离开',
                 subtitle: '您的反馈对我们至关重要，能告诉我们原因吗？',
                 placeholder: '请输入您的建议或卸载原因...',
                 submit: '帮助改进',
                 githubLink: '在 GitHub 上反馈问题',
-                subject: 'Banana Prompt Quicker 卸载反馈'
+                subject: 'image2 prompt quicker 卸载反馈'
             }
         },
         en: {
@@ -218,22 +218,22 @@
                 contextMenu: 'Insert Prompts'
             },
             onboarding: {
-                pageTitle: 'Welcome to Banana Prompt Quicker',
+                pageTitle: 'Welcome to image2 prompt quicker',
                 heroTitle: 'Prompts have never felt this elegant',
-                guideAlt: 'Banana Prompt Quicker guide',
+                guideAlt: 'image2 prompt quicker guide',
                 choosePlatform: 'Choose a platform to get started',
                 anySite: 'Any website, insert from the context menu',
                 next: 'Next',
                 getStarted: 'Get started'
             },
             uninstall: {
-                pageTitle: 'Sorry to see you go - Banana Prompt Quicker',
+                pageTitle: 'Sorry to see you go - image2 prompt quicker',
                 heading: 'Sorry to see you go',
                 subtitle: 'Your feedback matters. Could you tell us why?',
                 placeholder: 'Share your feedback or why you uninstalled...',
                 submit: 'Help us improve',
                 githubLink: 'Report an issue on GitHub',
-                subject: 'Banana Prompt Quicker uninstall feedback'
+                subject: 'image2 prompt quicker uninstall feedback'
             }
         }
     }
