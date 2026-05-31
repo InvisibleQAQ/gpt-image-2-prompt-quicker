@@ -36,7 +36,7 @@ class ChatGPTSite extends BaseSite {
         const referenceImages = typeof promptData === 'object' ? promptData.referenceImages : null;
         const el = await this.findPromptInput();
         if (!el || !this.isEditableElement(el)) {
-            console.log('Banana: ChatGPT insertPrompt debug', {
+            console.log('image2: ChatGPT insertPrompt debug', {
                 foundElement: false,
                 tagName: el?.tagName || null,
                 isContentEditable: !!el?.isContentEditable
@@ -44,7 +44,7 @@ class ChatGPTSite extends BaseSite {
             return;
         }
 
-        console.log('Banana: ChatGPT insertPrompt debug', {
+        console.log('image2: ChatGPT insertPrompt debug', {
             foundElement: true,
             tagName: el.tagName,
             id: el.id || null,
@@ -55,7 +55,7 @@ class ChatGPTSite extends BaseSite {
         });
 
         if (!el.isContentEditable) {
-            console.log('Banana: ChatGPT insertPrompt path', 'textarea-fallback');
+            console.log('image2: ChatGPT insertPrompt path', 'textarea-fallback');
             await super.insertPrompt(promptData);
             return;
         }
@@ -77,10 +77,10 @@ class ChatGPTSite extends BaseSite {
         if (typeof document.execCommand === 'function') {
             inserted = document.execCommand('insertText', false, promptText);
         }
-        console.log('Banana: ChatGPT insertPrompt execCommand', inserted);
+        console.log('image2: ChatGPT insertPrompt execCommand', inserted);
 
         if (!inserted) {
-            console.log('Banana: ChatGPT insertPrompt path', 'innerHTML-fallback');
+            console.log('image2: ChatGPT insertPrompt path', 'innerHTML-fallback');
             el.innerHTML = promptText.split('\n').map(line => {
                 const escaped = line
                     .replace(/&/g, '&amp;')
@@ -94,7 +94,7 @@ class ChatGPTSite extends BaseSite {
             selection.removeAllRanges();
             selection.addRange(range);
         } else {
-            console.log('Banana: ChatGPT insertPrompt path', 'execCommand');
+            console.log('image2: ChatGPT insertPrompt path', 'execCommand');
         }
 
         const inputEvent = typeof InputEvent === 'function'
@@ -107,7 +107,7 @@ class ChatGPTSite extends BaseSite {
             })
             : new Event('input', { bubbles: true });
         el.dispatchEvent(inputEvent);
-        console.log('Banana: ChatGPT insertPrompt dispatched', {
+        console.log('image2: ChatGPT insertPrompt dispatched', {
             inputType: inputEvent.inputType || 'plain-input',
             dataLength: inputEvent.data?.length || 0,
             finalInnerHTML: el.innerHTML
