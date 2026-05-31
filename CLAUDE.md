@@ -46,6 +46,7 @@ On Linux, expect these scripts to fail unless rewritten to avoid `sips`.
 - `extension/background.js` handles install-time behavior:
   - opens onboarding page on first install
   - creates the editable-field context menu item
+  - uses context-menu id `image2-prompt` for the right-click entry; keep the create/click handler values aligned if it changes
   - forwards context-menu clicks to the active tab via `chrome.tabs.sendMessage`
 - `extension/content.js` is the runtime bootstrap inside pages:
   - fetches remote config via `ConfigManager`

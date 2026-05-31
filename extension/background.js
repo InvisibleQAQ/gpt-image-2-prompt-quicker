@@ -31,7 +31,7 @@ async function createContextMenu() {
     const locale = await getBackgroundLocale();
     chrome.contextMenus.removeAll(() => {
         chrome.contextMenus.create({
-            id: 'banana-prompt',
+            id: 'image2-prompt',
             title: getContextMenuTitle(locale),
             contexts: ['editable']
         });
@@ -59,7 +59,7 @@ chrome.storage.onChanged?.addListener((changes, areaName) => {
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-    if (info.menuItemId === 'banana-prompt') {
+    if (info.menuItemId === 'image2-prompt') {
         chrome.tabs.sendMessage(tab.id, { action: 'openModal' })
     }
 })
