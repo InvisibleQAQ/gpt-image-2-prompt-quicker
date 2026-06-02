@@ -150,7 +150,6 @@ class BananaModal {
             },
             onLocaleChange: async (locale) => {
                 await this.store.setLocale(locale);
-                this.paginationComponent.resetPage();
             },
             onNsfwChange: async (enabled) => {
                 await this.store.setNsfwEnabled(enabled);

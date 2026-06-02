@@ -86,6 +86,6 @@ test('getPromptSearchTexts includes title variants and searchable fields', () =>
     sub_category: 'Category'
   };
 
-  const texts = PromptUtils.getPromptSearchTexts(prompt, 'zh-CN');
+  const texts = Array.from(PromptUtils.getPromptSearchTexts(prompt, 'zh-CN'));
   assert.deepEqual(texts, ['中文标题', 'Legacy title', 'English title', 'Prompt body', '@demo', 'Category']);
 });

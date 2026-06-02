@@ -109,7 +109,7 @@ Failure behavior matters: `fetcher.js` falls back to cached data even when expir
   - NSFW toggle
   - recent-week toggle
 - `BananaModal` subscribes to the store and re-renders cards/pagination when state changes.
-- Locale changes are live: the modal updates shell text in place, refreshes the launcher button label/tooltip, and reopens the custom prompt form so translated field labels/buttons are rebuilt from current store locale.
+- Locale changes are live: the modal updates shell text in place, refreshes the launcher button label/tooltip, and reopens the custom prompt form so translated field labels/buttons are rebuilt from current store locale; changing locale must not reset the current pagination page, though page count may still clamp if the filtered result set shrinks.
 - `extension/ui/pagination.js` renders the footer pagination controls plus a GitHub link; keep footer social actions minimal and update this note if they change.
 - Custom prompts, favorites, sort mode, and NSFW setting persist in `chrome.storage.local`; note that the NSFW toggle defaults with nullish coalescing, so an explicit stored `false` must remain false.
 
