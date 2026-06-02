@@ -90,6 +90,7 @@ There are two separate data sources with different purposes:
   - prompt catalog fetched remotely at runtime
   - merged in the client with user-authored prompts from `chrome.storage.local`
   - `reference_image_urls` entries are fetched and precompressed client-side; invalid or non-image URLs are skipped per entry rather than aborting the whole prompt list
+  - `created` drives the recent-week filter and recent-first ordering; store it as an ISO timestamp with timezone offset, for example `2026-05-28T09:40:59+08:00`
 
 The fetch path is:
 
