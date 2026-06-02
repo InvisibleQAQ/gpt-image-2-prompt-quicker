@@ -269,8 +269,8 @@ class BananaModal {
                     colors,
                     mobile,
                     onInsert: (prompt) => this.site.insertPrompt(prompt),
-                    onToggleFavorite: async (promptId) => {
-                        await this.store.toggleFavorite(promptId);
+                    onToggleFavorite: async (promptId, legacyPromptKey) => {
+                        await this.store.toggleFavorite(promptId, legacyPromptKey);
                         this.renderCards(); // Re-render to update star
                     },
                     onEdit: (prompt) => this.showPromptForm(prompt),

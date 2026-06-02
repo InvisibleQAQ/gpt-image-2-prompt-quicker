@@ -151,7 +151,11 @@ window.UI.PromptForm = class PromptForm {
 
         // Title Input
         const titleInput = this.createInput(this.t('promptForm.placeholders.title', 'Give it a name...'));
-        if (existingPrompt) titleInput.value = existingPrompt.title;
+        if (existingPrompt) {
+            titleInput.value = window.PromptUtils
+                ? window.PromptUtils.getPromptDisplayTitle(existingPrompt, window.I18n ? window.I18n.getLocale() : 'en')
+                : existingPrompt.title;
+        }
 
         // Category & Sub-Category Row
         const categoryRow = h('div', {

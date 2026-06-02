@@ -29,11 +29,11 @@ class Store {
     }
 
     async init() {
+        await this.loadLocale();
         await Promise.all([
             this.loadPrompts(),
             this.loadFavorites(),
             this.loadSortMode(),
-            this.loadLocale(),
             this.loadNsfwSetting()
         ]);
         this.notify();
@@ -89,13 +89,24 @@ class Store {
         this.state.favorites = result['banana-favorites'] || [];
     }
 
-    async toggleFavorite(promptId) {
-        const index = this.state.favorites.indexOf(promptId);
-        if (index === -1) {
-            this.state.favorites.push(promptId);
+    async toggleFavorite(promptId, legacyPromptKey = null) {
+        const favorites = new Set(this.state.favorites);
+        const hasCanonical = favorites.has(promptId);
+        const hasLegacy = legacyPromptKey ? favorites.has(legacyPromptKey) : false;
+
+        if (hasCanonical || hasLegacy) {
+            favorites.delete(promptId);
+            if (legacyPromptKey) {
+                favorites.delete(legacyPromptKey);
+            }
         } else {
-            this.state.favorites.splice(index, 1);
+            favorites.add(promptId);
+            if (legacyPromptKey) {
+                favorites.delete(legacyPromptKey);
+            }
         }
+
+        this.state.favorites = Array.from(favorites);
         await chrome.storage.local.set({ 'banana-favorites': this.state.favorites });
         this.notify();
     }
@@ -170,7 +181,7 @@ class Store {
 
     ensureRandomValues() {
         this.state.prompts.forEach(p => {
-            const key = `${p.title}-${p.author}`;
+            const key = window.PromptUtils.getPromptId(p);
             if (!this.state.randomMap.has(key)) {
                 this.state.randomMap.set(key, Math.random());
             }
@@ -199,9 +210,10 @@ class Store {
     }
 
     getFilteredPrompts() {
-        const { prompts, keyword, selectedCategory, activeFilters, favorites, sortMode, nsfwEnabled, recentWeekEnabled } = this.state;
+        const { prompts, keyword, selectedCategory, activeFilters, favorites, sortMode, nsfwEnabled, recentWeekEnabled, locale } = this.state;
 
         const FLASH_MODE_PROMPT = {
+            id: '__flash_mode__',
             title: window.I18n ? window.I18n.t('flashMode.title', 'Flash mode') : 'Flash mode',
             preview: "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/flash_mode.png",
             prompt: `你现在进入【灵光模式: 有灵感就够了】。请按照以下步骤辅助我完成创作：
@@ -222,11 +234,8 @@ OK，我想要：`,
         oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
         let filtered = prompts.filter(prompt => {
-            const matchesSearch = !keyword ||
-                prompt.title.toLowerCase().includes(keyword) ||
-                prompt.prompt.toLowerCase().includes(keyword) ||
-                prompt.author.toLowerCase().includes(keyword) ||
-                (prompt.sub_category && prompt.sub_category.toLowerCase().includes(keyword));
+            const searchTexts = window.PromptUtils.getPromptSearchTexts(prompt, locale).map(text => text.toLowerCase());
+            const matchesSearch = !keyword || searchTexts.some(text => text.includes(keyword));
 
             if (!matchesSearch) return false;
 
@@ -248,8 +257,7 @@ OK，我想要：`,
 
             if (activeFilters.size === 0) return true;
 
-            const promptId = `${prompt.title}-${prompt.author}`;
-            const isFavorite = favorites.includes(promptId);
+            const isFavorite = window.PromptUtils.favoriteMatchesPrompt(prompt, favorites);
 
             return Array.from(activeFilters).every(filter => {
                 if (filter === 'favorite') return isFavorite;
@@ -277,8 +285,7 @@ OK，我想要：`,
         const normalItems = [];
 
         filtered.forEach(item => {
-            const itemId = `${item.title}-${item.author}`;
-            const isFavorite = favorites.includes(itemId);
+            const isFavorite = window.PromptUtils.favoriteMatchesPrompt(item, favorites);
 
             if (isFavorite) {
                 favoriteItems.push(item);

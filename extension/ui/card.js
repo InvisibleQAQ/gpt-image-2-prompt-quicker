@@ -15,8 +15,11 @@ window.UI.Card = {
         } = options;
 
         const { h } = window.DOM;
-        const promptId = `${prompt.title}-${prompt.author}`;
-        const isFavorite = favorites.includes(promptId);
+        const locale = window.I18n ? window.I18n.getLocale() : 'en';
+        const promptId = window.PromptUtils.getPromptId(prompt);
+        const legacyPromptKey = window.PromptUtils.getLegacyPromptKey(prompt);
+        const displayTitle = window.PromptUtils.getPromptDisplayTitle(prompt, locale);
+        const isFavorite = window.PromptUtils.favoriteMatchesPrompt(prompt, favorites);
 
         const cardStyle = `
             background: ${colors.surface}; 
@@ -52,7 +55,7 @@ window.UI.Card = {
         // Image
         const img = h('img', {
             src: prompt.preview,
-            alt: prompt.title,
+            alt: displayTitle,
             style: `width: 100%; height: ${mobile ? '180px' : '200px'}; object-fit: cover; flex-shrink: 0;`,
             onclick: () => onInsert(prompt)
         });
@@ -77,7 +80,7 @@ window.UI.Card = {
             `,
             onclick: (e) => {
                 e.stopPropagation();
-                onToggleFavorite(promptId);
+                onToggleFavorite(promptId, legacyPromptKey);
             },
             onmouseenter: () => {
                 if (!mobile) {
@@ -100,8 +103,9 @@ window.UI.Card = {
 
         const title = h('h3', {
             style: `font-size: ${mobile ? '15px' : '14px'}; font-weight: 500; color: ${colors.text}; margin: 0; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;`,
-            onclick: () => onInsert(prompt)
-        }, prompt.title);
+            onclick: () => onInsert(prompt),
+            title: displayTitle
+        }, displayTitle);
 
         const bottomRow = h('div', {
             style: 'display: flex; justify-content: space-between; align-items: center; margin-top: 4px;'
