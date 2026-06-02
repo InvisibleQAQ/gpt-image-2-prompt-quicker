@@ -113,6 +113,10 @@ class ChatGPTSite extends BaseSite {
             finalInnerHTML: el.innerHTML
         });
 
+        if (typeof promptData === 'object') {
+            await this.store?.recordPromptUsage(promptData);
+        }
+
         if (this.modal) {
             this.modal.hide();
         }

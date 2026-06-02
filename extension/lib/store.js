@@ -1,3 +1,34 @@
+const RECENT_PROMPT_USAGE_KEY = 'banana-recent-prompt-usage';
+const RECENT_PROMPT_WINDOW_MS = 7 * 24 * 60 * 60 * 1000;
+
+function getRecentPromptUsageCutoff() {
+    return Date.now() - RECENT_PROMPT_WINDOW_MS;
+}
+
+function pruneRecentPromptUsageMap(usageMap) {
+    if (!usageMap || typeof usageMap !== 'object' || Array.isArray(usageMap)) {
+        return {};
+    }
+
+    const cutoff = getRecentPromptUsageCutoff();
+    const pruned = {};
+
+    Object.entries(usageMap).forEach(([promptId, usedAt]) => {
+        if (typeof promptId !== 'string' || !promptId.trim() || typeof usedAt !== 'string') {
+            return;
+        }
+
+        const timestamp = new Date(usedAt).getTime();
+        if (Number.isNaN(timestamp) || timestamp < cutoff) {
+            return;
+        }
+
+        pruned[promptId] = new Date(timestamp).toISOString();
+    });
+
+    return pruned;
+}
+
 class Store {
     constructor() {
         this.state = {
@@ -12,7 +43,8 @@ class Store {
             categories: new Set(),
             randomMap: new Map(),
             nsfwEnabled: true,
-            recentWeekEnabled: false
+            recentWeekEnabled: false,
+            recentPromptUsage: {}
         };
         this.listeners = [];
     }
@@ -33,6 +65,7 @@ class Store {
         await Promise.all([
             this.loadPrompts(),
             this.loadFavorites(),
+            this.loadRecentPromptUsage(),
             this.loadSortMode(),
             this.loadNsfwSetting()
         ]);
@@ -49,8 +82,6 @@ class Store {
         this.state.prompts = [...customPrompts, ...staticPrompts];
 
         this.updateCategories();
-
-
         this.ensureRandomValues();
     }
 
@@ -62,7 +93,6 @@ class Store {
     async saveCustomPrompts(prompts) {
         await chrome.storage.local.set({ 'banana-custom-prompts': prompts });
         this.state.customPrompts = prompts;
-        // Reload all prompts to merge
         await this.loadPrompts();
         this.notify();
     }
@@ -108,6 +138,33 @@ class Store {
 
         this.state.favorites = Array.from(favorites);
         await chrome.storage.local.set({ 'banana-favorites': this.state.favorites });
+        this.notify();
+    }
+
+    async loadRecentPromptUsage() {
+        const result = await chrome.storage.local.get([RECENT_PROMPT_USAGE_KEY]);
+        const storedUsage = pruneRecentPromptUsageMap(result[RECENT_PROMPT_USAGE_KEY]);
+        this.state.recentPromptUsage = storedUsage;
+        await chrome.storage.local.set({ [RECENT_PROMPT_USAGE_KEY]: storedUsage });
+    }
+
+    async recordPromptUsage(prompt) {
+        if (!prompt || typeof prompt !== 'object' || !window.PromptUtils?.getPromptId) {
+            return;
+        }
+
+        const promptId = window.PromptUtils.getPromptId(prompt);
+        if (typeof promptId !== 'string' || !promptId.trim()) {
+            return;
+        }
+
+        const nextUsage = pruneRecentPromptUsageMap({
+            ...this.state.recentPromptUsage,
+            [promptId]: new Date().toISOString()
+        });
+
+        this.state.recentPromptUsage = nextUsage;
+        await chrome.storage.local.set({ [RECENT_PROMPT_USAGE_KEY]: nextUsage });
         this.notify();
     }
 
@@ -157,7 +214,6 @@ class Store {
         this.state.nsfwEnabled = enabled;
         await chrome.storage.local.set({ 'banana-nsfw-enabled': enabled });
 
-        // If disabling NSFW and current category is NSFW, switch to 'all'
         if (!enabled && this.state.selectedCategory === 'NSFW') {
             this.state.selectedCategory = 'all';
         }
@@ -170,7 +226,6 @@ class Store {
         this.state.categories = new Set();
         this.state.prompts.forEach(p => {
             if (p.category) {
-                // Skip NSFW category if disabled
                 if (!this.state.nsfwEnabled && p.category === 'NSFW') {
                     return;
                 }
@@ -210,12 +265,23 @@ class Store {
     }
 
     getFilteredPrompts() {
-        const { prompts, keyword, selectedCategory, activeFilters, favorites, sortMode, nsfwEnabled, recentWeekEnabled, locale } = this.state;
+        const {
+            prompts,
+            keyword,
+            selectedCategory,
+            activeFilters,
+            favorites,
+            sortMode,
+            nsfwEnabled,
+            recentWeekEnabled,
+            recentPromptUsage,
+            locale
+        } = this.state;
 
         const FLASH_MODE_PROMPT = {
             id: '__flash_mode__',
             title: window.I18n ? window.I18n.t('flashMode.title', 'Flash mode') : 'Flash mode',
-            preview: "https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/flash_mode.png",
+            preview: 'https://cdn.jsdelivr.net/gh/InvisibleQAQ/gpt-image-2-prompt-quicker@main/images/flash_mode.png',
             prompt: `你现在进入【灵光模式: 有灵感就够了】。请按照以下步骤辅助我完成创作：
 1. 需求理解：分析我输入的粗略的想法描述（可能会包含图片）
 2. 需求澄清：要求我做出细节澄清，提出 3 个你认为最重要的选择题（A/B/C/D），以明确我的生图或修图需求（例如风格、构图、光影、具体相关细节等）。请一次性列出这三个问题
@@ -224,16 +290,15 @@ class Store {
 ---
 
 OK，我想要：`,
-            link: "https://www.xiaohongshu.com/user/profile/5f7dc54d0000000001004afb",
-            author: "Official@glidea",
+            link: 'https://www.xiaohongshu.com/user/profile/5f7dc54d0000000001004afb',
+            author: 'Official@glidea',
             isFlash: true
         };
 
-        // Calculate one week ago timestamp
-        const oneWeekAgo = new Date();
-        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+        const recentUsageCutoff = getRecentPromptUsageCutoff();
+        const promptsToFilter = recentWeekEnabled ? [...prompts, FLASH_MODE_PROMPT] : prompts;
 
-        let filtered = prompts.filter(prompt => {
+        let filtered = promptsToFilter.filter(prompt => {
             const searchTexts = window.PromptUtils.getPromptSearchTexts(prompt, locale).map(text => text.toLowerCase());
             const matchesSearch = !keyword || searchTexts.some(text => text.includes(keyword));
 
@@ -243,16 +308,17 @@ OK，我想要：`,
                 return false;
             }
 
-            // Filter NSFW content if disabled
             if (!nsfwEnabled && prompt.category === 'NSFW') {
                 return false;
             }
 
-            // Filter by recent week if enabled
             if (recentWeekEnabled) {
-                if (!prompt.created) return false;
-                const createdDate = new Date(prompt.created);
-                if (createdDate < oneWeekAgo) return false;
+                const promptId = window.PromptUtils.getPromptId(prompt);
+                const usedAt = recentPromptUsage[promptId];
+                const usedAtTimestamp = usedAt ? new Date(usedAt).getTime() : NaN;
+                if (Number.isNaN(usedAtTimestamp) || usedAtTimestamp < recentUsageCutoff) {
+                    return false;
+                }
             }
 
             if (activeFilters.size === 0) return true;
@@ -268,15 +334,14 @@ OK，我想要：`,
             });
         });
 
-        // Sort
-        // If recent week is enabled, sort by created time (newest first)
         if (recentWeekEnabled) {
             filtered.sort((a, b) => {
-                const dateA = a.created ? new Date(a.created) : new Date(0);
-                const dateB = b.created ? new Date(b.created) : new Date(0);
-                return dateB - dateA; // Newest first
+                const promptIdA = window.PromptUtils.getPromptId(a);
+                const promptIdB = window.PromptUtils.getPromptId(b);
+                const dateA = recentPromptUsage[promptIdA] ? new Date(recentPromptUsage[promptIdA]).getTime() : 0;
+                const dateB = recentPromptUsage[promptIdB] ? new Date(recentPromptUsage[promptIdB]).getTime() : 0;
+                return dateB - dateA;
             });
-            filtered.unshift(FLASH_MODE_PROMPT);
             return filtered;
         }
 

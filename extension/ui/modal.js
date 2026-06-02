@@ -25,6 +25,7 @@ class BananaModal {
         // Initialize Store
         this.store = new Store();
         await this.store.init();
+        this.site.store = this.store;
 
         // Subscribe to store changes
         this._unsubscribe = this.store.subscribe(() => {

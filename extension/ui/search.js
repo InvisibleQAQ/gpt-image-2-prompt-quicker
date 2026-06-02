@@ -195,7 +195,7 @@
             }
 
             if (this.refs.recentWeekBtn) {
-                this.refs.recentWeekBtn.textContent = this.t('search.filters.recentWeek', 'Recent week');
+                this.refs.recentWeekBtn.textContent = this.t('search.filters.recentWeek', 'Recently used');
             }
 
             if (this.refs.addBtn) {
@@ -327,7 +327,7 @@
                     e.target.style.transform = 'scale(1)';
                     e.target.style.boxShadow = this.state.recentWeekEnabled ? `0 2px 8px ${colors.shadow}` : 'none';
                 } : null
-            }, this.t('search.filters.recentWeek', 'Recent week'));
+            }, this.t('search.filters.recentWeek', 'Recently used'));
             this.refs.recentWeekBtn = recentWeekBtn;
             buttonsContainer.appendChild(recentWeekBtn);
 

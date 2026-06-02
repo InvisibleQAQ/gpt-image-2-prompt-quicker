@@ -298,6 +298,26 @@ test('ChatGPT prompt insertion should emit debug logs for the chosen input path'
   assert.ok(context.__logs.some(args => args[0] === 'Banana: ChatGPT insertPrompt debug'));
 });
 
+test('ChatGPT prompt insertion should record usage once on the direct contenteditable path', async () => {
+  const context = loadSites();
+  const ChatGPTSite = context.ChatGPTSite;
+  const site = new ChatGPTSite();
+  const editor = createContentEditableElement();
+  const payload = { id: 'prompt-1', prompt: 'debug me' };
+  const usageCalls = [];
+
+  site.store = {
+    async recordPromptUsage(promptData) {
+      usageCalls.push(promptData);
+    }
+  };
+  site.findPromptInput = async () => editor;
+
+  await site.insertPrompt(payload);
+
+  assert.deepEqual(usageCalls, [payload]);
+});
+
 test('ChatGPT button should stay icon-only outside image mode', () => {
   const context = loadSites();
   const ChatGPTSite = context.ChatGPTSite;

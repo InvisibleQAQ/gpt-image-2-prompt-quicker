@@ -25,7 +25,7 @@
                     label: '语言'
                 },
                 filters: {
-                    recentWeek: '最近一周',
+                    recentWeek: '最近使用',
                     favorite: '收藏',
                     custom: '自定义',
                     generate: '文生图',
@@ -142,7 +142,7 @@
                     label: 'Language'
                 },
                 filters: {
-                    recentWeek: 'Recent week',
+                    recentWeek: 'Recently used',
                     favorite: 'Favorites',
                     custom: 'Custom',
                     generate: 'Generate',

@@ -314,6 +314,10 @@ class BaseSite {
             el.focus();
         }
 
+        if (typeof promptData === 'object') {
+            await this.store?.recordPromptUsage(promptData);
+        }
+
         if (this.modal) {
             this.modal.hide();
         }
