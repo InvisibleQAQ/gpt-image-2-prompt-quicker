@@ -129,3 +129,62 @@ test('search quick filters should not include generate or edit chips', () => {
   assert.ok(!ids.includes('filter-generate'));
   assert.ok(!ids.includes('filter-edit'));
 });
+
+test('category dropdown should show an explicit filter label in default state', () => {
+  const SearchComponent = loadSearchComponent();
+  const component = new SearchComponent({
+    colors: {
+      text: '#111',
+      textSecondary: '#666',
+      primary: '#000',
+      border: '#ddd',
+      inputBorder: '#ddd',
+      inputBg: '#fff',
+      surface: '#fff',
+      surfaceHover: '#f5f5f5',
+      shadow: 'rgba(0,0,0,0.1)'
+    },
+    isMobile: false,
+    categories: new Set(['Portrait']),
+    selectedCategory: 'all',
+    activeFilters: new Set(),
+    sortMode: 'recommend',
+    nsfwEnabled: true,
+    recentWeekEnabled: false,
+    locale: 'en'
+  });
+
+  component.render();
+
+  assert.equal(component.refs.dropdowns.category.triggerText.textContent, 'Category · All categories');
+  assert.equal(component.refs.dropdowns.locale.triggerText.textContent, 'English');
+});
+
+test('category dropdown should show selected category with explicit label', () => {
+  const SearchComponent = loadSearchComponent();
+  const component = new SearchComponent({
+    colors: {
+      text: '#111',
+      textSecondary: '#666',
+      primary: '#000',
+      border: '#ddd',
+      inputBorder: '#ddd',
+      inputBg: '#fff',
+      surface: '#fff',
+      surfaceHover: '#f5f5f5',
+      shadow: 'rgba(0,0,0,0.1)'
+    },
+    isMobile: false,
+    categories: new Set(['Portrait']),
+    selectedCategory: 'Portrait',
+    activeFilters: new Set(),
+    sortMode: 'recommend',
+    nsfwEnabled: true,
+    recentWeekEnabled: false,
+    locale: 'en'
+  });
+
+  component.render();
+
+  assert.equal(component.refs.dropdowns.category.triggerText.textContent, 'Category · Portrait');
+});

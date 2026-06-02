@@ -78,6 +78,20 @@
             return option ? option.label : '';
         }
 
+        getDropdownDisplayText(name, options, selectedValue) {
+            const selectedLabel = this.getOptionLabel(options, selectedValue);
+            if (name !== 'category') {
+                return selectedLabel;
+            }
+
+            const categoryLabel = this.t('search.category.label', 'Category');
+            const displayValue = selectedValue === 'all'
+                ? this.t('search.category.allSelected', 'All categories')
+                : selectedLabel;
+
+            return `${categoryLabel} · ${displayValue}`;
+        }
+
         renderDropdownOptions(name, options, selectedValue) {
             const dropdown = this.refs.dropdowns?.[name];
             if (!dropdown) return;
@@ -118,7 +132,7 @@
             const dropdown = this.refs.dropdowns?.[name];
             if (!dropdown) return;
 
-            dropdown.triggerText.textContent = this.getOptionLabel(options, selectedValue);
+            dropdown.triggerText.textContent = this.getDropdownDisplayText(name, options, selectedValue);
             dropdown.optionsContainer.style.display = this.state.openDropdown === name ? 'flex' : 'none';
             dropdown.optionsContainer.setAttribute('data-visible', this.state.openDropdown === name);
             dropdown.arrowIcon.style.transform = this.state.openDropdown === name ? 'rotate(180deg)' : 'rotate(0deg)';
@@ -127,18 +141,22 @@
 
         createDropdown(name, options) {
             const { colors, isMobile } = this.props;
+            const isCategoryDropdown = name === 'category';
+            const defaultBorder = isCategoryDropdown ? `${colors.primary}40` : colors.border;
+            const defaultBackground = isCategoryDropdown ? `${colors.primary}08` : colors.surface;
+            const defaultBoxShadow = isCategoryDropdown ? `0 2px 8px ${colors.shadow}` : 'none';
 
             const triggerText = h('span', {
-                style: 'overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; text-align: center;'
+                style: `overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; text-align: ${isCategoryDropdown ? 'left' : 'center'}; font-weight: ${isCategoryDropdown ? 600 : 500};`
             }, '');
 
             const arrowIcon = h('span', {
-                style: 'display: flex; align-items: center; transition: transform 0.2s; opacity: 0.6;',
+                style: `display: flex; align-items: center; transition: transform 0.2s; opacity: ${isCategoryDropdown ? 0.8 : 0.6};`,
                 innerHTML: `<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1L5 5L9 1"/></svg>`
             });
 
             const trigger = h('div', {
-                style: `padding: ${isMobile ? '10px 14px' : '8px 12px'}; border: 1px solid ${colors.border}; border-radius: 16px; background: ${colors.surface}; color: ${colors.text}; font-size: ${isMobile ? '14px' : '13px'}; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s; min-width: ${options.minWidth || '90px'}; justify-content: space-between; user-select: none;`,
+                style: `padding: ${isMobile ? '10px 14px' : '8px 12px'}; border: 1px solid ${defaultBorder}; border-radius: ${isCategoryDropdown ? '20px' : '16px'}; background: ${defaultBackground}; color: ${colors.text}; font-size: ${isMobile ? '14px' : '13px'}; cursor: pointer; display: flex; align-items: center; gap: 4px; transition: all 0.2s; min-width: ${options.minWidth || '90px'}; justify-content: space-between; user-select: none; box-shadow: ${defaultBoxShadow};`,
                 onclick: (e) => {
                     e.stopPropagation();
                     this.updateState({ openDropdown: this.state.openDropdown === name ? null : name });
@@ -146,10 +164,14 @@
                 onmouseenter: !isMobile ? (e) => {
                     e.currentTarget.style.borderColor = colors.primary;
                     e.currentTarget.style.boxShadow = `0 2px 8px ${colors.shadow}`;
+                    if (isCategoryDropdown) {
+                        e.currentTarget.style.background = `${colors.primary}12`;
+                    }
                 } : null,
                 onmouseleave: !isMobile ? (e) => {
-                    e.currentTarget.style.borderColor = colors.border;
-                    e.currentTarget.style.boxShadow = 'none';
+                    e.currentTarget.style.borderColor = defaultBorder;
+                    e.currentTarget.style.boxShadow = defaultBoxShadow;
+                    e.currentTarget.style.background = defaultBackground;
                 } : null
             }, [triggerText, arrowIcon]);
 
@@ -290,7 +312,7 @@
             }, [sortBtn, tooltip]);
 
             const categoryDropdown = this.createDropdown('category', {
-                minWidth: '90px',
+                minWidth: isMobile ? '150px' : '190px',
                 onSelect: (value) => {
                     this.updateState({ selectedCategory: value, openDropdown: null });
                     if (this.props.onCategoryChange) this.props.onCategoryChange(value);
@@ -298,7 +320,7 @@
             });
 
             const localeDropdown = this.createDropdown('locale', {
-                minWidth: '110px',
+                minWidth: isMobile ? '96px' : '110px',
                 onSelect: (value) => {
                     this.updateState({ locale: value, openDropdown: null });
                     if (this.props.onLocaleChange) this.props.onLocaleChange(value);

@@ -57,6 +57,8 @@ test('i18n prefers stored locale over browser locale', async () => {
   const locale = await I18n.init();
   assert.equal(locale, 'en');
   assert.equal(I18n.t('search.category.all'), 'All');
+  assert.equal(I18n.t('search.category.label'), 'Category');
+  assert.equal(I18n.t('search.category.allSelected'), 'All categories');
 });
 
 test('i18n falls back to browser locale when no stored locale exists', async () => {
@@ -64,6 +66,8 @@ test('i18n falls back to browser locale when no stored locale exists', async () 
   const locale = await I18n.init();
   assert.equal(locale, 'zh-CN');
   assert.equal(I18n.t('search.category.all'), '全部');
+  assert.equal(I18n.t('search.category.label'), '分类');
+  assert.equal(I18n.t('search.category.allSelected'), '全部分类');
 });
 
 test('i18n persists locale changes', async () => {

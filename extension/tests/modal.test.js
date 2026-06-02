@@ -165,3 +165,49 @@ test('search section should expose only recent, favorite, and custom quick filte
   assert.deepEqual(Array.from(searchProps.activeFilters), []);
   assert.equal(typeof searchProps.onFilterChange, 'function');
 });
+
+test('category change should reset current pagination page', () => {
+  const { BananaModal, getCapturedSearchProps } = loadModal();
+  const modal = new BananaModal({
+    getThemeColors() {
+      return { background: '#fff', border: '#ddd' };
+    }
+  });
+
+  let setCategoryCalls = 0;
+  let resetPageCalls = 0;
+
+  modal.store = {
+    state: {
+      categories: new Set(['Portrait']),
+      selectedCategory: 'all',
+      activeFilters: new Set(),
+      sortMode: 'recommend',
+      nsfwEnabled: true,
+      recentWeekEnabled: false,
+      locale: 'en'
+    },
+    setCategory(category) {
+      setCategoryCalls += 1;
+      this.state.selectedCategory = category;
+    },
+    async setLocale() {}
+  };
+  modal.paginationComponent = {
+    currentPage: 5,
+    resetPage() {
+      resetPageCalls += 1;
+      this.currentPage = 1;
+    }
+  };
+
+  modal.createSearchSection();
+  const searchProps = getCapturedSearchProps();
+
+  searchProps.onCategoryChange('Portrait');
+
+  assert.equal(setCategoryCalls, 1);
+  assert.equal(modal.store.state.selectedCategory, 'Portrait');
+  assert.equal(modal.paginationComponent.currentPage, 1);
+  assert.equal(resetPageCalls, 1);
+});

@@ -18,7 +18,9 @@
                     enable: '开启 NSFW'
                 },
                 category: {
+                    label: '分类',
                     all: '全部',
+                    allSelected: '全部分类',
                     none: '无分类'
                 },
                 locale: {
@@ -135,7 +137,9 @@
                     enable: 'Show NSFW'
                 },
                 category: {
+                    label: 'Category',
                     all: 'All',
+                    allSelected: 'All categories',
                     none: 'No categories'
                 },
                 locale: {
