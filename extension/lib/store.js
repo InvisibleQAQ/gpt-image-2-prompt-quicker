@@ -328,8 +328,6 @@ OK，我想要：`,
             return Array.from(activeFilters).every(filter => {
                 if (filter === 'favorite') return isFavorite;
                 if (filter === 'custom') return prompt.isCustom;
-                if (filter === 'generate') return prompt.mode === 'generate';
-                if (filter === 'edit') return prompt.mode === 'edit';
                 return false;
             });
         });

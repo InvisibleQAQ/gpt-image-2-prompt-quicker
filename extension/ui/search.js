@@ -204,8 +204,6 @@
 
             if (this.refs.filterButtons.favorite) this.refs.filterButtons.favorite.textContent = this.t('search.filters.favorite', 'Favorites');
             if (this.refs.filterButtons.custom) this.refs.filterButtons.custom.textContent = this.t('search.filters.custom', 'Custom');
-            if (this.refs.filterButtons.generate) this.refs.filterButtons.generate.textContent = this.t('search.filters.generate', 'Generate');
-            if (this.refs.filterButtons.edit) this.refs.filterButtons.edit.textContent = this.t('search.filters.edit', 'Edit');
 
             const sortBtn = this.element.querySelector('#sort-mode-btn');
             if (sortBtn) {
@@ -222,7 +220,7 @@
             }
 
             const { colors, isMobile } = this.props;
-            ['favorite', 'custom', 'generate', 'edit'].forEach(key => {
+            ['favorite', 'custom'].forEach(key => {
                 const btn = this.refs.filterButtons[key];
                 if (!btn) return;
                 const isActive = this.state.activeFilters.has(key);
@@ -333,9 +331,7 @@
 
             const filters = [
                 { key: 'favorite', labelKey: 'search.filters.favorite', fallback: 'Favorites' },
-                { key: 'custom', labelKey: 'search.filters.custom', fallback: 'Custom' },
-                { key: 'generate', labelKey: 'search.filters.generate', fallback: 'Generate' },
-                { key: 'edit', labelKey: 'search.filters.edit', fallback: 'Edit' }
+                { key: 'custom', labelKey: 'search.filters.custom', fallback: 'Custom' }
             ];
 
             filters.forEach(filter => {
@@ -347,8 +343,6 @@
                         if (nextFilters.has(filter.key)) {
                             nextFilters.delete(filter.key);
                         } else {
-                            if (filter.key === 'generate' && nextFilters.has('edit')) nextFilters.delete('edit');
-                            if (filter.key === 'edit' && nextFilters.has('generate')) nextFilters.delete('generate');
                             nextFilters.add(filter.key);
                         }
                         this.updateState({ activeFilters: nextFilters });

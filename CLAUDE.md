@@ -110,6 +110,7 @@ Failure behavior matters: `fetcher.js` falls back to cached data even when expir
   - NSFW toggle
   - recent-week toggle
   - recent prompt usage history persisted in `chrome.storage.local` (`banana-recent-prompt-usage`) for the `最近使用` / `Recently used` filter
+- Quick filters in the modal are `最近使用` / `Recently used`, `收藏` / `Favorites`, and `自定义` / `Custom`; do not reintroduce separate `文生图` / `Generate` or `编辑` / `Edit` quick-filter chips unless the product requirement changes.
 - `BananaModal` subscribes to the store and re-renders cards/pagination when state changes.
 - Locale changes are live: the modal updates shell text in place, refreshes the launcher button label/tooltip, and reopens the custom prompt form so translated field labels/buttons are rebuilt from current store locale; changing locale must not reset the current pagination page, though page count may still clamp if the filtered result set shrinks.
 - `extension/ui/pagination.js` renders the footer pagination controls plus a GitHub link; keep footer social actions minimal and update this note if they change.

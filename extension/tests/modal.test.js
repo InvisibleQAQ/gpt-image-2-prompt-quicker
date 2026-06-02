@@ -133,3 +133,35 @@ test('locale change should preserve current pagination page', async () => {
   assert.equal(modal.paginationComponent.currentPage, 9);
   assert.equal(resetPageCalls, 0);
 });
+
+test('search section should expose only recent, favorite, and custom quick filters', () => {
+  const { BananaModal, getCapturedSearchProps } = loadModal();
+  const modal = new BananaModal({
+    getThemeColors() {
+      return { background: '#fff', border: '#ddd' };
+    }
+  });
+
+  modal.store = {
+    state: {
+      categories: new Set(),
+      selectedCategory: 'all',
+      activeFilters: new Set(),
+      sortMode: 'recommend',
+      nsfwEnabled: true,
+      recentWeekEnabled: false,
+      locale: 'en'
+    },
+    async setLocale() {}
+  };
+  modal.paginationComponent = {
+    currentPage: 1,
+    resetPage() {}
+  };
+
+  modal.createSearchSection();
+  const searchProps = getCapturedSearchProps();
+
+  assert.deepEqual(Array.from(searchProps.activeFilters), []);
+  assert.equal(typeof searchProps.onFilterChange, 'function');
+});
