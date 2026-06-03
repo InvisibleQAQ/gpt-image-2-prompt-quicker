@@ -89,3 +89,18 @@ test('getPromptSearchTexts includes title variants and searchable fields', () =>
   const texts = Array.from(PromptUtils.getPromptSearchTexts(prompt, 'zh-CN'));
   assert.deepEqual(texts, ['中文标题', 'Legacy title', 'English title', 'Prompt body', '@demo', 'Category']);
 });
+
+test('getCategoryDisplayName localizes stable category keys for english mode', () => {
+  const PromptUtils = loadPromptUtils({ browserLocale: 'en-US' });
+
+  assert.equal(PromptUtils.getCategoryDisplayName('摄影', 'en'), 'Photography');
+  assert.equal(PromptUtils.getCategoryDisplayName('海报', 'en'), 'Poster');
+  assert.equal(PromptUtils.getCategoryDisplayName('UI', 'en'), 'UI');
+});
+
+test('getCategoryDisplayName keeps chinese labels in chinese mode and falls back for unknown values', () => {
+  const PromptUtils = loadPromptUtils({ browserLocale: 'zh-CN' });
+
+  assert.equal(PromptUtils.getCategoryDisplayName('摄影', 'zh-CN'), '摄影');
+  assert.equal(PromptUtils.getCategoryDisplayName('未收录分类', 'en'), '未收录分类');
+});

@@ -57,10 +57,16 @@
         }
 
         getCategoryOptions() {
+            const locale = this.state.locale || this.props.locale || (window.I18n ? window.I18n.getLocale() : 'en');
             const categories = Array.from(this.props.categories || []).sort((a, b) => a.localeCompare(b));
             return [
                 { value: 'all', label: this.t('search.category.all', 'All') },
-                ...categories.map(category => ({ value: category, label: category }))
+                ...categories.map(category => ({
+                    value: category,
+                    label: window.PromptUtils?.getCategoryDisplayName
+                        ? window.PromptUtils.getCategoryDisplayName(category, locale)
+                        : category
+                }))
             ];
         }
 

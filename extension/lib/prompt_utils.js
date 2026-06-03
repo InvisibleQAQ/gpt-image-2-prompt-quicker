@@ -48,6 +48,41 @@
         return ''
     }
 
+    const CATEGORY_LABELS = {
+        '海报': { 'zh-CN': '海报', en: 'Poster' },
+        '信息可视化': { 'zh-CN': '信息可视化', en: 'Infographic' },
+        '摄影': { 'zh-CN': '摄影', en: 'Photography' },
+        '艺术': { 'zh-CN': '艺术', en: 'Art' },
+        'UI': { 'zh-CN': 'UI', en: 'UI' },
+        '商品': { 'zh-CN': '商品', en: 'Product' },
+        '品牌': { 'zh-CN': '品牌', en: 'Brand' },
+        '人物': { 'zh-CN': '人物', en: 'Portrait' },
+        '科研': { 'zh-CN': '科研', en: 'Science' },
+        '场景': { 'zh-CN': '场景', en: 'Scene' },
+        '历史与古风': { 'zh-CN': '历史与古风', en: 'Historical & Classical' },
+        '动漫': { 'zh-CN': '动漫', en: 'Anime' },
+        '电影': { 'zh-CN': '电影', en: 'Film' },
+        '插画': { 'zh-CN': '插画', en: 'Illustration' },
+        '文档': { 'zh-CN': '文档', en: 'Document' },
+        '游戏': { 'zh-CN': '游戏', en: 'Game' },
+        '建筑': { 'zh-CN': '建筑', en: 'Architecture' },
+        'NSFW': { 'zh-CN': 'NSFW', en: 'NSFW' }
+    }
+
+    function getCategoryDisplayName(category, locale) {
+        if (typeof category !== 'string') return ''
+        const trimmedCategory = category.trim()
+        if (!trimmedCategory) return ''
+
+        const resolvedLocale = getCurrentLocale(locale)
+        const localizedCategory = CATEGORY_LABELS[trimmedCategory]
+        if (localizedCategory && typeof localizedCategory[resolvedLocale] === 'string' && localizedCategory[resolvedLocale].trim()) {
+            return localizedCategory[resolvedLocale].trim()
+        }
+
+        return trimmedCategory
+    }
+
     function getLegacyPromptKey(prompt) {
         const title = typeof prompt?.title === 'string' ? prompt.title : getPromptDisplayTitle(prompt, 'en')
         const author = typeof prompt?.author === 'string' ? prompt.author : ''
@@ -94,6 +129,7 @@
 
     globalScope.PromptUtils = {
         getPromptDisplayTitle,
+        getCategoryDisplayName,
         getPromptId,
         getLegacyPromptKey,
         getPromptSearchTexts,

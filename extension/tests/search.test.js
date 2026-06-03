@@ -67,7 +67,8 @@ function collectIds(node, ids = []) {
 }
 
 function loadSearchComponent() {
-  const filePath = path.join(__dirname, '..', 'ui', 'search.js');
+  const searchPath = path.join(__dirname, '..', 'ui', 'search.js');
+  const promptUtilsPath = path.join(__dirname, '..', 'lib', 'prompt_utils.js');
   const context = {
     window: {
       DOM: { h: createDomNode },
@@ -81,6 +82,9 @@ function loadSearchComponent() {
         ]
       }
     },
+    navigator: {
+      language: 'en-US'
+    },
     document: {
       addEventListener() {},
       removeEventListener() {}
@@ -91,7 +95,8 @@ function loadSearchComponent() {
   context.globalThis = context;
 
   vm.createContext(context);
-  vm.runInContext(fs.readFileSync(filePath, 'utf8'), context);
+  vm.runInContext(fs.readFileSync(promptUtilsPath, 'utf8'), context);
+  vm.runInContext(fs.readFileSync(searchPath, 'utf8'), context);
 
   return context.window.UI.Search;
 }
@@ -187,4 +192,33 @@ test('category dropdown should show selected category with explicit label', () =
   component.render();
 
   assert.equal(component.refs.dropdowns.category.triggerText.textContent, 'Category · Portrait');
+});
+
+test('category dropdown should localize chinese category values in english mode', () => {
+  const SearchComponent = loadSearchComponent();
+  const component = new SearchComponent({
+    colors: {
+      text: '#111',
+      textSecondary: '#666',
+      primary: '#000',
+      border: '#ddd',
+      inputBorder: '#ddd',
+      inputBg: '#fff',
+      surface: '#fff',
+      surfaceHover: '#f5f5f5',
+      shadow: 'rgba(0,0,0,0.1)'
+    },
+    isMobile: false,
+    categories: new Set(['摄影', '海报']),
+    selectedCategory: '摄影',
+    activeFilters: new Set(),
+    sortMode: 'recommend',
+    nsfwEnabled: true,
+    recentWeekEnabled: false,
+    locale: 'en'
+  });
+
+  component.render();
+
+  assert.equal(component.refs.dropdowns.category.triggerText.textContent, 'Category · Photography');
 });

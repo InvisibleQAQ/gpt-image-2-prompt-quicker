@@ -442,7 +442,14 @@ window.UI.PromptForm = class PromptForm {
             style: 'position: relative; width: 100%; z-index: 10;'
         });
 
-        const categoryTriggerText = h('span', {}, this.state.selectedCategory || this.t('promptForm.placeholders.category', 'Select a category'));
+        const getCategoryLabel = (category) => {
+            if (!category) return this.t('promptForm.placeholders.category', 'Select a category');
+            return window.PromptUtils?.getCategoryDisplayName
+                ? window.PromptUtils.getCategoryDisplayName(category, window.I18n ? window.I18n.getLocale() : 'en')
+                : category;
+        };
+
+        const categoryTriggerText = h('span', {}, getCategoryLabel(this.state.selectedCategory));
 
         const categoryArrow = h('span', {
             innerHTML: `<svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1L5 5L9 1"/></svg>`,
@@ -478,12 +485,12 @@ window.UI.PromptForm = class PromptForm {
                     onclick: (e) => {
                         e.stopPropagation();
                         this.state.selectedCategory = cat;
-                        categoryTriggerText.textContent = cat;
+                        categoryTriggerText.textContent = getCategoryLabel(cat);
                         categoryOptions.style.display = 'none';
                         categoryArrow.style.transform = 'rotate(0deg)';
                         renderOptions();
                     }
-                }, cat);
+                }, getCategoryLabel(cat));
 
                 categoryOptions.appendChild(option);
             });
