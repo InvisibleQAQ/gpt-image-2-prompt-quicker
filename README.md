@@ -46,12 +46,6 @@
 2. 在 Cronmite 中访问上面的 Chrome Web Store 链接
 3. 点击「添加至 Chrome」即可安装
 
-### 油猴版本
-> 注：该版本功能较落后
-
-感谢 bxb100 的贡献 🎉
-
-https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/script.user.js
 
 
 ## 注意
@@ -126,31 +120,3 @@ https://github.com/bxb100/Scripts/raw/refs/heads/main/banana-prompt-quicker/scri
 }
 ```
 
----
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/glidea/zenfeed/blob/main/docs/images/wechat.png?raw=true" alt="Wechat QR Code" width="300">
-      <br>
-      <strong>AI 学习交流社群</strong>
-    </td>
-    <td align="center">
-      <img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/glidea.png?raw=true" width="250">
-      <br>
-      <strong><a href="https://glidea.zenfeed.xyz/">我的其它项目</a></strong>
-    </td>
-    <td align="center">
-      <img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/sponsor.png?raw=true" width="300">
-      <br>
-      <strong>🧋请喝杯奶茶</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2">
-      <img src="https://github.com/InvisibleQAQ/gpt-image-2-prompt-quicker/blob/main/images/readnote.png?raw=true" width="400">
-      <br>
-      <strong><a href="https://www.xiaohongshu.com/user/profile/5f7dc54d0000000001004afb">📕 小红书账号 - 持续分享 AI 原创</a></strong>
-    </td>
-  </tr>
-</table>
