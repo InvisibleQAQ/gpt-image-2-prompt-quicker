@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "image2 prompt quicker",
+    "name": "chatgpt image prompt quicker",
     "version": "1.6.0",
-    "description": "Prompts quicker is ALL you need",
+    "description": "Quickly access all the image prompts you need.",
     "icons": {
         "16": "icon16.png",
         "48": "icon48.png",
