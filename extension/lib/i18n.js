@@ -223,7 +223,7 @@
             },
             onboarding: {
                 pageTitle: 'Welcome to image2 prompt quicker',
-                heroTitle: 'Prompts have never felt this elegant',
+                heroTitle: 'Quickly access all the image prompts you need',
                 guideAlt: 'image2 prompt quicker guide',
                 choosePlatform: 'Choose a platform to get started',
                 anySite: 'Any website, insert from the context menu',
